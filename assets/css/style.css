@@ -113,6 +113,17 @@ body {
 .main {
   flex: 1;
 }
+
+.main h1 {
+  font-size: 2.1rem;
+  margin-top: 0;
+}
+
+.main h2,
+.main h3 {
+  margin-top: 2.2rem;
+}
+
 /* ============================= */
 /*   Light Vision Pro Pub Cards  */
 /* ============================= */
@@ -122,35 +133,45 @@ body {
   margin-bottom: 32px;
   padding: 26px 28px;
 
-  border-radius: 22px;
+  border-radius: 26px;
 
-  /* 浅色玻璃 + Apple 式柔光 */
-  background: 
-    radial-gradient(circle at top left, rgba(180, 196, 255, 0.40), transparent 58%),
-    radial-gradient(circle at bottom right, rgba(160, 240, 220, 0.28), transparent 60%),
-    rgba(255, 255, 255, 0.85);
+  /* 浅色渐变 + 玻璃感 */
+  background:
+    radial-gradient(circle at top left, rgba(176, 196, 255, 0.75), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(167, 243, 208, 0.7), transparent 60%),
+    linear-gradient(120deg, #f4f7ff, #f7fffb);
 
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 
-  border: 1px solid rgba(180, 188, 200, 0.40);
+  border: 1px solid rgba(180, 188, 200, 0.55);
 
   box-shadow:
-    0 8px 30px rgba(0,0,0,0.08),
-    0 2px 4px rgba(0,0,0,0.04);
+    0 22px 45px rgba(15, 23, 42, 0.20),
+    0 4px 10px rgba(15, 23, 42, 0.06);
 
   display: flex;
   gap: 26px;
   color: #1f2937;
+
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
-/* 内发光细边框（Apple 风） */
+/* Hover 悬浮感 */
+.pub-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 28px 60px rgba(15, 23, 42, 0.26),
+    0 8px 18px rgba(15, 23, 42, 0.08);
+}
+
+/* 内发光边框 */
 .pub-card::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  border: 1px solid rgba(255,255,255,0.55);
+  border: 1px solid rgba(255,255,255,0.8);
   pointer-events: none;
 }
 
@@ -158,24 +179,41 @@ body {
   flex: 1;
 }
 
-/* 图片：浅色高端感 */
+/* 右上角封面小圆图 */
+.pub-right {
+  margin-left: auto;
+  align-self: flex-start;
+}
+
 .pub-right img {
-  width: 230px;
-  border-radius: 18px;
-  border: 1px solid rgba(200,200,210,0.5);
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  object-fit: cover;
 
+  border: 2px solid rgba(255,255,255,0.9);
   box-shadow:
-    0 10px 26px rgba(0,0,0,0.10),
-    0 0 1px rgba(255,255,255,0.8);
+    0 0 0 4px rgba(180, 196, 255, 0.55),
+    0 10px 25px rgba(15, 23, 42, 0.35);
 
-  background: rgba(255,255,255,0.7);
+  background: radial-gradient(circle at top left, #ffffff, #e5e7eb);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* 卡片 hover 时封面更亮一点 */
+.pub-card:hover .pub-right img {
+  transform: translateY(-2px) rotate(-4deg) scale(1.05);
+  box-shadow:
+    0 0 0 5px rgba(129, 140, 248, 0.7),
+    0 14px 30px rgba(15, 23, 42, 0.45);
 }
 
 /* 标题 */
 .pub-title {
   font-size: 1.26rem;
   font-weight: 650;
-  color: #111;
+  color: #111827;
   margin-bottom: 8px;
 }
 
@@ -184,6 +222,10 @@ body {
   font-size: 0.96rem;
   line-height: 1.45;
   color: #374151;
+}
+
+.pub-authors strong {
+  font-weight: 700;
 }
 
 .pub-authors a {
@@ -200,10 +242,15 @@ body {
   font-size: 0.9rem;
   color: #6b7280;
   margin-top: 6px;
+  margin-bottom: 10px;  /* 和按钮之间拉开间距 */
   font-style: italic;
 }
 
 /* 标签：浅色柔光胶囊 */
+.pub-tags {
+  margin-bottom: 6px;
+}
+
 .pub-tags span {
   display: inline-block;
   padding: 4px 10px;
@@ -223,19 +270,40 @@ body {
   box-shadow: 0 0 12px rgba(180,196,255,0.6);
 }
 
-/* 按钮：浅色毛玻璃圆角 */
+/* 状态 pill：Under Review / To Appear / R&R 等 */
+.pub-status {
+  display: inline-block;
+  padding: 4px 10px;
+  margin-left: 6px;
+
+  background: rgba(220, 220, 235, 0.55);
+  border: 1px solid rgba(180, 185, 200, 0.6);
+
+  color: #374151;
+  font-size: 0.72rem;
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* 按钮：浅色毛玻璃 */
+.pub-buttons {
+  margin-top: 6px;
+}
+
 .pub-buttons a {
   display: inline-block;
-  padding: 7px 16px;
+  padding: 7px 18px;
   margin-right: 10px;
+  margin-top: 6px;
 
   border-radius: 999px;
 
-  background: rgba(255,255,255,0.65);
+  background: rgba(255,255,255,0.85);
   border: 1px solid rgba(200,200,210,0.55);
 
   color: #1f2937;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   text-decoration: none;
 
   backdrop-filter: blur(12px);
@@ -244,26 +312,47 @@ body {
   transition: 0.2s ease;
 }
 
-/* Hover：亮蓝色柔光 */
+/* Hover：亮蓝柔光 */
 .pub-buttons a:hover {
-  background: rgba(147,197,253,0.85); /* Apple light blue */
+  background: rgba(147,197,253,0.9);
   border-color: transparent;
-  color: white;
-
+  color: #ffffff;
   box-shadow:
-    0 4px 18px rgba(147,197,253,0.65),
-    0 0 4px rgba(255,255,255,0.8);
+    0 6px 20px rgba(147,197,253,0.65),
+    0 0 4px rgba(255,255,255,0.9);
 }
 
-/* Responsive */
+/* ============================= */
+/*          Responsive           */
+/* ============================= */
+
 @media (max-width: 780px) {
+  .wrapper {
+    flex-direction: column;
+    padding: 24px 16px;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .main {
+    padding-top: 12px;
+  }
+
   .pub-card {
     flex-direction: column;
   }
 
+  .pub-right {
+    margin-left: 0;
+    align-self: flex-start;
+  }
+
   .pub-right img {
-    width: 100%;
-    margin-top: 12px;
+    width: 64px;
+    height: 64px;
   }
 }
-
