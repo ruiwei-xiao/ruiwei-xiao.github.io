@@ -441,6 +441,6 @@ html {
   }
 }
 
-section, main {
+section, main, sidebar {
   margin-top: 70px !important;
 }
