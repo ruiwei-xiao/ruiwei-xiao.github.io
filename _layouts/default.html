@@ -6,6 +6,22 @@
   <title>{{ page.title | default: site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
+  
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const items = document.querySelectorAll('.project-item');
+  const panels = document.querySelectorAll('.project-panel');
+
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      const key = item.dataset.project;
+
+      items.forEach(i => i.classList.toggle('is-active', i === item));
+      panels.forEach(p => p.classList.toggle('is-active', p.dataset.project === key));
+    });
+  });
+});
+</script>
 
 <body>
   <div class="wrapper">
