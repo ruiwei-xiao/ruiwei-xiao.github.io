@@ -6,28 +6,31 @@ permalink: /publications/
 
 <h2>Publications</h2>
 
+<!-- [C.1] CHI 2026 -->
 <div class="pub-card">
   <div class="pub-left">
     <div class="pub-tags">
       <span>[C.1]</span><span>CHI 2026</span>
     </div>
-
-    <div class="pub-title">Do Teachers Dream of GenAI Widening Educational (In)Equality?</div>
-
+    <div class="pub-title">
+      Do Teachers Dream of GenAI Widening Educational (In)Equality
+    </div>
     <div class="pub-authors">
       <strong>Ruiwei Xiao</strong>, Qing Xiao, Xinying Hou, Pheny Mole, Hanqi Li, Hong Shen, John Stamper
     </div>
-
     <div class="pub-venue">
       Proceedings of CHI 2026 (to appear)
     </div>
-
     <div class="pub-buttons">
-      <a href="#">PDF</a>
+      <a href="https://arxiv.org/abs/2506.19107" target="_blank">PDF</a>
       <a href="#">Project</a>
       <a href="#">BibTeX</a>
     </div>
   </div>
+  <div class="pub-right">
+    <img src="/assets/img/c1_chi26.png" alt="GenAI Educational (In)Equality paper teaser">
+  </div>
+</div>
 
   <div class="pub-right">
     <img src="/assets/img/paper1.png">
