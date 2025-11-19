@@ -29,9 +29,7 @@
 /* ============================= */
 
 header {
-  position: sticky;
-  top: 40px; /* 卷动时左侧栏略微悬浮 */
-  align-self: flex-start;
+  position: static;
 
   padding: 24px 20px;
   border-radius: 24px;
