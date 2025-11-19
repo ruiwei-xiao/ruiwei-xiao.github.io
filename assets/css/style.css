@@ -441,6 +441,36 @@ html {
   }
 }
 
+/* Social icons row */
+.social-row {
+  display: flex;
+  gap: 14px;
+  margin-top: 12px;
+  margin-bottom: 4px;
+
+  /* 视觉对齐 */
+  align-items: center;
+}
+
+/* Icons style */
+.social-row img {
+  width: 28px;
+  height: 28px;
+
+  opacity: 0.8;
+  transition: all 0.2s ease;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.12));
+  border-radius: 6px;
+}
+
+/* Hover = Apple 风格亮一点 */
+.social-row img:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.18));
+}
+
+
 section, main, sidebar {
   margin-top: 70px !important;
 }
