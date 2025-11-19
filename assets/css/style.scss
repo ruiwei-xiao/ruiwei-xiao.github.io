@@ -3,29 +3,40 @@
 
 @import "{{ site.theme }}";
 
-.sidebar {
-  width: 210px !important;   // 
-  padding-right: 20px;
+@media screen and (min-width: 860px) {
+  header {
+    width: 220px;       
+  }
+  section {
+    margin-left: 260px;  
+    max-width: 1000px;   
+  }
 }
 
-.main {
-  flex: 1;
-  max-width: 1000px; 
-}
+/* ========================= */
+/*       Publication Card    */
+/* ========================= */
 
-/* Publication Card Style */
 .pub-card {
   background: #f4f9fa;
   border-radius: 14px;
   padding: 20px;
   margin-bottom: 30px;
   border: 1px solid #dce7ea;
-  display: flex;
+
+  
+  display: flex !important;
+  align-items: flex-start !important;
   gap: 20px;
+  clear: both;
 }
 
 .pub-left {
-  flex: 1;
+  flex: 1 1 auto;
+}
+
+.pub-right {
+  flex: 0 0 auto;
 }
 
 .pub-title {
@@ -60,6 +71,8 @@
   text-decoration: none;
   color: #143c3c;
   font-weight: 600;
+  display: inline-block;
+  margin-top: 6px;
 }
 
 .pub-buttons a:hover {
@@ -70,4 +83,16 @@
   width: 180px;
   border-radius: 10px;
   border: 1px solid #ccc;
+  display: block;
+  float: none !important;   /* 防止被主题的 float 影响 */
+}
+
+/* 小屏幕时上下堆叠，避免挤在一行里 */
+@media screen and (max-width: 768px) {
+  .pub-card {
+    flex-direction: column;
+  }
+  .pub-right img {
+    width: 100%;
+  }
 }
