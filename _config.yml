@@ -3,7 +3,7 @@ plugins:
   - jekyll-remote-theme
 
 title: Ruiwei Xiao
-logo: /assets/img/profile.jpg
+logo: https://www.cs.cmu.edu/~hcdl/images/ruiwei_xiao.jpg
 
 description: >
   <div class="sidebar-subtitle">2nd Year PhD Student at CMU HCII</div>
