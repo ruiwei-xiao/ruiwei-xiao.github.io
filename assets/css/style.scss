@@ -23,32 +23,38 @@
     max-width: 1000px;     /* 右栏内容宽度 */
   }
 }
-
-/* ========================= */
-/*       Publication Card    */
-/*       Apple Minimal       */
-/* ========================= */
+/* ============================= */
+/*      Apple Pro Max Cards      */
+/* ============================= */
 
 .pub-card {
   background: #ffffff;
-  border-radius: 18px;
-  padding: 22px 26px;
-  margin-bottom: 28px;
-  border: 1px solid #e5e5e7;
-  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.06);
+  border-radius: 22px;
+  padding: 28px 32px;
+  margin-bottom: 32px;
+  border: 1px solid rgba(0,0,0,0.06);
+
+  /* Apple 多层阴影 */
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.04),
+    0 12px 28px rgba(0,0,0,0.08),
+    0 0 1px rgba(0,0,0,0.1);
 
   display: flex !important;
   align-items: flex-start !important;
-  gap: 22px;
+  gap: 28px;
   clear: both;
 
-  font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+               system-ui, sans-serif;
 }
 
 .pub-left {
   flex: 1 1 auto;
 }
 
+
+/* Right side image — Apple promo style */
 .pub-right {
   flex: 0 0 auto;
   margin-left: auto;
@@ -56,28 +62,35 @@
 }
 
 .pub-right img {
-  width: 220px;
-  border-radius: 16px;
-  border: 1px solid #e5e5e7;
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.13);
+  width: 240px;
+  border-radius: 20px;
+
+  /* Apple 图片投影 */
+  box-shadow:
+    0 4px 12px rgba(0,0,0,0.08),
+    0 24px 48px rgba(0,0,0,0.12);
+
+  border: 1px solid rgba(0,0,0,0.04);
+  background: #fafafa;
   display: block;
   float: none !important;
 }
 
-/* Title & text */
 
+/* Title */
 .pub-title {
-  font-size: 1.25rem;
+  font-size: 1.32rem;
   font-weight: 650;
-  letter-spacing: -0.01em;
-  color: #111827;
-  margin-bottom: 6px;
+  letter-spacing: -0.012em;
+  color: #111;
+  margin-bottom: 10px;
 }
 
+/* Authors */
 .pub-authors {
-  font-size: 0.95rem;
-  color: #4b5563;
-  margin-top: 4px;
+  font-size: 0.97rem;
+  color: #475569;
+  line-height: 1.45;
 }
 
 .pub-authors a {
@@ -89,79 +102,83 @@
   text-decoration: underline;
 }
 
+/* Venue */
 .pub-venue {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   color: #6b7280;
-  margin-top: 6px;
+  margin-top: 8px;
   font-style: italic;
 }
 
-/* Tags */
 
+/* Tags — macOS style rounded pills */
 .pub-tags {
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .pub-tags span {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  padding: 4px 10px;
+  padding: 5px 12px;
+
   margin-right: 8px;
-  border-radius: 999px;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
+  border-radius: 1000px;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  background: #f5f5f7;
-  color: #4b5563;
-  border: 1px solid #e5e5e7;
+
+  background: #f2f2f7;   /* macOS system gray */
+  color: #3a3a3c;
+  border: 1px solid rgba(0,0,0,0.05);
 }
 
-/* Buttons → Apple 风格软胶囊 */
 
+/* Buttons — Apple frosted style */
 .pub-buttons {
-  margin-top: 14px;
+  margin-top: 18px;
 }
 
 .pub-buttons a {
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 6px 16px;
-  margin-right: 10px;
-  margin-top: 6px;
+  padding: 7px 18px;
+  margin-right: 12px;
 
   border-radius: 999px;
-  border: 1px solid #d1d5db;
-  background: #f5f5f7;
+
+  background: rgba(0,0,0,0.03);
+  backdrop-filter: saturate(180%) blur(20px); /* Apple frosted glass */
+  border: 1px solid rgba(0,0,0,0.08);
 
   font-size: 0.85rem;
   font-weight: 500;
-  color: #111827;
+  color: #1c1c1e;
   text-decoration: none;
 
-  transition: background 0.15s ease, color 0.15s ease,
-    box-shadow 0.15s ease, border-color 0.15s ease;
+  transition: all 0.18s ease;
 }
 
+/* Hover → 深色填充 + 增强阴影 */
 .pub-buttons a:hover {
-  background: #111827;
-  color: #ffffff;
+  background: #1c1c1e;
+  color: white;
   border-color: transparent;
-  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.25);
+  box-shadow:
+    0 6px 12px rgba(0,0,0,0.25),
+    0 0 1px rgba(255,255,255,0.2);
 }
 
-/* 小屏幕：上下排 */
 
+/* Mobile layout */
 @media screen and (max-width: 768px) {
   .pub-card {
     flex-direction: column;
+    padding: 22px 20px;
   }
   .pub-right {
     margin-left: 0;
+    margin-top: 12px;
   }
   .pub-right img {
     width: 100%;
