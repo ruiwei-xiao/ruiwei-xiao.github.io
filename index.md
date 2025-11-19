@@ -3,20 +3,15 @@ layout: default
 title: Ruiwei Xiao
 ---
 
+<div id="about"></div>
+
 # Hello, I’m Ruiwei! 👋
 
 Welcome to my personal homepage.
 
-Here are some things about me:
-
-- PhD student at CMU  
-- Research on AI Literacy & Computing Education  
-- Co-founder of ActiveAI  
-
 ---
 
-# Publications
-
+## <span id="publications"></span>Publications
 <div class="pub-card">
   <div class="pub-left">
     <div class="pub-tags">
@@ -408,4 +403,11 @@ Here are some things about me:
     <img src="/assets/img/c15_sigcse23.png" alt="Cheating detection paper teaser">
   </div>
 </div>
+
+
+## <span id="projects"></span>Projects
+...
+
+## <span id="life"></span>Life
+...
 
