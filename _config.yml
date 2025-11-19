@@ -1,10 +1,13 @@
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-remote-theme
+
 title: Ruiwei Xiao
 logo:
-description: > 
-2nd Year PhD Student at CMU HCII
+
+description: >
+  2nd Year PhD Student at CMU HCII
+  <br/>
   <a href="https://www.linkedin.com/in/rx98" target="_blank">
     <img src="https://img.icons8.com/ios-filled/30/0077B5/linkedin.png" alt="LinkedIn"/>
   </a>
@@ -13,7 +16,8 @@ description: >
     <img src="https://cdn.icon-icons.com/icons2/2108/PNG/512/google_scholar_icon_130918.png" alt="Google Scholar"/>
   </a>
   &nbsp;
-  <a href="ruiweix@andrew.com.edu" target="_blank">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4vtphMtxRWfK6nO2CIbGfSETyEs79Dr6oPw&s" alt="Email"/>
+  <a href="mailto:ruiweix@andrew.cmu.edu">
+    <img src="https://img.icons8.com/ios-filled/30/000000/new-post.png" alt="Email"/>
   </a>
+
 theme: jekyll-theme-minimal
