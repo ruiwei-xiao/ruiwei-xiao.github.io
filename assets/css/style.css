@@ -134,6 +134,56 @@ body {
 }
 
 /* ============================= */
+/*      Navigation Bar Area        */
+/* ============================= */
+html {
+  scroll-behavior: smooth;  /* 点击导航平滑滚动 */
+}
+
+/* 顶部极简导航条（右上角） */
+.top-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-bottom: 16px;
+
+  font-size: 0.92rem;
+}
+
+.top-nav a {
+  padding: 6px 12px;
+  border-radius: 999px;
+
+  color: #4b5563;
+  text-decoration: none;
+
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(209,213,219,0.8);
+  box-shadow: 0 4px 10px rgba(15,23,42,0.05);
+
+  transition: background 0.16s ease, color 0.16s ease,
+              box-shadow 0.16s ease, border-color 0.16s ease,
+              transform 0.16s ease;
+}
+
+/* hover：轻微高亮 + 浮一点点 */
+.top-nav a:hover {
+  background: #111827;
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 8px 18px rgba(15,23,42,0.18);
+  transform: translateY(-1px);
+}
+
+/* 当前页面/当前 section 高亮的话以后可以加一个 .active */
+.top-nav a.active {
+  background: #111827;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+
+/* ============================= */
 /*   Light Vision Pro Pub Cards  */
 /* ============================= */
 
