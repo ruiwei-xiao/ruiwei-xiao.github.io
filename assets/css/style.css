@@ -140,46 +140,69 @@ html {
   scroll-behavior: smooth;  /* 点击导航平滑滚动 */
 }
 
-/* 顶部极简导航条（右上角） */
-.top-nav {
-  display: flex;
-  justify-content: flex-end;
-  gap: 14px;
-  margin-bottom: 16px;
+/* ============================== */
+/*       🌙 Apple-style Nav       */
+/* ============================== */
 
-  font-size: 0.92rem;
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 52px;
+
+  backdrop-filter: saturate(180%) blur(18px);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
+
+  background: rgba(255, 255, 255, 0.68);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9999; /* 永远在最上层 */
 }
 
-.top-nav a {
-  padding: 6px 12px;
-  border-radius: 999px;
+.nav-content {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  color: #4b5563;
+  padding: 0 28px;
+  box-sizing: border-box;
+}
+
+.nav-left .nav-logo {
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: default;
+  opacity: 0.85;
+}
+
+.nav-center a {
+  margin: 0 18px;
+
+  font-size: 0.95rem;
+  color: #1d1d1f;
   text-decoration: none;
 
-  background: rgba(255,255,255,0.9);
-  border: 1px solid rgba(209,213,219,0.8);
-  box-shadow: 0 4px 10px rgba(15,23,42,0.05);
-
-  transition: background 0.16s ease, color 0.16s ease,
-              box-shadow 0.16s ease, border-color 0.16s ease,
-              transform 0.16s ease;
+  opacity: 0.82;
+  transition: opacity .2s ease;
 }
 
-/* hover：轻微高亮 + 浮一点点 */
-.top-nav a:hover {
-  background: #111827;
-  color: #ffffff;
-  border-color: transparent;
-  box-shadow: 0 8px 18px rgba(15,23,42,0.18);
-  transform: translateY(-1px);
+.nav-center a:hover {
+  opacity: 1;
 }
 
-/* 当前页面/当前 section 高亮的话以后可以加一个 .active */
-.top-nav a.active {
-  background: #111827;
-  color: #ffffff;
-  border-color: transparent;
+/* 小屏幕：导航间距缩小 */
+@media screen and (max-width: 780px) {
+  .nav-center a {
+    margin: 0 10px;
+    font-size: 0.9rem;
+  }
 }
 
 
