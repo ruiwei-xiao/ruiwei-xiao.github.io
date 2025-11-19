@@ -151,6 +151,21 @@ body {
   color: #374151;
 }
 
+.news-list-small li {
+  font-size: 0.82rem;     /* 更小一点 */
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.news-tag {
+  background: #e5e7eb;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.70rem;     /* 年月标签也稍微小一点 */
+  margin-right: 6px;
+  color: #374151;
+}
+
 /* ============================= */
 /*      Main Content Area        */
 /* ============================= */
