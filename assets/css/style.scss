@@ -24,7 +24,6 @@
   margin-bottom: 30px;
   border: 1px solid #dce7ea;
 
-  
   display: flex !important;
   align-items: flex-start !important;
   gap: 20px;
@@ -37,54 +36,16 @@
 
 .pub-right {
   flex: 0 0 auto;
-}
-
-.pub-title {
-  font-size: 1.4em;
-  font-weight: 700;
-  color: #143c3c;
-}
-
-.pub-authors a {
-  color: #005b9f;
-  text-decoration: none;
-}
-
-.pub-authors a:hover {
-  text-decoration: underline;
-}
-
-.pub-tags span {
-  background: #c8e6ef;
-  padding: 4px 10px;
-  margin-right: 10px;
-  border-radius: 6px;
-  font-family: monospace;
-  font-weight: bold;
-}
-
-.pub-buttons a {
-  background: #bde6ef;
-  padding: 6px 14px;
-  margin-right: 10px;
-  border-radius: 6px;
-  text-decoration: none;
-  color: #143c3c;
-  font-weight: 600;
-  display: inline-block;
-  margin-top: 6px;
-}
-
-.pub-buttons a:hover {
-  background: #a3d9e7;
+  margin-left: auto;       /* 把右侧区域推到最右边 */
+  align-self: center;      /* 让图片在卡片中垂直居中一点 */
 }
 
 .pub-right img {
-  width: 180px;
+  width: 220px;            /* 图稍微大一点 */
   border-radius: 10px;
   border: 1px solid #ccc;
   display: block;
-  float: none !important;   /* 防止被主题的 float 影响 */
+  float: none !important;  /* 防止被主题的 float 影响 */
 }
 
 /* 小屏幕时上下堆叠，避免挤在一行里 */
