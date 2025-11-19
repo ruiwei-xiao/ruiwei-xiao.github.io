@@ -76,19 +76,22 @@ document.addEventListener('DOMContentLoaded', () => {
     <!--      Main Content     -->
     <!-- ===================== -->
     <main class="main">
-      <!-- 顶部极简导航 -->
       <nav class="top-nav">
         <div class="nav-content">
           <div class="nav-left">
             <span class="nav-logo"></span>
           </div>
           <div class="nav-center">
-            <a href="#about">About</a>
-            <a href="#publications">Publications</a>
-            <a href="#projects">Projects</a>
+            <a href="#about" class="nav-link is-active">About</a>
+            <a href="#publications" class="nav-link">Publications</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <!-- 以后如果有 Life，可以加：
+            <a href="#life" class="nav-link">Life</a>
+            -->
           </div>
         </div>
       </nav>
+
 
     
       {{ content }}
