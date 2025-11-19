@@ -34,7 +34,7 @@ body {
   padding-right: 4px;
 
   position: sticky;
-  top: calc(50vh - 200px);  /* 200 大概是 sidebar 半高度，可以微调 */
+  top: calc(50vh - 240px);  /* 220 大概是 sidebar 半高度，可以微调 */
 
   align-self: flex-start;
 }
