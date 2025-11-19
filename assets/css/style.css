@@ -22,14 +22,20 @@ body {
 /* ============================= */
 
 .sidebar {
-  width: 275px;      
+  width: 275px;
   display: flex;
   flex-direction: column;
   gap: 18px;
-  padding-top: 6px;      
-  padding-left: 4px;    
+
+  padding-top: 6px;
+  padding-left: 4px;
   padding-right: 4px;
+
+  position: sticky;
+  top: 24px;          
+  align-self: flex-start;
 }
+
 
 
 .sidebar-photo {
