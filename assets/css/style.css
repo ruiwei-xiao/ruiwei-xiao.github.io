@@ -471,6 +471,20 @@ html {
 }
 
 
-section, main, sidebar {
+section, main {
   margin-top: 70px !important;
 }
+
+/* 让整个主布局成为 flex container */
+.wrapper {
+  display: flex;
+  align-items: center;   /* <-- 垂直居中关键 */
+}
+
+/* 左侧 header 垂直居中 */
+header {
+  position: sticky;
+  top: 50%;      
+  transform: translateY(-50%);  /* <-- 真正实现居中 */
+}
+
