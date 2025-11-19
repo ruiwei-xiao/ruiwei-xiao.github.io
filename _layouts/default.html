@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- ===================== -->
+    <!--       Sidebar         -->
+    <!-- ===================== -->
+    <aside class="sidebar">
+      <img src="/assets/img/profile.jpg" alt="Profile" class="sidebar-photo">
+
+      <h1 class="sidebar-name">Ruiwei Xiao</h1>
+      <p class="sidebar-subtitle">2nd Year PhD Student at CMU HCII</p>
+
+      <div class="sidebar-links">
+        <a href="https://scholar.google.com/citations?user=izYxC3EAAAAJ&hl=en" target="_blank">🎓 Google Scholar</a>
+        <a href="https://github.com/ruiweix" target="_blank">🐙 Github</a>
+        <a href="https://www.linkedin.com/in/rx98" target="_blank">🔗 LinkedIn</a>
+      </div>
+
+      <div class="sidebar-news">
+        <div class="sidebar-news-title">News</div>
+        <ul>
+          <li><span class="news-tag">2026</span> CHI paper (GenAI & Inequality) R&R 🎉</li>
+          <li><span class="news-tag">2025</span> AILIT4ALL workshops across 3 countries</li>
+          <li><span class="news-tag">2025</span> ActiveAI deployed in K-12 classrooms</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- ===================== -->
+    <!--      Main Content     -->
+    <!-- ===================== -->
+    <main class="main">
+      {{ content }}
+    </main>
+
+  </div>
+</body>
+</html>
