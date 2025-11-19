@@ -1,0 +1,104 @@
+/* ============================= */
+/*         Base Layout           */
+/* ============================= */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  background: #ffffff;
+  color: #1f2937;
+}
+
+.wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  gap: 50px;
+}
+
+/* ============================= */
+/*         Sidebar Styles        */
+/* ============================= */
+
+.sidebar {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-top: 10px;
+}
+
+.sidebar-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 26px;
+  object-fit: cover;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow:
+    0 4px 12px rgba(0,0,0,0.08),
+    0 1px 0 rgba(255,255,255,0.4);
+}
+
+.sidebar-name {
+  font-size: 1.9rem;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.sidebar-subtitle {
+  margin-top: -6px;
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.sidebar-links a {
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.sidebar-links a:hover {
+  text-decoration: underline;
+}
+
+/* News */
+
+.sidebar-news {
+  margin-top: 24px;
+}
+
+.sidebar-news-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.sidebar-news ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.sidebar-news li {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.news-tag {
+  background: #e5e7eb;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-siz
