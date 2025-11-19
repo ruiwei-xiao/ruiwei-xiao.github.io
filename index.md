@@ -409,68 +409,35 @@ Welcome to my personal homepage.
 
 <div class="projects-shell">
   <div class="projects-layout">
+
     <!-- 左侧：Project 列表 -->
     <div class="projects-list">
       <div class="projects-label">Projects</div>
 
       <button class="project-item is-active" data-project="activeai">
-        <h3>ActiveAI Platform</h3>
-        <p>AI literacy platform for K-12 students & teachers.</p>
+        <h3>ActiveAI × AI Literacy For All</h3>
+        <p>K–12 AI Literacy platform deployed in 3 countries.</p>
       </button>
 
-      <button class="project-item" data-project="pedagogical-prompting">
-        <h3>Pedagogical Prompting Tutor</h3>
-        <p>Helping novices learn how to prompt AI for learning.</p>
-      </button>
-
-      <button class="project-item" data-project="ai-literacy-assessment">
-        <h3>AI Literacy Assessment</h3>
-        <p>Measuring how people understand, use, and trust AI.</p>
+      <button class="project-item" data-project="pedagogical">
+        <h3>Pedagogical Prompting</h3>
+        <p>How novices learn to prompt AI for learning.</p>
       </button>
     </div>
 
-    <!-- 右侧：对应 paper 缩略图区域 -->
+    <!-- 右侧：ActiveAI 对应 Papers -->
     <div class="projects-detail">
 
-      <!-- ActiveAI 对应的 paper 缩略卡 -->
       <div class="project-panel is-active" data-project="activeai">
         <div class="project-panel-title">Related Papers</div>
 
         <div class="project-papers-grid">
-          <div class="project-paper-mini">
-            <div class="mini-tag">LAK 2025</div>
-            <div class="mini-title">ActiveAI: Enabling K-12 AI Literacy Education &amp; Analytics at Scale</div>
-          </div>
 
           <div class="project-paper-mini">
-            <div class="mini-tag">AAAI 2025</div>
-            <div class="mini-title">From Unseen Needs to Classroom Solutions…</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Pedagogical Prompting 对应的 paper 缩略卡 -->
-      <div class="project-panel" data-project="pedagogical-prompting">
-        <div class="project-panel-title">Related Papers</div>
-
-        <div class="project-papers-grid">
-          <div class="project-paper-mini">
-            <div class="mini-tag">CAEAI 2026</div>
-            <div class="mini-title">Improving Student–AI Interaction Through Pedagogical Prompting…</div>
+            <div class="mini-tag">CHI 2026</div>
+            <div class="mini-title">Do Teachers Dream of GenAI Widening Educational (In)Equality?</div>
           </div>
 
-          <div class="project-paper-mini">
-            <div class="mini-tag">CHI EA 2024</div>
-            <div class="mini-title">Exploring How Multiple Levels of GPT-Generated Programming Hints…</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- AI Literacy Assessment 对应的 paper 缩略卡 -->
-      <div class="project-panel" data-project="ai-literacy-assessment">
-        <div class="project-panel-title">Related Papers</div>
-
-        <div class="project-papers-grid">
           <div class="project-paper-mini">
             <div class="mini-tag">LAK 2026</div>
             <div class="mini-title">How to Assess AI Literacy: Misalignment Between Self-Reported and Objective-Based Measures</div>
@@ -480,12 +447,33 @@ Welcome to my personal homepage.
             <div class="mini-tag">SIGCSE 2025</div>
             <div class="mini-title">Generating AI Literacy MCQs: A Multi-Agent LLM Approach</div>
           </div>
+
+        </div>
+      </div>
+
+      <!-- 右侧：Pedagogical Prompting 对应 Papers -->
+      <div class="project-panel" data-project="pedagogical">
+        <div class="project-panel-title">Related Papers</div>
+
+        <div class="project-papers-grid">
+
+          <div class="project-paper-mini">
+            <div class="mini-tag">CAEAI 2026</div>
+            <div class="mini-title">Improving Student–AI Interaction Through Pedagogical Prompting</div>
+          </div>
+
+          <div class="project-paper-mini">
+            <div class="mini-tag">CHI EA 2024</div>
+            <div class="mini-title">Exploring GPT-Generated Programming Hints…</div>
+          </div>
+
         </div>
       </div>
 
     </div><!-- /projects-detail -->
-  </div><!-- /projects-layout -->
-</div><!-- /projects-shell -->
+
+  </div>
+</div>
 
 
 ## <span id="life"></span>Life
