@@ -3,18 +3,61 @@
 
 @import "{{ site.theme }}";
 
-.wrapper {
-  max-width: 1500px;
+/* Publication Card Style */
+.pub-card {
+  background: #f4f9fa;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 30px;
+  border: 1px solid #dce7ea;
+  display: flex;
+  gap: 20px;
 }
 
+.pub-left {
+  flex: 1;
+}
 
-@media screen and (min-width: 800px) {
-  
-  header {
-    width: 220px;         
-  }
+.pub-title {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #143c3c;
+}
 
-  section {
-    margin-left: 260px;    
-  }
+.pub-authors a {
+  color: #005b9f;
+  text-decoration: none;
+}
+
+.pub-authors a:hover {
+  text-decoration: underline;
+}
+
+.pub-tags span {
+  background: #c8e6ef;
+  padding: 4px 10px;
+  margin-right: 10px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.pub-buttons a {
+  background: #bde6ef;
+  padding: 6px 14px;
+  margin-right: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #143c3c;
+  font-weight: 600;
+}
+
+.pub-buttons a:hover {
+  background: #a3d9e7;
+}
+
+.pub-right img {
+  width: 180px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
 }
