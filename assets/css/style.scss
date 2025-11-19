@@ -26,19 +26,23 @@
 
 /* ========================= */
 /*       Publication Card    */
+/*       Apple Minimal       */
 /* ========================= */
 
 .pub-card {
-  background: #f4f9fa;
-  border-radius: 14px;
-  padding: 20px;
-  margin-bottom: 30px;
-  border: 1px solid #dce7ea;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px 26px;
+  margin-bottom: 28px;
+  border: 1px solid #e5e5e7;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.06);
 
   display: flex !important;
   align-items: flex-start !important;
-  gap: 20px;
+  gap: 22px;
   clear: both;
+
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }
 
 .pub-left {
@@ -47,26 +51,37 @@
 
 .pub-right {
   flex: 0 0 auto;
-  margin-left: auto;       /* 让右侧图像自动推到卡片最右边 */
-  align-self: center;      /* 图在卡片中垂直居中 */
+  margin-left: auto;
+  align-self: center;
 }
 
 .pub-right img {
-  width: 220px;            /* 图片更大更好看 */
-  border-radius: 10px;
-  border: 1px solid #ccc;
+  width: 220px;
+  border-radius: 16px;
+  border: 1px solid #e5e5e7;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.13);
   display: block;
-  float: none !important;  /* 强制清掉 float 干扰 */
+  float: none !important;
 }
 
+/* Title & text */
+
 .pub-title {
-  font-size: 1.4em;
-  font-weight: 700;
-  color: #143c3c;
+  font-size: 1.25rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.pub-authors {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-top: 4px;
 }
 
 .pub-authors a {
-  color: #005b9f;
+  color: #111827;
   text-decoration: none;
 }
 
@@ -74,35 +89,79 @@
   text-decoration: underline;
 }
 
+.pub-venue {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* Tags */
+
+.pub-tags {
+  margin-bottom: 10px;
+}
+
 .pub-tags span {
-  background: #c8e6ef;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 4px 10px;
-  margin-right: 10px;
-  border-radius: 6px;
-  font-family: monospace;
-  font-weight: bold;
+  margin-right: 8px;
+  border-radius: 999px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: #f5f5f7;
+  color: #4b5563;
+  border: 1px solid #e5e5e7;
+}
+
+/* Buttons → Apple 风格软胶囊 */
+
+.pub-buttons {
+  margin-top: 14px;
 }
 
 .pub-buttons a {
-  background: #bde6ef;
-  padding: 6px 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px 16px;
   margin-right: 10px;
-  border-radius: 6px;
-  text-decoration: none;
-  color: #143c3c;
-  font-weight: 600;
-  display: inline-block;
   margin-top: 6px;
+
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #f5f5f7;
+
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #111827;
+  text-decoration: none;
+
+  transition: background 0.15s ease, color 0.15s ease,
+    box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
 .pub-buttons a:hover {
-  background: #a3d9e7;
+  background: #111827;
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.25);
 }
 
-/* 小屏幕：卡片上下堆叠 */
+/* 小屏幕：上下排 */
+
 @media screen and (max-width: 768px) {
   .pub-card {
     flex-direction: column;
+  }
+  .pub-right {
+    margin-left: 0;
   }
   .pub-right img {
     width: 100%;
