@@ -474,17 +474,150 @@ html {
 section, main {
   margin-top: 70px !important;
 }
+/* ============================= */
+/*         Projects Section      */
+/* ============================= */
 
-/* 让整个主布局成为 flex container */
-.wrapper {
-  display: flex;
-  align-items: center;   /* <-- 垂直居中关键 */
+.projects-shell {
+  margin-top: 48px;
 }
 
-/* 左侧 header 垂直居中 */
-header {
-  position: sticky;
-  top: 50%;      
-  transform: translateY(-50%);  /* <-- 真正实现居中 */
+.projects-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.2fr);
+  gap: 32px;
+  align-items: stretch;
+}
+
+/* 左边：项目列表 */
+
+.projects-list {
+  background: #e5e7eb;
+  border-radius: 24px;
+  padding: 32px 28px;
+  box-shadow:
+    0 18px 36px rgba(0,0,0,0.08),
+    0 0 0 1px rgba(255,255,255,0.9) inset;
+}
+
+.projects-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #6b7280;
+  margin-bottom: 14px;
+}
+
+.project-item {
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: transparent;
+  padding: 10px 0 12px;
+  border-radius: 14px;
+  cursor: pointer;
+
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+
+.project-item h3 {
+  font-size: 1.02rem;
+  margin: 0 0 4px;
+  color: #111827;
+}
+
+.project-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* hover & active 状态 */
+
+.project-item:hover {
+  background: rgba(255,255,255,0.6);
+  transform: translateY(-1px);
+}
+
+.project-item.is-active {
+  background: #111827;
+  transform: translateY(-1px);
+}
+
+.project-item.is-active h3,
+.project-item.is-active p {
+  color: #f9fafb;
+}
+
+/* 右边：paper 缩略墙 */
+
+.projects-detail {
+  position: relative;
+  min-height: 220px;
+
+  background: #f3f4f6;
+  border-radius: 24px;
+  padding: 24px 22px;
+  box-shadow:
+    0 18px 36px rgba(15,23,42,0.10),
+    0 0 0 1px rgba(255,255,255,0.9) inset;
+}
+
+.project-panel {
+  display: none;
+  height: 100%;
+}
+
+.project-panel.is-active {
+  display: block;
+}
+
+.project-panel-title {
+  font-size: 0.86rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+
+/* 缩略卡：迷你版 Vision Pro 卡片 */
+
+.project-papers-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+}
+
+.project-paper-mini {
+  padding: 10px 14px;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at top left, rgba(191, 219, 254, 0.65), transparent 55%),
+    rgba(255,255,255,0.95);
+  border: 1px solid rgba(209,213,219,0.8);
+  box-shadow:
+    0 10px 24px rgba(15,23,42,0.15),
+    0 0 0 1px rgba(255,255,255,0.9) inset;
+}
+
+.project-paper-mini .mini-tag {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.project-paper-mini .mini-title {
+  font-size: 0.9rem;
+  color: #111827;
+}
+
+/* 小屏幕下上下堆叠 */
+
+@media (max-width: 900px) {
+  .projects-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
