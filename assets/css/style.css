@@ -135,20 +135,21 @@ body {
 
   border-radius: 26px;
 
-  /* 浅色渐变 + 玻璃感 */
+  /* ⛅️ 更浅、更空气感的 VisionOS 背景 */
   background:
-    radial-gradient(circle at top left, rgba(176, 196, 255, 0.75), transparent 55%),
-    radial-gradient(circle at bottom right, rgba(167, 243, 208, 0.7), transparent 60%),
-    linear-gradient(120deg, #f4f7ff, #f7fffb);
+    radial-gradient(circle at top left, rgba(210, 225, 255, 0.38), transparent 60%),
+    radial-gradient(circle at bottom right, rgba(205, 255, 235, 0.35), transparent 60%),
+    rgba(255, 255, 255, 0.88);  /* 白色为主，极浅玻璃 */
 
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 
-  border: 1px solid rgba(180, 188, 200, 0.55);
+  border: 1px solid rgba(210, 215, 230, 0.55);
 
+  /* 气垫悬浮阴影更柔一点 */
   box-shadow:
-    0 22px 45px rgba(15, 23, 42, 0.20),
-    0 4px 10px rgba(15, 23, 42, 0.06);
+    0 18px 38px rgba(0, 0, 0, 0.07),
+    0 4px 8px rgba(0, 0, 0, 0.04);
 
   display: flex;
   gap: 26px;
@@ -157,23 +158,24 @@ body {
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
-/* Hover 悬浮感 */
+/* hover 时微浮起 */
 .pub-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow:
-    0 28px 60px rgba(15, 23, 42, 0.26),
-    0 8px 18px rgba(15, 23, 42, 0.08);
+    0 24px 50px rgba(0, 0, 0, 0.10),
+    0 6px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* 内发光边框 */
+/* 内边缘亮光更柔 */
 .pub-card::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  border: 1px solid rgba(255,255,255,0.8);
+  border: 1px solid rgba(255,255,255,0.75);
   pointer-events: none;
 }
+
 
 .pub-left {
   flex: 1;
