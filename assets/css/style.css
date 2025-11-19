@@ -76,7 +76,7 @@ body {
 
 
 .social-row {
-  margin-top: 0px;   /* 原本是 12px，改成更紧凑 */
+  margin-top: -8px;   /* 原本是 12px，改成更紧凑 */
 }
 
 .sidebar-links {
