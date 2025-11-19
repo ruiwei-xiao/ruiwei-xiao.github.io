@@ -643,3 +643,38 @@ section, main {
 }
 
 
+/* ========================================= */
+/*      🌤️ VisionOS Soft Halo Sidebar        */
+/* ========================================= */
+
+.sidebar {
+  background:
+    radial-gradient(circle at top left, rgba(180, 200, 255, 0.45), transparent 60%),
+    radial-gradient(circle at bottom right, rgba(165, 255, 220, 0.35), transparent 70%),
+    rgba(255, 255, 255, 0.72); /* 主玻璃色 */
+
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+
+  border-radius: 32px;
+
+  /* 更轻盈的 VisionOS 阴影 */
+  box-shadow:
+    0 25px 45px rgba(0, 0, 0, 0.06),
+    0 4px 8px rgba(0, 0, 0, 0.04),
+    0 0 0 1px rgba(255,255,255,0.7) inset; /* 内亮边 */
+
+  padding: 34px 28px 40px;
+  transition: all 0.25s ease;
+}
+
+/* Hover 时有微妙浮起，非常 Vision Pro */
+.sidebar:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 32px 60px rgba(0, 0, 0, 0.08),
+    0 6px 12px rgba(0, 0, 0, 0.05),
+    0 0 0 1px rgba(255,255,255,0.8) inset;
+}
+
+
