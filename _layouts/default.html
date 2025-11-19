@@ -6,114 +6,65 @@
   <title>{{ page.title | default: site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
-  
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const items = document.querySelectorAll('.project-item');
-  const panels = document.querySelectorAll('.project-panel');
-
-  items.forEach(item => {
-    item.addEventListener('click', () => {
-      const key = item.dataset.project;
-
-      items.forEach(i => i.classList.toggle('is-active', i === item));
-      panels.forEach(p => p.classList.toggle('is-active', p.dataset.project === key));
-    });
-  });
-});
-</script>
 
 <body>
+  <!-- 只负责 Projects 页里小卡片切换 -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.project-item');
+    const panels = document.querySelectorAll('.project-panel');
+    if (!items.length) return; // 非 projects 页不用处理
+
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        const key = item.dataset.project;
+
+        items.forEach(i => i.classList.toggle('is-active', i === item));
+        panels.forEach(p => p.classList.toggle('is-active', p.dataset.project === key));
+      });
+    });
+  });
+  </script>
+
   <div class="wrapper">
 
     <!-- ===================== -->
     <!--       Sidebar         -->
     <!-- ===================== -->
     <aside class="sidebar">
-      <img src="https://www.cs.cmu.edu/~hcdl/images/ruiwei_xiao.jpg"
-           alt="Profile" class="sidebar-photo">
-    
-      <h1 class="sidebar-name">Ruiwei Xiao</h1>
-      <p class="sidebar-subtitle">2nd Year PhD Student at CMU HCII</p>
-      <p class="sidebar-role2">Co-Founder of ActiveAI</p>
-
-  
-    
-      <!-- Social icons row -->
-      <div class="social-row">
-        <a href="https://scholar.google.com/citations?user=izYxC3EAAAAJ" target="_blank">
-          <img src="https://img.icons8.com/ios-filled/50/graduation-cap.png" alt="Google Scholar"/>
-        </a>
-    
-        <a href="https://linkedin.com/in/rx98" target="_blank">
-          <img src="https://img.icons8.com/ios-filled/50/linkedin.png" alt="LinkedIn"/>
-        </a>
-    
-        <a href="https://github.com/Ruiwei-Xiao" target="_blank">
-          <img src="https://img.icons8.com/ios-glyphs/50/github.png" alt="GitHub"/>
-        </a>
-    
-        <a href="https://hcii.cmu.edu/people/ruiwei-xiao" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/81/HCII_logo.svg/1099px-HCII_logo.svg.png" alt="HCII"/>
-        </a>
-    
-        <!-- CV icon -->
-        <a href="/assets/Ruiwei_Xiao_CV.pdf" target="_blank">
-          <img src="https://img.icons8.com/ios-filled/50/resume.png" alt="CV"/>
-        </a>
-      </div>
-    
-      <div class="sidebar-news">
-        <div class="sidebar-news-title">NEWS</div>
-        <ul class="news-list-small">
-          <li>
-            <span class="news-tag">2025-11</span>
-            ActiveAI partners with CSForALL; launches Hour of AI Activity 🎉
-          </li>
-          <li>
-            <span class="news-tag">2025-10</span>
-            One first-author paper passed CHI’26 R&R 🎉
-          </li>
-          <li>
-            <span class="news-tag">2025-10</span>
-            One first-author paper accepted to AAAI’26 🎉
-          </li>
-          <li>
-            <span class="news-tag">2025-09</span>
-            One co-first-author paper accepted to SIGCSE’26 🎉
-          </li>
-        </ul>
-      </div>
-
+      <!-- 这里保持你现在的 sidebar（头像、名字、links、news 等） -->
+      <!-- ... -->
     </aside>
-
 
     <!-- ===================== -->
     <!--      Main Content     -->
     <!-- ===================== -->
     <main class="main">
+      <!-- 顶部极简导航：指向不同页面 -->
       <nav class="top-nav">
         <div class="nav-content">
           <div class="nav-left">
             <span class="nav-logo"></span>
           </div>
           <div class="nav-center">
-            <a href="#about" class="nav-link is-active">About</a>
-            <a href="#publications" class="nav-link">Publications</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <!-- 以后如果有 Life，可以加：
-            <a href="#life" class="nav-link">Life</a>
-            -->
+            <a href="{{ '/' | relative_url }}"
+               class="nav-link{% if page.url == '/' %} is-active{% endif %}">
+              About
+            </a>
+            <a href="{{ '/publications/' | relative_url }}"
+               class="nav-link{% if page.url == '/publications/' %} is-active{% endif %}">
+              Publications
+            </a>
+            <a href="{{ '/projects/' | relative_url }}"
+               class="nav-link{% if page.url == '/projects/' %} is-active{% endif %}">
+              Projects
+            </a>
           </div>
         </div>
       </nav>
 
-
-    
       {{ content }}
     </main>
-
-
   </div>
 </body>
 </html>
