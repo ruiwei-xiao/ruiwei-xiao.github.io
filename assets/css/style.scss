@@ -23,78 +23,92 @@
     max-width: 1000px;     /* 右栏内容宽度 */
   }
 }
+
 /* ============================= */
-/*      Apple Pro Max Cards      */
+/*     Vision Pro Glass Cards    */
 /* ============================= */
 
 .pub-card {
-  background: #ffffff;
-  border-radius: 22px;
-  padding: 28px 32px;
+  position: relative;
   margin-bottom: 32px;
-  border: 1px solid rgba(0,0,0,0.06);
+  padding: 24px 26px;
 
-  /* Apple 多层阴影 */
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  background: radial-gradient(circle at top left, rgba(148, 163, 255, 0.16), transparent 45%),
+              radial-gradient(circle at bottom right, rgba(45, 212, 191, 0.18), transparent 50%),
+              rgba(15, 23, 42, 0.88); /* 深色玻璃底 */
+
   box-shadow:
-    0 2px 4px rgba(0,0,0,0.04),
-    0 12px 28px rgba(0,0,0,0.08),
-    0 0 1px rgba(0,0,0,0.1);
+    0 18px 40px rgba(15, 23, 42, 0.7),
+    0 0 0.5px rgba(255, 255, 255, 0.2);
 
   display: flex !important;
   align-items: flex-start !important;
-  gap: 28px;
+  gap: 24px;
   clear: both;
 
+  color: #e5e7eb;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
                system-ui, sans-serif;
 }
 
-.pub-left {
-  flex: 1 1 auto;
+/* 细微内发光边 */
+.pub-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  pointer-events: none;
 }
 
+.pub-left {
+  flex: 1 1 auto;
+  position: relative;
+  z-index: 1;
+}
 
-/* Right side image — Apple promo style */
 .pub-right {
   flex: 0 0 auto;
   margin-left: auto;
   align-self: center;
+  position: relative;
+  z-index: 1;
 }
 
+/* 图片：Vision Pro promo style */
 .pub-right img {
-  width: 240px;
+  width: 230px;
   border-radius: 20px;
-
-  /* Apple 图片投影 */
-  box-shadow:
-    0 4px 12px rgba(0,0,0,0.08),
-    0 24px 48px rgba(0,0,0,0.12);
-
-  border: 1px solid rgba(0,0,0,0.04);
-  background: #fafafa;
   display: block;
   float: none !important;
-}
 
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  box-shadow:
+    0 12px 35px rgba(15, 23, 42, 0.9),
+    0 0 0.5px rgba(255, 255, 255, 0.4);
+  background: radial-gradient(circle at top left, #1f2937, #020617);
+}
 
 /* Title */
 .pub-title {
-  font-size: 1.32rem;
+  font-size: 1.26rem;
   font-weight: 650;
-  letter-spacing: -0.012em;
-  color: #111;
-  margin-bottom: 10px;
+  letter-spacing: -0.013em;
+  color: #f9fafb;
+  margin-bottom: 8px;
 }
 
 /* Authors */
 .pub-authors {
-  font-size: 0.97rem;
-  color: #475569;
-  line-height: 1.45;
+  font-size: 0.94rem;
+  color: #cbd5f5;
+  line-height: 1.5;
 }
 
 .pub-authors a {
-  color: #111827;
+  color: #e5e7eb;
   text-decoration: none;
 }
 
@@ -104,14 +118,13 @@
 
 /* Venue */
 .pub-venue {
-  font-size: 0.92rem;
-  color: #6b7280;
+  font-size: 0.9rem;
+  color: #9ca3af;
   margin-top: 8px;
   font-style: italic;
 }
 
-
-/* Tags — macOS style rounded pills */
+/* Tags – 霓虹软胶囊 */
 .pub-tags {
   margin-bottom: 14px;
 }
@@ -119,62 +132,76 @@
 .pub-tags span {
   display: inline-flex;
   align-items: center;
-  padding: 5px 12px;
-
+  padding: 4px 11px;
   margin-right: 8px;
-  border-radius: 1000px;
 
+  border-radius: 999px;
   font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 
-  background: #f2f2f7;   /* macOS system gray */
-  color: #3a3a3c;
-  border: 1px solid rgba(0,0,0,0.05);
+  background: radial-gradient(circle at top left, rgba(129, 140, 248, 0.5), rgba(15, 23, 42, 0.9));
+  color: #e5e7eb;
+  border: 1px solid rgba(129, 140, 248, 0.55);
+  box-shadow: 0 0 16px rgba(129, 140, 248, 0.7);
 }
 
-
-/* Buttons — Apple frosted style */
+/* Buttons – Vision Pro 玻璃按钮 */
 .pub-buttons {
   margin-top: 18px;
 }
 
 .pub-buttons a {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   padding: 7px 18px;
-  margin-right: 12px;
+  margin-right: 10px;
+  margin-top: 6px;
 
   border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
 
-  background: rgba(0,0,0,0.03);
-  backdrop-filter: saturate(180%) blur(20px); /* Apple frosted glass */
-  border: 1px solid rgba(0,0,0,0.08);
+  background: radial-gradient(circle at top left,
+              rgba(148, 163, 184, 0.18),
+              rgba(15, 23, 42, 0.96));
+  color: #e5e7eb;
 
   font-size: 0.85rem;
   font-weight: 500;
-  color: #1c1c1e;
   text-decoration: none;
 
-  transition: all 0.18s ease;
-}
-
-/* Hover → 深色填充 + 增强阴影 */
-.pub-buttons a:hover {
-  background: #1c1c1e;
-  color: white;
-  border-color: transparent;
   box-shadow:
-    0 6px 12px rgba(0,0,0,0.25),
-    0 0 1px rgba(255,255,255,0.2);
+    0 10px 25px rgba(15, 23, 42, 0.9),
+    0 0 0.5px rgba(255, 255, 255, 0.3);
+
+  backdrop-filter: blur(26px) saturate(180%);
+  -webkit-backdrop-filter: blur(26px) saturate(180%);
+
+  transition: transform 0.16s ease,
+              box-shadow 0.16s ease,
+              background 0.16s ease,
+              border-color 0.16s ease;
 }
 
+.pub-buttons a:hover {
+  transform: translateY(-1px);
+  background: radial-gradient(circle at top left,
+              rgba(56, 189, 248, 0.9),
+              rgba(15, 23, 42, 1));
+  border-color: rgba(59, 130, 246, 0.9);
+  box-shadow:
+    0 14px 32px rgba(15, 23, 42, 0.95),
+    0 0 18px rgba(56, 189, 248, 0.9);
+}
 
 /* Mobile layout */
 @media screen and (max-width: 768px) {
   .pub-card {
     flex-direction: column;
-    padding: 22px 20px;
+    padding: 20px 18px;
   }
   .pub-right {
     margin-left: 0;
@@ -184,3 +211,4 @@
     width: 100%;
   }
 }
+
