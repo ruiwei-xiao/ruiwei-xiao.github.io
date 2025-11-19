@@ -24,7 +24,7 @@ body {
 /* ============================= */
 
 .sidebar {
-  width: 275px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   gap: 18px;
