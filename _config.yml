@@ -3,37 +3,31 @@ plugins:
   - jekyll-remote-theme
 
 title: Ruiwei Xiao
-logo:
+logo: /assets/img/profile.jpg
 
 description: >
-  2nd Year PhD Student at CMU HCII  
-  <br/><br/>
+  <div class="sidebar-subtitle">2nd Year PhD Student at CMU HCII</div>
 
-  <p style="line-height: 1.8;">
-
-    <a href="https://scholar.google.com/citations?user=izYxC3EAAAAJ&hl=en" target="_blank" style="text-decoration:none;">
-      <img src="https://img.icons8.com/ios-filled/26/4a90e2/school.png" style="vertical-align:middle;"/> 
-      &nbsp;Google Scholar
+  <div class="sidebar-links">
+    <a href="https://scholar.google.com/citations?user=izYxC3EAAAAJ&hl=en" target="_blank">
+      <span class="sidebar-icon">🎓</span> Google Scholar
+    </a><br/>
+    <a href="https://github.com/ruiweix" target="_blank">
+      <span class="sidebar-icon">🐙</span> Github
+    </a><br/>
+    <a href="https://www.linkedin.com/in/rx98" target="_blank">
+      <span class="sidebar-icon">🔗</span> LinkedIn
     </a>
-    <br/>
+  </div>
 
-    <a href="https://github.com/ruiweix" target="_blank" style="text-decoration:none;">
-      <img src="https://img.icons8.com/ios-glyphs/26/4a90e2/github.png" style="vertical-align:middle;"/> 
-      &nbsp;Github
-    </a>
-    <br/>
+  <div class="sidebar-news">
+    <div class="sidebar-news-title">News</div>
+    <ul>
+      <li><span class="news-tag">2026</span> CHI paper (GenAI &amp; inequality) R&amp;R 🎉</li>
+      <li><span class="news-tag">2025</span> AILIT4ALL workshops across 3 countries</li>
+      <li><span class="news-tag">2025</span> ActiveAI deployed in K-12 classrooms</li>
+    </ul>
+  </div>
 
-    <a href="https://twitter.com/YOUR_TWITTER" target="_blank" style="text-decoration:none;">
-      <img src="https://img.icons8.com/ios-filled/26/4a90e2/twitter.png" style="vertical-align:middle;"/> 
-      &nbsp;Twitter
-    </a>
-    <br/>
-
-    <a href="https://www.linkedin.com/in/rx98" target="_blank" style="text-decoration:none;">
-      <img src="https://img.icons8.com/ios-filled/26/0A66C2/linkedin.png" style="vertical-align:middle;"/> 
-      &nbsp;LinkedIn
-    </a>
-
-  </p>
 
 theme: jekyll-theme-minimal
