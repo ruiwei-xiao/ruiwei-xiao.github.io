@@ -440,3 +440,7 @@ html {
     height: 64px;
   }
 }
+
+section, main {
+  margin-top: 70px !important;
+}
