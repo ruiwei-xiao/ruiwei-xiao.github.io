@@ -25,128 +25,108 @@
 }
 
 /* ============================= */
-/*     Vision Pro Sidebar Card   */
+/*   Minimal Vision Pro Sidebar  */
 /* ============================= */
 
 header {
-  position: static;
-
-  padding: 24px 20px;
-  border-radius: 24px;
-
-  border: 1px solid rgba(148,163,184,0.32);
-  background:
-    radial-gradient(circle at top left, rgba(148,163,255,0.22), transparent 55%),
-    radial-gradient(circle at bottom right, rgba(45,212,191,0.22), transparent 55%),
-    rgba(15,23,42,0.92);
-
-  box-shadow:
-    0 18px 40px rgba(15,23,42,0.85),
-    0 0 1px rgba(255,255,255,0.25);
-
-  color: #e5e7eb;
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
-               system-ui, sans-serif;
+  position: sticky;
+  top: 40px;  /* 可以改成 0，看你喜欢 */
+  padding: 10px 0;
+  background: transparent;  /* ❗ 不再是卡片 */
+  border: none;
+  box-shadow: none;
 
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
+
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+               system-ui, sans-serif;
+  color: #1f2937; /* 深灰 — Apple 风 */
 }
 
-/* 头像区域：用 site.logo 渲染出来的图片 */
-header .site-logo {
+/* 头像（依然可以存在，但不再放在卡片里） */
+header img {
   width: 120px;
   height: 120px;
-  border-radius: 28px;
+  border-radius: 26px;
   object-fit: cover;
-  margin-bottom: 10px;
 
-  border: 1px solid rgba(148,163,184,0.5);
+  border: 1px solid rgba(0,0,0,0.08);
   box-shadow:
-    0 12px 32px rgba(15,23,42,0.9),
-    0 0 0.5px rgba(255,255,255,0.55);
+     0 4px 12px rgba(0,0,0,0.06),
+     0 1px 0 rgba(255,255,255,0.5);
 }
 
-/* 名字 & 副标题 */
+/* 名字 */
 header h1 {
-  font-size: 1.6rem;
+  font-size: 1.85rem;
   font-weight: 700;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   margin: 0;
-  color: #f9fafb;
+  color: #111;
 }
 
+/* 副标题 */
 .sidebar-subtitle {
-  font-size: 0.95rem;
-  color: #cbd5f5;
+  font-size: 1rem;
+  color: #4b5563;
 }
 
-/* 链接列表 */
-.sidebar-links {
-  margin-top: 8px;
-  font-size: 0.93rem;
-}
-
+/* 链接清单 — 清爽版 */
 .sidebar-links a {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 6px;
 
-  color: #e5e7eb;
+  color: #2563eb;  /* Apple 蓝 */
   text-decoration: none;
+  font-size: 1rem;
   padding: 3px 0;
 }
 
 .sidebar-links a:hover {
-  color: #a5b4fc;
+  text-decoration: underline;
 }
 
+/* 图标精简 */
 .sidebar-icon {
-  font-size: 1rem;
+  font-size: 1.05rem;
 }
 
-/* News 区域靠下对齐 */
+/* News 部分 — 无卡片，无边框 */
 .sidebar-news {
-  margin-top: auto;   /* 把 news 推到 header 的底部 */
-  padding-top: 10px;
-  border-top: 1px solid rgba(148,163,184,0.35);
-  font-size: 0.85rem;
+  margin-top: 24px;
 }
 
 .sidebar-news-title {
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #e5e7eb;
+  color: #6b7280;
   margin-bottom: 6px;
 }
 
 .sidebar-news ul {
-  list-style: none;
   padding-left: 0;
-  margin: 0;
+  list-style: none;
 }
 
 .sidebar-news li {
-  margin-bottom: 6px;
-  color: #d1d5db;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #374151;
 }
 
-/* 小小的年份 tag */
 .news-tag {
-  display: inline-block;
-  min-width: 3.1em;
-  padding: 2px 6px;
-  margin-right: 6px;
-
+  font-size: 0.7rem;
+  background: #e5e7eb;
+  padding: 2px 8px;
   border-radius: 999px;
-  background: rgba(15,23,42,0.9);
-  border: 1px solid rgba(148,163,184,0.6);
-  color: #e5e7eb;
-  font-size: 0.72rem;
-  text-align: center;
+  margin-right: 6px;
+  color: #374151;
 }
+
 
 
 
