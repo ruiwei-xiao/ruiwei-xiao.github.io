@@ -3,6 +3,10 @@
 
 @import "{{ site.theme }}";
 
+.wrapper {
+  max-width: 90% !important;
+}
+
 @media screen and (min-width: 860px) {
   header {
     width: 220px;       
