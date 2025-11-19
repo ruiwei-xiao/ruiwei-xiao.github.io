@@ -15,7 +15,9 @@ body {
   padding: 40px 20px;
   display: flex;
   gap: 50px;
+  min-height: 100vh;
 }
+
 
 /* ============================= */
 /*         Sidebar Styles        */
@@ -32,9 +34,11 @@ body {
   padding-right: 4px;
 
   position: sticky;
-  top: 24px;          
+  top: calc(50vh - 220px);  /* 220 大概是 sidebar 半高度，可以微调 */
+
   align-self: flex-start;
 }
+
 
 
 
