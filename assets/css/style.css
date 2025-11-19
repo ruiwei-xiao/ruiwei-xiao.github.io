@@ -101,4 +101,153 @@ body {
   background: #e5e7eb;
   padding: 2px 8px;
   border-radius: 999px;
-  font-siz
+  font-size: 0.72rem;
+  margin-right: 6px;
+  color: #374151;
+}
+
+/* ============================= */
+/*      Main Content Area        */
+/* ============================= */
+
+.main {
+  flex: 1;
+}
+
+/* ============================= */
+/*    Vision Pro Publication     */
+/* ============================= */
+
+.pub-card {
+  position: relative;
+  margin-bottom: 32px;
+  padding: 26px 28px;
+
+  border-radius: 24px;
+  border: 1px solid rgba(148,163,184,0.28);
+
+  background: radial-gradient(circle at top left, rgba(148,163,255,0.18), transparent 45%),
+              radial-gradient(circle at bottom right, rgba(45,212,191,0.18), transparent 50%),
+              rgba(15,23,42,0.88);
+
+  box-shadow:
+    0 18px 40px rgba(15,23,42,0.7),
+    0 0 0.5px rgba(255,255,255,0.25);
+
+  display: flex;
+  gap: 26px;
+  color: #e5e7eb;
+}
+
+/* Inner glow border */
+.pub-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(255,255,255,0.08);
+  pointer-events: none;
+}
+
+.pub-left {
+  flex: 1;
+}
+
+.pub-right img {
+  width: 230px;
+  border-radius: 20px;
+  border: 1px solid rgba(148,163,184,0.5);
+  box-shadow:
+    0 12px 32px rgba(15,23,42,0.9),
+    0 0 0.5px rgba(255,255,255,0.6);
+}
+
+/* Titles */
+.pub-title {
+  font-size: 1.28rem;
+  font-weight: 650;
+  margin-bottom: 8px;
+  color: #f9fafb;
+}
+
+/* Authors */
+.pub-authors {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #dbeafe;
+}
+
+.pub-authors a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.pub-authors a:hover {
+  text-decoration: underline;
+}
+
+/* Venue */
+.pub-venue {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* Tags */
+.pub-tags span {
+  display: inline-block;
+  padding: 4px 12px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+
+  border-radius: 999px;
+  background: rgba(129,140,248,0.4);
+  color: #fff;
+  border: 1px solid rgba(129,140,248,0.6);
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Buttons */
+.pub-buttons a {
+  display: inline-block;
+  padding: 7px 16px;
+  margin-right: 8px;
+
+  border-radius: 999px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+  text-decoration: none;
+
+  backdrop-filter: blur(20px);
+}
+
+.pub-buttons a:hover {
+  background: rgba(56,189,248,0.8);
+  border-color: transparent;
+}
+
+/* Responsive */
+@media (max-width: 780px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .pub-card {
+    flex-direction: column;
+  }
+
+  .pub-right img {
+    width: 100%;
+    margin-top: 12px;
+  }
+}
