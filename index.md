@@ -475,7 +475,3 @@ Welcome to my personal homepage.
   </div>
 </div>
 
-
-## <span id="life"></span>Life
-...
-
