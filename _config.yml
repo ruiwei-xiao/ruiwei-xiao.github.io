@@ -1,33 +1,4 @@
-remote_theme: pages-themes/minimal@v0.2.0
-plugins:
-  - jekyll-remote-theme
-
 title: Ruiwei Xiao
-logo: https://www.cs.cmu.edu/~hcdl/images/ruiwei_xiao.jpg
-
-description: >
-  <div class="sidebar-subtitle">2nd Year PhD Student at CMU HCII</div>
-
-  <div class="sidebar-links">
-    <a href="https://scholar.google.com/citations?user=izYxC3EAAAAJ&hl=en" target="_blank">
-      <span class="sidebar-icon">🎓</span> Google Scholar
-    </a><br/>
-    <a href="https://github.com/ruiweix" target="_blank">
-      <span class="sidebar-icon">🐙</span> Github
-    </a><br/>
-    <a href="https://www.linkedin.com/in/rx98" target="_blank">
-      <span class="sidebar-icon">🔗</span> LinkedIn
-    </a>
-  </div>
-
-  <div class="sidebar-news">
-    <div class="sidebar-news-title">News</div>
-    <ul>
-      <li><span class="news-tag">2026</span> CHI paper (GenAI &amp; inequality) R&amp;R 🎉</li>
-      <li><span class="news-tag">2025</span> AILIT4ALL workshops across 3 countries</li>
-      <li><span class="news-tag">2025</span> ActiveAI deployed in K-12 classrooms</li>
-    </ul>
-  </div>
-
-
-theme: jekyll-theme-minimal
+description: Personal Website
+markdown: kramdown
+highlighter: rouge
