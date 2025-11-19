@@ -3,17 +3,24 @@
 
 @import "{{ site.theme }}";
 
+/* ========================= */
+/*       A. Modern Wide      */
+/* ========================= */
+
 .wrapper {
-  max-width: 90% !important;
+  max-width: 1300px !important;   /* A 版：现代大气布局 */
+  padding-left: 20px !important;
+  padding-right: 20px !important;
 }
 
+/* 左侧栏宽度（Minimal 使用 header + section 布局） */
 @media screen and (min-width: 860px) {
   header {
-    width: 220px;       
+    width: 220px;          /* 左栏宽度 */
   }
   section {
-    margin-left: 260px;  
-    max-width: 1000px;   
+    margin-left: 260px;    /* 右栏开始位置 */
+    max-width: 1000px;     /* 右栏内容宽度 */
   }
 }
 
@@ -40,19 +47,59 @@
 
 .pub-right {
   flex: 0 0 auto;
-  margin-left: auto;       /* 把右侧区域推到最右边 */
-  align-self: center;      /* 让图片在卡片中垂直居中一点 */
+  margin-left: auto;       /* 让右侧图像自动推到卡片最右边 */
+  align-self: center;      /* 图在卡片中垂直居中 */
 }
 
 .pub-right img {
-  width: 220px;            /* 图稍微大一点 */
+  width: 220px;            /* 图片更大更好看 */
   border-radius: 10px;
   border: 1px solid #ccc;
   display: block;
-  float: none !important;  /* 防止被主题的 float 影响 */
+  float: none !important;  /* 强制清掉 float 干扰 */
 }
 
-/* 小屏幕时上下堆叠，避免挤在一行里 */
+.pub-title {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #143c3c;
+}
+
+.pub-authors a {
+  color: #005b9f;
+  text-decoration: none;
+}
+
+.pub-authors a:hover {
+  text-decoration: underline;
+}
+
+.pub-tags span {
+  background: #c8e6ef;
+  padding: 4px 10px;
+  margin-right: 10px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.pub-buttons a {
+  background: #bde6ef;
+  padding: 6px 14px;
+  margin-right: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #143c3c;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 6px;
+}
+
+.pub-buttons a:hover {
+  background: #a3d9e7;
+}
+
+/* 小屏幕：卡片上下堆叠 */
 @media screen and (max-width: 768px) {
   .pub-card {
     flex-direction: column;
