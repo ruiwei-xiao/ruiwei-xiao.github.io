@@ -3,7 +3,8 @@ plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 title: Ruiwei Xiao
 logo:
-description: >
+description: > 
+2nd Year PhD Student at CMU HCII
   <a href="https://www.linkedin.com/in/rx98" target="_blank">
     <img src="https://img.icons8.com/ios-filled/30/0077B5/linkedin.png" alt="LinkedIn"/>
   </a>
