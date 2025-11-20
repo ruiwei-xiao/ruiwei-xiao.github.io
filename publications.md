@@ -32,11 +32,6 @@ permalink: /publications/
   </div>
 </div>
 
-  <div class="pub-right">
-    <img src="/assets/img/paper1.png">
-  </div>
-</div>
-
 <!-- [C.2] CAEAI 2026 -->
 <div class="pub-card">
   <div class="pub-left">
