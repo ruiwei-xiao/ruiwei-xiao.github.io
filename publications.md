@@ -19,7 +19,7 @@ permalink: /publications/
       <strong>Ruiwei Xiao</strong>, Qing Xiao, Xinying Hou, Phenyo Phemelo Moletsane, Hanqi Li, Hong Shen, John Stamper
     </div>
     <div class="pub-venue">
-      Proceedings of CHI 2026 (to appear)
+      Proceedings of CHI 2026 (to appear after R&R)
     </div>
     <div class="pub-buttons">
       <a href="https://arxiv.org/abs/2506.19107" target="_blank">PDF</a>
@@ -28,7 +28,8 @@ permalink: /publications/
     </div>
   </div>
   <div class="pub-right">
-    <img src="/assets/img/c1_chi26.png" alt="GenAI Educational (In)Equality paper teaser">
+    <img src="https://drive.google.com/uc?export=view&id=110hAY9x3gEbiXzJIS55Q_Rub_diRBMV8"
+     alt="GenAI Educational (In)Equality paper teaser">
   </div>
 </div>
 
@@ -45,7 +46,7 @@ permalink: /publications/
       <strong>Ruiwei Xiao</strong>, Xinying Hou*, Runlong Ye*, Majeed Kazemitabaar*, Nicholas Diana, Michael Liut, John Stamper
     </div>
     <div class="pub-venue">
-      Computers &amp; Education: Artificial Intelligence (CAEAI’26). Under review.
+      Under Review Preprint.
     </div>
     <div class="pub-buttons">
       <a href="https://arxiv.org/abs/2506.19107" target="_blank">PDF</a>
@@ -71,7 +72,7 @@ permalink: /publications/
       <strong>Ruiwei Xiao*</strong>, Shan Zhang*, Anthony F. Botelho, Guanze Liao, Thomas K. F. Chiu, John Stamper, Kenneth R. Koedinger
     </div>
     <div class="pub-venue">
-      Proceedings of the 16th International Learning Analytics and Knowledge Conference (LAK’26). Under review.
+      Under Review Preprint.
     </div>
     <div class="pub-buttons">
       <a href="#">PDF</a>
