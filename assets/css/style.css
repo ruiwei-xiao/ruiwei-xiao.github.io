@@ -536,134 +536,82 @@ section, main {
   margin-top: 70px !important;
 }
 /* ============================= */
-/*         Projects Section      */
+/*        Projects Layout        */
 /* ============================= */
 
 .projects-shell {
-  margin-top: 60px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
 }
 
-.projects-layout {
+/* 每个 Project 一行：左大块 + 右侧论文列 */
+.project-row {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.3fr);
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
   gap: 32px;
-  align-items: stretch;
+  align-items: flex-start;
 }
 
-/* 左边：项目列表 */
-
-.projects-list {
-  background: #f3f4f6;
-  border-radius: 22px;
-  padding: 28px 26px;
-  box-shadow:
-    0 16px 36px rgba(0,0,0,0.06),
-    0 0 0 1px rgba(255,255,255,0.9) inset;
+/* 左侧大 Project 卡（现在是灰色占位，可以之后换成渐变 / 图） */
+.project-hero {
+  min-height: 260px;
+  border-radius: 28px;
+  background: #e5e5e5;         /* 先用你截图里的灰色 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 32px;
 }
 
-.projects-label {
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: #6b7280;
-  margin-bottom: 16px;
+.project-hero-inner {
+  max-width: 80%;
 }
 
-.project-item {
-  width: 100%;
-  border: none;
-  background: transparent;
-  text-align: left;
-  padding: 12px 10px;
-  border-radius: 14px;
-  cursor: pointer;
-  transition: background 0.18s ease, transform 0.18s ease;
+.project-hero h3 {
+  margin: 0 0 8px;
+  font-size: 1.4rem;
 }
 
-.project-item h3 {
-  margin: 0;
-  font-size: 1.04rem;
-  color: #111827;
-}
-
-.project-item p {
-  margin: 4px 0 0;
-  font-size: 0.9rem;
+.project-hero p {
+  margin: 0 0 12px;
+  font-size: 0.98rem;
   color: #4b5563;
 }
 
-.project-item:hover {
-  background: rgba(255,255,255,0.7);
-  transform: translateY(-2px);
+.project-hero ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #4b5563;
+  font-size: 0.95rem;
 }
 
-.project-item.is-active {
-  background: #111827;
-  transform: translateY(-2px);
-}
-
-.project-item.is-active h3,
-.project-item.is-active p {
-  color: white;
-}
-
-/* 右侧内容区 */
-
-.projects-detail {
-  background: #f9fafb;
-  border-radius: 22px;
-  padding: 26px 26px;
-  min-height: 240px;
-  box-shadow:
-    0 16px 36px rgba(0,0,0,0.06),
-    0 0 0 1px rgba(255,255,255,0.9) inset;
-}
-
-.project-panel {
-  display: none;
-}
-
-.project-panel.is-active {
-  display: block;
-}
-
-.project-panel-title {
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: #6b7280;
-  margin-bottom: 14px;
-}
-
-/* 缩略卡墙 */
-
-.project-papers-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-}
-
-.project-paper-mini {
-  padding: 12px 14px;
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(12px);
-  border-radius: 18px;
-  border: 1px solid rgba(209,213,219,0.6);
-  box-shadow:
-    0 12px 24px rgba(0,0,0,0.08),
-    0 0 0 1px rgba(255,255,255,0.9) inset;
-}
-
-.mini-tag {
+/* 小小的 Project pill */
+.project-pill {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 3px 10px;
+  border-radius: 999px;
   font-size: 0.75rem;
-  text-transform: uppercase;
-  color: #6b7280;
   letter-spacing: 0.12em;
-  margin-bottom: 4px;
+  text-transform: uppercase;
+  background: #f3f4f6;
+  color: #6b7280;
 }
 
-.mini-title {
-  font-size: 0.9rem;
-  color: #111827;
+/* 右侧：复用 pub-card 样式，只调间距即可 */
+.project-related .pub-card {
+  margin-bottom: 20px;
 }
 
+/* 响应式：窄屏时改为上下堆叠 */
+@media (max-width: 900px) {
+  .project-row {
+    grid-template-columns: 1fr;
+  }
+
+  .project-hero {
+    min-height: 220px;
+  }
+}
