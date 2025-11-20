@@ -63,7 +63,7 @@ permalink: /publications/
 <div class="pub-card">
   <div class="pub-left">
     <div class="pub-tags">
-      <span>[P.1]</span><span>LAK 2026</span>
+      <span>[P.1]</span><span>Preprint 2026</span>
     </div>
     <div class="pub-title">
       How to Assess AI Literacy: Misalignment Between Self-Reported and Objective-Based Measures.
@@ -81,7 +81,7 @@ permalink: /publications/
     </div>
   </div>
   <div class="pub-right">
-    <img src="/assets/img/c3_lak26.png" alt="AI literacy assessment paper teaser">
+    <img src="/assets/img/lak26.png" alt="AI literacy assessment paper teaser">
   </div>
 </div>
 
