@@ -4,7 +4,7 @@ title: Publications – Ruiwei Xiao
 permalink: /publications/
 ---
 
-<h2>Publications</h2>
+<h2>Selected Publications</h2>
 
 <!-- [C.6] CHI 2026 -->
 <div class="pub-card">
@@ -37,7 +37,7 @@ permalink: /publications/
 <div class="pub-card">
   <div class="pub-left">
     <div class="pub-tags">
-      <span>[P.2]</span><span>CAEAI 2026</span>
+      <span>[P.2]</span><span>Preprint 2026</span>
     </div>
     <div class="pub-title">
       Improving Student–AI Interaction Through Pedagogical Prompting: An Example in Computer Science Education.
@@ -55,7 +55,7 @@ permalink: /publications/
     </div>
   </div>
   <div class="pub-right">
-    <img src="/assets/img/chi26equality.png" alt="Pedagogical prompting paper teaser">
+    <img src="/assets/img/pedagogicalprompting.png" alt="Pedagogical prompting paper teaser">
   </div>
 </div>
 
