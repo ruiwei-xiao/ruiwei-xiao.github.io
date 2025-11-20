@@ -330,29 +330,36 @@ html {
   align-self: flex-start;
 }
 
+/* --- Bigger, Rounded-Rectangle paper teaser preview --- */
+
 .pub-right img {
-  width: 56px;
-  height: 56px;
-  border-radius: 999px;
+  width: 180px;         /* 大很多 */
+  height: 140px;        /* 稍宽的比例，视觉更高级 */
+  border-radius: 24px;  /* 大圆角矩形 */
   object-fit: cover;
 
   border: 2px solid rgba(255,255,255,0.9);
+
+  /* VisionOS style layered glow */
   box-shadow:
-    0 0 0 4px rgba(180, 196, 255, 0.55),
-    0 10px 25px rgba(15, 23, 42, 0.35);
+    0 0 0 6px rgba(180, 196, 255, 0.35),
+    0 12px 32px rgba(15, 23, 42, 0.22),
+    0 4px 8px rgba(0,0,0,0.08);
 
   background: radial-gradient(circle at top left, #ffffff, #e5e7eb);
 
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 
-/* 卡片 hover 时封面更亮一点 */
+/* hover 效果：轻微浮起 + 蓝色柔光 */
 .pub-card:hover .pub-right img {
-  transform: translateY(-2px) rotate(-4deg) scale(1.05);
+  transform: translateY(-4px) scale(1.03);
   box-shadow:
-    0 0 0 5px rgba(129, 140, 248, 0.7),
-    0 14px 30px rgba(15, 23, 42, 0.45);
+    0 0 0 6px rgba(129, 140, 248, 0.5),
+    0 16px 36px rgba(15, 23, 42, 0.28),
+    0 6px 14px rgba(0,0,0,0.1);
 }
+
 
 /* 标题 */
 .pub-title {
