@@ -28,7 +28,7 @@ permalink: /publications/
     </div>
   </div>
   <div class="pub-right">
-    <img src="assets/img/chi26equality.png"
+    <img src="/assets/img/chi26equality.png"
      alt="GenAI Educational (In)Equality paper teaser">
   </div>
 </div>
