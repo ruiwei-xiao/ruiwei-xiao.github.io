@@ -324,40 +324,70 @@ html {
   flex: 1;
 }
 
-/* 右上角封面小圆图 */
+/* ========================= */
+/*   Vision Pro 动效媒体预览   */
+/* ========================= */
+
 .pub-right {
+  display: flex;
+  align-items: center;   /* ← 垂直居中 */
+  justify-content: center;
   margin-left: auto;
-  align-self: flex-start;
+  padding-right: 8px;
 }
 
-/* --- Bigger, Rounded-Rectangle paper teaser preview --- */
-
+/* 预览框：大尺寸 + 大圆角矩形 */
 .pub-right img {
-  width: 180px;         /* 大很多 */
-  height: 140px;        /* 稍宽的比例，视觉更高级 */
-  border-radius: 24px;  /* 大圆角矩形 */
+  width: 200px;
+  height: 150px;
+  border-radius: 26px;
   object-fit: cover;
 
-  border: 2px solid rgba(255,255,255,0.9);
+  border: 2px solid rgba(255,255,255,0.8);
+  background: radial-gradient(circle at top left, #fff, #eef2ff);
 
-  /* VisionOS style layered glow */
+  /* VisionOS 光晕 */
   box-shadow:
-    0 0 0 6px rgba(180, 196, 255, 0.35),
-    0 12px 32px rgba(15, 23, 42, 0.22),
-    0 4px 8px rgba(0,0,0,0.08);
+    0 0 0 8px rgba(180,196,255,0.35),
+    0 12px 30px rgba(15,23,42,0.18),
+    inset 0 0 10px rgba(255,255,255,0.5);
 
-  background: radial-gradient(circle at top left, #ffffff, #e5e7eb);
-
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  transition:
+    transform 0.35s cubic-bezier(.22,1,.36,1),
+    box-shadow 0.35s cubic-bezier(.22,1,.36,1),
+    filter 0.3s ease;
 }
 
-/* hover 效果：轻微浮起 + 蓝色柔光 */
+/* 🫧 Apple Vision Pro breathing glow 动效 */
+@keyframes vp-glow {
+  0% {
+    box-shadow:
+      0 0 0 8px rgba(180,196,255,0.32),
+      0 12px 30px rgba(15,23,42,0.18),
+      inset 0 0 12px rgba(255,255,255,0.55);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow:
+      0 0 0 14px rgba(180,196,255,0.45),
+      0 16px 36px rgba(15,23,42,0.22),
+      inset 0 0 16px rgba(255,255,255,0.65);
+    transform: scale(1.015);
+  }
+  100% {
+    box-shadow:
+      0 0 0 8px rgba(180,196,255,0.32),
+      0 12px 30px rgba(15,23,42,0.18),
+      inset 0 0 12px rgba(255,255,255,0.55);
+    transform: scale(1);
+  }
+}
+
+/* 悬浮：微浮起 + 扩散光圈 + 更亮 */
 .pub-card:hover .pub-right img {
-  transform: translateY(-4px) scale(1.03);
-  box-shadow:
-    0 0 0 6px rgba(129, 140, 248, 0.5),
-    0 16px 36px rgba(15, 23, 42, 0.28),
-    0 6px 14px rgba(0,0,0,0.1);
+  animation: vp-glow 2.2s ease-in-out infinite;
+  transform: translateY(-3px) scale(1.05);
+  filter: brightness(1.06);
 }
 
 
