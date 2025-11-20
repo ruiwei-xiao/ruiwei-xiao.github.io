@@ -55,7 +55,7 @@ permalink: /publications/
     </div>
   </div>
   <div class="pub-right">
-    <img src="/assets/img/c2_caeai26.png" alt="Pedagogical prompting paper teaser">
+    <img src="/assets/img/chi26equality.png" alt="Pedagogical prompting paper teaser">
   </div>
 </div>
 
