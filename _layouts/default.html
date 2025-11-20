@@ -8,12 +8,13 @@
 </head>
 
 <body>
-  <!-- 只负责 Projects 页里小卡片切换 -->
+  <!-- 只给 Projects 页用的小交互：点击左侧项目切右侧卡片 -->
   <script>
   document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.project-item');
     const panels = document.querySelectorAll('.project-panel');
-    if (!items.length) return; // 非 projects 页不用处理
+
+    if (!items.length) return; // 不是 projects 页就直接退出
 
     items.forEach(item => {
       item.addEventListener('click', () => {
@@ -32,15 +33,68 @@
     <!--       Sidebar         -->
     <!-- ===================== -->
     <aside class="sidebar">
-      <!-- 这里保持你现在的 sidebar（头像、名字、links、news 等） -->
-      <!-- ... -->
+      <!-- 头像 -->
+      <img src="https://www.cs.cmu.edu/~hcdl/images/ruiwei_xiao.jpg"
+           alt="Profile"
+           class="sidebar-photo">
+
+      <!-- 名字 -->
+      <h1 class="sidebar-name">Ruiwei Xiao</h1>
+
+      <!-- 两行简介 -->
+      <p class="sidebar-subtitle">2nd Year PhD Student at CMU HCII</p>
+      <p class="sidebar-role2">Co-Founder of ActiveAI</p>
+
+      <!-- 社交 icon 一排 -->
+      <div class="social-row">
+        <a href="https://scholar.google.com/citations?user=izYxC3EAAAAJ" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/50/graduation-cap.png" alt="Google Scholar">
+        </a>
+        <a href="https://linkedin.com/in/rx98" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/50/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/Ruiwei-Xiao" target="_blank">
+          <img src="https://img.icons8.com/ios-glyphs/50/github.png" alt="GitHub">
+        </a>
+        <!-- CMU HCII logo -->
+        <a href="https://hcii.cmu.edu" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/50/university.png" alt="HCII">
+        </a>
+        <!-- CV icon（可以指向 pdf） -->
+        <a href="/assets/cv.pdf" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/50/resume.png" alt="CV">
+        </a>
+      </div>
+
+      <!-- News -->
+      <div class="sidebar-news">
+        <div class="sidebar-news-title">NEWS</div>
+        <ul class="news-list-small">
+          <li>
+            <span class="news-tag">2026-11</span>
+            ActiveAI × CSforALL; launches Hour of AI
+          </li>
+          <li>
+            <span class="news-tag">2026-10</span>
+            1 first-author paper passed CHI’26 R&amp;R
+          </li>
+          <li>
+            <span class="news-tag">2026-10</span>
+            1 first-author paper accepted to AAAI’26
+          </li>
+          <li>
+            <span class="news-tag">2026-09</span>
+            Co-first-author paper accepted to SIGCSE’26
+          </li>
+        </ul>
+      </div>
     </aside>
 
     <!-- ===================== -->
     <!--      Main Content     -->
     <!-- ===================== -->
     <main class="main">
-      <!-- 顶部极简导航：指向不同页面 -->
+      <!-- 顶部极简导航（所有页面公用） -->
       <nav class="top-nav">
         <div class="nav-content">
           <div class="nav-left">
@@ -63,6 +117,7 @@
         </div>
       </nav>
 
+      <!-- 每个页面自己的内容 -->
       {{ content }}
     </main>
   </div>
