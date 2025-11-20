@@ -4,13 +4,13 @@ title: Publications – Ruiwei Xiao
 permalink: /publications/
 ---
 
-<h2>Publications</h2>
+<h2>Selected Publications</h2>
 
-<!-- [C.1] CHI 2026 -->
+<!-- CHI 2026 -->
 <div class="pub-card">
   <div class="pub-left">
     <div class="pub-tags">
-      <span>[C.1]</span><span>CHI 2026</span>
+      <span>CHI 2026</span><span>AI in Education</span>
     </div>
     <div class="pub-title">
       Do Teachers Dream of GenAI Widening Educational (In)Equality
@@ -32,11 +32,11 @@ permalink: /publications/
   </div>
 </div>
 
-<!-- [C.2] CAEAI 2026 -->
+<!-- CAEAI 2026 -->
 <div class="pub-card">
   <div class="pub-left">
     <div class="pub-tags">
-      <span>[C.2]</span><span>CAEAI 2026</span>
+      <span>Journal Under Review 2026</span><span>AI in Education</span>
     </div>
     <div class="pub-title">
       Improving Student–AI Interaction Through Pedagogical Prompting: An Example in Computer Science Education.
@@ -45,7 +45,7 @@ permalink: /publications/
       <strong>Ruiwei Xiao</strong>, Xinying Hou*, Runlong Ye*, Majeed Kazemitabaar*, Nicholas Diana, Michael Liut, John Stamper
     </div>
     <div class="pub-venue">
-      Computers &amp; Education: Artificial Intelligence (CAEAI’26). Under review.
+      Under Review Journal.
     </div>
     <div class="pub-buttons">
       <a href="https://arxiv.org/abs/2506.19107" target="_blank">PDF</a>
@@ -58,7 +58,7 @@ permalink: /publications/
   </div>
 </div>
 
-<!-- [C.3] LAK 2026 -->
+<!-- [C.6] LAK 2026 -->
 <div class="pub-card">
   <div class="pub-left">
     <div class="pub-tags">
@@ -84,7 +84,7 @@ permalink: /publications/
   </div>
 </div>
 
-<!-- [C.4] SIGCSE 2026 -->
+<!-- [C.5] SIGCSE 2026 -->
 <div class="pub-card">
   <div class="pub-left">
     <div class="pub-tags">
@@ -110,7 +110,7 @@ permalink: /publications/
   </div>
 </div>
 
-<!-- [C.5] AAAI 2026 -->
+<!-- [C.4] AAAI 2026 -->
 <div class="pub-card">
   <div class="pub-left">
     <div class="pub-tags">
@@ -136,7 +136,7 @@ permalink: /publications/
   </div>
 </div>
 
-<!-- [C.6] AAAI 2025 -->
+<!-- [C.3] AAAI 2025 -->
 <div class="pub-card">
   <div class="pub-left">
     <div class="pub-tags">
@@ -162,7 +162,7 @@ permalink: /publications/
   </div>
 </div>
 
-<!-- [C.7] AIED 2025 -->
+<!-- [P.5] AIED 2025 -->
 <div class="pub-card">
   <div class="pub-left">
     <div class="pub-tags">
@@ -188,7 +188,7 @@ permalink: /publications/
   </div>
 </div>
 
-<!-- [C.8] LAK 2025 -->
+<!-- [P.4] LAK 2025 -->
 <div class="pub-card">
   <div class="pub-left">
     <div class="pub-tags">
@@ -214,7 +214,7 @@ permalink: /publications/
   </div>
 </div>
 
-<!-- [C.9] SIGCSE 2025 -->
+<!-- [P.3] SIGCSE 2025 -->
 <div class="pub-card">
   <div class="pub-left">
     <div class="pub-tags">
@@ -240,7 +240,7 @@ permalink: /publications/
   </div>
 </div>
 
-<!-- [C.10] CHI EA 2024 -->
+<!-- [P.2] CHI EA 2024 -->
 <div class="pub-card">
   <div class="pub-left">
     <div class="pub-tags">
@@ -266,7 +266,7 @@ permalink: /publications/
   </div>
 </div>
 
-<!-- [C.11] AIED 2024 -->
+<!-- [C.2] AIED 2024 -->
 <div class="pub-card">
   <div class="pub-left">
     <div class="pub-tags">
@@ -292,7 +292,7 @@ permalink: /publications/
   </div>
 </div>
 
-<!-- [C.12] L@S 2024 -->
+<!-- [C.1] L@S 2024 -->
 <div class="pub-card">
   <div class="pub-left">
     <div class="pub-tags">
@@ -318,7 +318,7 @@ permalink: /publications/
   </div>
 </div>
 
-<!-- [C.13] CSEDM 2024 -->
+<!-- [W.1] CSEDM 2024 -->
 <div class="pub-card">
   <div class="pub-left">
     <div class="pub-tags">
@@ -344,7 +344,7 @@ permalink: /publications/
   </div>
 </div>
 
-<!-- [C.14] SIGCSE 2024 -->
+<!-- [P.1] SIGCSE 2024 -->
 <div class="pub-card">
   <div class="pub-left">
     <div class="pub-tags">
@@ -367,31 +367,5 @@ permalink: /publications/
   </div>
   <div class="pub-right">
     <img src="/assets/img/c14_sigcse24.png" alt="Goal-based scenarios paper teaser">
-  </div>
-</div>
-
-<!-- [C.15] SIGCSE 2023 -->
-<div class="pub-card">
-  <div class="pub-left">
-    <div class="pub-tags">
-      <span>[C.15]</span><span>SIGCSE 2023</span>
-    </div>
-    <div class="pub-title">
-      Detecting Cheating in Online Take-Home Exams with Randomized Questions.
-    </div>
-    <div class="pub-authors">
-      <strong>Ruiwei Xiao</strong>, Eduardo Huerta-Mercado, Dan Garcia
-    </div>
-    <div class="pub-venue">
-      Proceedings of the 55th ACM Technical Symposium on Computer Science Education (SIGCSE’23).
-    </div>
-    <div class="pub-buttons">
-      <a href="#">PDF</a>
-      <a href="#">Project</a>
-      <a href="#">BibTeX</a>
-    </div>
-  </div>
-  <div class="pub-right">
-    <img src="/assets/img/c15_sigcse23.png" alt="Cheating detection paper teaser">
   </div>
 </div>
