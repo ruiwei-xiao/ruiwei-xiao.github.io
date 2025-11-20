@@ -16,7 +16,7 @@ permalink: /publications/
       Do Teachers Dream of GenAI Widening Educational (In)Equality
     </div>
     <div class="pub-authors">
-      <strong>Ruiwei Xiao</strong>, Qing Xiao, Xinying Hou, Pheny Mole, Hanqi Li, Hong Shen, John Stamper
+      <strong>Ruiwei Xiao</strong>, Qing Xiao, Xinying Hou, Phenyo Phemelo Moletsane, Hanqi Li, Hong Shen, John Stamper
     </div>
     <div class="pub-venue">
       Proceedings of CHI 2026 (to appear)
