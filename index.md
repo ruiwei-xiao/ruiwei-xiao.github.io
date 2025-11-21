@@ -17,7 +17,7 @@ My research focuses on **AI in Education** and **AI Literacy Education**, curren
 <!-- ----------------- PROJECT 1: ACTIVEAI ----------------- -->
 <!-- ------------------------------------------------------- -->
 
-<section id="activeai" class="project-hero-image-right">
+<section id="activeai" class="project-hero">
 
   <div class="hero-content">
     <div class="project-label">PROJECT</div>
@@ -59,7 +59,7 @@ My research focuses on **AI in Education** and **AI Literacy Education**, curren
 <!-- ------------ PROJECT 2: PEDAGOGICAL PROMPTING --------- -->
 <!-- ------------------------------------------------------- -->
 
-<section id="pedagogical" class="project-hero">
+<section id="pedagogical" class="project-hero-image-right">
 
   <div class="hero-media">
     <img src="/assets/img/pedagogical_prompting_hero.png" alt="Pedagogical prompting hero image">
