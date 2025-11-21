@@ -5,8 +5,6 @@ title: Ruiwei Xiao
 
 <section id="about" class="about-section">
 
-# Hello, I’m Ruiwei! 👋
-
 I'm a 2nd Year PhD Student in the Human-Computer Interaction Institute (HCII) at Carnegie Mellon University, advised by Professor John Stamper.  
 I am also the co-founder of ActiveAI.  
 My research focuses on **AI in Education** and **AI Literacy Education**, currently centered on two projects:
@@ -20,10 +18,6 @@ My research focuses on **AI in Education** and **AI Literacy Education**, curren
 <!-- ------------------------------------------------------- -->
 
 <section id="activeai" class="project-hero">
-
-  <div class="hero-media">
-    <img src="/assets/img/activeai_hero.png" alt="ActiveAI hero image">
-  </div>
 
   <div class="hero-content">
     <div class="project-label">PROJECT</div>
@@ -51,6 +45,10 @@ My research focuses on **AI in Education** and **AI Literacy Education**, curren
     <p class="team-desc">
       Collaborators from CMU, NTHU, and partner K–12 schools.
     </p>
+  </div>
+  
+  <div class="hero-media">
+    <img src="/assets/img/activeai_hero.png" alt="ActiveAI hero image">
   </div>
 
 </section>
