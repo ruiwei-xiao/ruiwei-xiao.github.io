@@ -17,7 +17,7 @@ My research focuses on **AI in Education** and **AI Literacy Education**, curren
 <!-- ----------------- PROJECT 1: ACTIVEAI ----------------- -->
 <!-- ------------------------------------------------------- -->
 
-<section id="activeai" class="project-hero">
+<section id="activeai" class="project-hero-image-right">
 
   <div class="hero-content">
     <div class="project-label">PROJECT</div>
