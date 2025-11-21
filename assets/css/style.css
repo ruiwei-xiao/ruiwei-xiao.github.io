@@ -652,3 +652,88 @@ section, main {
     min-height: 220px;
   }
 }
+
+/* ===== Section container ===== */
+.about-section {
+  margin-top: 40px;
+  padding-right: 20px;
+}
+
+/* ===== About text block ===== */
+.about-container {
+  margin-bottom: 50px;
+}
+
+.about-title {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.about-description {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #374151;
+  max-width: 680px;
+}
+
+/* ===== Project Cards ===== */
+.project-card {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 32px 36px;
+  border-radius: 30px;
+  margin-bottom: 40px;
+
+  border: 1px solid rgba(210, 215, 230, 0.55);
+  box-shadow:
+    0 18px 38px rgba(0, 0, 0, 0.06),
+    0 4px 8px rgba(0, 0, 0, 0.04);
+
+  backdrop-filter: blur(22px);
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 650;
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+
+/* ===== Layout inside a project card ===== */
+.project-body {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 28px;
+  align-items: center;
+}
+
+/* Left side text */
+.project-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #1f2937;
+}
+
+/* Right side image holder */
+.project-media {
+  width: 100%;
+  height: 260px;
+  background: #f3f4f6;
+  border-radius: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.9rem;
+  color: #9ca3af;
+  border: 1px dashed rgba(200,200,200,0.5);
+}
+
+/* Mobile layout */
+@media (max-width: 760px) {
+  .project-body {
+    grid-template-columns: 1fr;
+  }
+}
+
