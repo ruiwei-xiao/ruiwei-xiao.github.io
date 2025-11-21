@@ -572,184 +572,98 @@ html {
 section, main {
   margin-top: 70px !important;
 }
-/* ============================= */
-/*   Hero Project Feature Blocks */
-/*   (ActiveAI / Pedagogical)    */
-/* ============================= */
+/* =============================== */
+/*        Project Hero Layout      */
+/* =============================== */
 
-.project-feature {
-  position: relative;
+.project-hero {
   width: 100%;
-  margin: 28px 0 44px;
-  border-radius: 28px;
-  overflow: hidden;
-
   display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  min-height: 320px;
+  grid-template-columns: 45% 55%;  /* 左图更宽 */
+  gap: 40px;
+
+  margin-top: 40px;
+  padding: 28px;
+  border-radius: 34px;
+
+  background: rgba(255,255,255,0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 
   box-shadow:
-    0 22px 60px rgba(0,0,0,0.10),
-    0 6px 14px rgba(0,0,0,0.06);
-
-  transition: transform .25s ease, box-shadow .25s ease;
+    0 25px 50px rgba(0,0,0,0.07),
+    0 0 0 2px rgba(255,255,255,0.8) inset;
 }
 
-.project-feature:hover {
-  transform: translateY(-3px);
-  box-shadow:
-    0 30px 80px rgba(0,0,0,0.14),
-    0 10px 22px rgba(0,0,0,0.08);
-}
-
-/* Left media area */
-.project-media {
-  position: relative;
-  height: 100%;
-  background: #f3f4f6;
-}
-
-.project-media img{
+/* 左侧媒体更大 */
+.hero-media img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  border-radius: 22px;
   object-fit: cover;
-  display: block;
-  transform: scale(1.02);
-  transition: transform .6s ease;
+  box-shadow:
+    0 8px 22px rgba(0,0,0,0.12),
+    0 0 0 1px rgba(255,255,255,0.9) inset;
 }
 
-.project-feature:hover .project-media img{
-  transform: scale(1.06);
+/* 右侧文字更小更紧凑 */
+.hero-content {
+  padding-top: 10px;
 }
 
-/* Right content area */
-.project-content {
-  position: relative;
-  padding: 36px 38px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-}
-
-/* Light version (like your ActiveAI example: bright, airy) */
-.project-feature--light .project-content {
-  background:
-    linear-gradient(90deg,
-      rgba(255,255,255,0.00) 0%,
-      rgba(255,255,255,0.65) 12%,
-      rgba(255,255,255,0.92) 40%,
-      rgba(255,255,255,0.98) 100%);
-  color: #0f172a;
-}
-
-/* Dark version (like your Pedagogical example: dark overlay text) */
-.project-feature--dark .project-content {
-  background:
-    linear-gradient(90deg,
-      rgba(0,0,0,0.00) 0%,
-      rgba(0,0,0,0.55) 16%,
-      rgba(2,6,23,0.88) 46%,
-      rgba(2,6,23,0.95) 100%);
-  color: #f8fafc;
-}
-
-.project-kicker{
-  font-size: 0.78rem;
-  letter-spacing: .18em;
+.project-label {
+  font-size: 0.75rem;
   text-transform: uppercase;
-  opacity: .7;
+  letter-spacing: 0.18em;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.project-title {
+  font-size: 1.9rem;     /* 略小 */
   font-weight: 700;
+  margin: 0 0 14px 0;
 }
 
-.project-title{
-  font-size: 2.0rem;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  margin: 2px 0 6px;
-  font-weight: 750;
-}
-
-.project-desc{
-  font-size: 1.05rem;
+.project-desc {
+  font-size: 0.98rem;    /* 略小 */
+  color: #4b5563;
   line-height: 1.55;
-  opacity: .9;
-  margin-bottom: 8px;
-  max-width: 42ch;
+  margin-bottom: 26px;
 }
 
-/* Related papers + team block */
-.project-meta, .project-team{
-  margin-top: 8px;
-}
-
-.project-meta-title{
-  font-size: 0.82rem;
-  letter-spacing: .12em;
+/* section title */
+.project-section-title {
+  font-size: 0.78rem;
   text-transform: uppercase;
-  font-weight: 700;
-  opacity: .7;
-  margin-bottom: 6px;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  color: #6b7280;
+  margin: 26px 0 10px;
 }
 
-.project-related{
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-  display: grid;
-  gap: 6px;
-  font-size: 0.98rem;
-  line-height: 1.45;
-}
-
-.project-related li{
-  display: flex;
-  gap: 8px;
-  align-items: baseline;
-  opacity: .95;
-}
-
-/* small venue tag */
-.project-related .mini-tag{
-  display: inline-flex;
-  align-items: center;
+/* papers pill tag */
+.paper-pill {
+  display: inline-block;
+  background: #e8ecff;
+  color: #374151;
   padding: 2px 8px;
-  border-radius: 999px;
-  font-size: 0.72rem;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  font-weight: 700;
-  white-space: nowrap;
+  margin-right: 8px;
+  border-radius: 10px;
+  font-size: 0.70rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
 }
 
-/* auto color based on light/dark parent */
-.project-feature--light .mini-tag{
-  background: rgba(220,225,255,0.9);
-  border: 1px solid rgba(160,170,210,0.55);
-  color: #111827;
+.related-papers {
+  font-size: 0.92rem;
+  line-height: 1.5;
 }
 
-.project-feature--dark .mini-tag{
-  background: rgba(148,163,255,0.14);
-  border: 1px solid rgba(148,163,255,0.35);
-  color: #f8fafc;
+/* team */
+.team-desc {
+  font-size: 0.92rem;
+  color: #4b5563;
+  line-height: 1.5;
 }
 
-/* Responsive: stack on mobile */
-@media (max-width: 900px){
-  .project-feature{
-    grid-template-columns: 1fr;
-    min-height: unset;
-  }
-  .project-media{
-    height: 220px;
-  }
-  .project-feature--light .project-content,
-  .project-feature--dark .project-content{
-    background: rgba(255,255,255,0.98);
-    color: #0f172a;
-  }
-  .project-title{
-    font-size: 1.6rem;
-  }
-}
