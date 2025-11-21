@@ -572,98 +572,77 @@ html {
 section, main {
   margin-top: 70px !important;
 }
-/* =============================== */
-/*        Project Hero Layout      */
-/* =============================== */
+/* ----------------------------------------------------- */
+/* Edgeless Full-Width Project Hero Layout               */
+/* ----------------------------------------------------- */
 
 .project-hero {
-  width: 100%;
   display: grid;
-  grid-template-columns: 45% 55%;  /* 左图更宽 */
-  gap: 40px;
-
-  margin-top: 40px;
-  padding: 28px;
-  border-radius: 34px;
-
-  background: rgba(255,255,255,0.55);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-
-  box-shadow:
-    0 25px 50px rgba(0,0,0,0.07),
-    0 0 0 2px rgba(255,255,255,0.8) inset;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 48px;
+  margin: 90px 0;
+  padding: 0;
+  align-items: center;
 }
 
-/* 左侧媒体更大 */
 .hero-media img {
   width: 100%;
-  height: auto;
-  border-radius: 22px;
+  height: 100%;
   object-fit: cover;
-  box-shadow:
-    0 8px 22px rgba(0,0,0,0.12),
-    0 0 0 1px rgba(255,255,255,0.9) inset;
+  border-radius: 22px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
 }
 
-/* 右侧文字更小更紧凑 */
 .hero-content {
-  padding-top: 10px;
+  padding-right: 30px;
 }
 
 .project-label {
   font-size: 0.75rem;
-  text-transform: uppercase;
   letter-spacing: 0.18em;
   color: #6b7280;
+  text-transform: uppercase;
   margin-bottom: 10px;
 }
 
 .project-title {
-  font-size: 1.9rem;     /* 略小 */
+  font-size: 2rem;
+  margin: 0 0 14px;
   font-weight: 700;
-  margin: 0 0 14px 0;
 }
 
 .project-desc {
-  font-size: 0.98rem;    /* 略小 */
-  color: #4b5563;
-  line-height: 1.55;
-  margin-bottom: 26px;
-}
-
-/* section title */
-.project-section-title {
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-weight: 600;
-  color: #6b7280;
-  margin: 26px 0 10px;
-}
-
-/* papers pill tag */
-.paper-pill {
-  display: inline-block;
-  background: #e8ecff;
+  font-size: 1rem;
   color: #374151;
-  padding: 2px 8px;
-  margin-right: 8px;
-  border-radius: 10px;
-  font-size: 0.70rem;
+  margin-bottom: 22px;
+}
+
+.project-section-title {
+  margin-top: 28px;
+  margin-bottom: 8px;
+  font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #6b7280;
 }
 
 .related-papers {
-  font-size: 0.92rem;
-  line-height: 1.5;
+  font-size: 0.95rem;
+  line-height: 1.55;
 }
 
-/* team */
-.team-desc {
-  font-size: 0.92rem;
-  color: #4b5563;
-  line-height: 1.5;
+.paper-pill {
+  background: #eef2ff;
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 0.7rem;
+  margin-right: 6px;
 }
+
+.team-desc {
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
 
