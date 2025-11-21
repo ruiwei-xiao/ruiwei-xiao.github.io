@@ -1,48 +1,97 @@
 ---
 layout: default
-title: Pedagogical Prompting
-permalink: /projects/pedagogical-prompting/
+title: Ruiwei Xiao
 ---
 
-<div class="project-hero">
+<section id="about" class="about-section">
+
+# Hello, I’m Ruiwei! 👋
+
+I'm a 2nd Year PhD Student in the Human-Computer Interaction Institute (HCII) at Carnegie Mellon University, advised by Professor John Stamper.  
+I am also the co-founder of ActiveAI.  
+My research focuses on **AI in Education** and **AI Literacy Education**, currently centered on two projects:
+
+</section>
+
+
+
+<!-- ------------------------------------------------------- -->
+<!-- ----------------- PROJECT 1: ACTIVEAI ----------------- -->
+<!-- ------------------------------------------------------- -->
+
+<section id="activeai" class="project-hero">
 
   <div class="hero-media">
-    <!-- 换成你的 Pedagogical Prompting hero 图 -->
-    <img src="/assets/img/pedagogical_hero.jpg" alt="Pedagogical prompting teaser">
+    <img src="/assets/img/activeai_hero.jpg" alt="ActiveAI hero image">
   </div>
 
   <div class="hero-content">
+    <div class="project-label">PROJECT</div>
 
-    <div class="project-label">Project</div>
-    <h1 class="project-title">Pedagogical Prompting</h1>
+    <h1 class="project-title">ActiveAI × AI Literacy For All</h1>
 
     <p class="project-desc">
-      A line of work on helping novices learn to prompt AI for learning and problem solving.
+      A scalable K–12 AI literacy learning, teaching, and research platform deployed across three countries.
     </p>
 
     <div class="project-section-title">Related Papers</div>
-
     <div class="related-papers">
-      <span class="paper-pill">CAEAI 2026</span>
-      Improving Student–AI Interaction Through Pedagogical Prompting: An Example in Computer Science Education
+      <span class="paper-pill">CHI 2026</span> Do Teachers Dream of GenAI Widening Educational (In)Equality?  
       <br>
-
-      <span class="paper-pill">CHI EA 2024</span>
-      Exploring How Multiple Levels of GPT-Generated Programming Hints Support or Disappoint Novices
+      <span class="paper-pill">LAK 2026</span> Misalignment Between Self-Reported & Objective-Based Measures  
       <br>
-
-      <span class="paper-pill">CSEDM 2024</span>
-      A Preliminary Analysis of Students’ Help Requests with an LLM-Powered Chatbot When Completing CS1 Assignments
+      <span class="paper-pill">SIGCSE 2025</span> Generating AI Literacy MCQs via Multi-Agent LLMs  
       <br>
-
-      <span class="paper-pill">SIGCSE 2026</span>
-      Exploring Student Choice and the Use of Multimodal Generative AI in Programming Learning
+      <span class="paper-pill">LAK 2025</span> ActiveAI: K–12 AI Literacy Education & Analytics  
+      <br>
+      <span class="paper-pill">AAAI 2025</span> Project-Based AI Literacy Toolkit  
     </div>
 
     <div class="project-section-title">Team</div>
     <p class="team-desc">
-      Collaboration with the HCII/Learnvia/ActiveAI research team and K–12 partner educators.
+      Collaborators from CMU, NTHU, and partner K–12 schools.
+    </p>
+  </div>
+
+</section>
+
+
+
+<!-- ------------------------------------------------------- -->
+<!-- ------------ PROJECT 2: PEDAGOGICAL PROMPTING --------- -->
+<!-- ------------------------------------------------------- -->
+
+<section id="pedagogical" class="project-hero">
+
+  <div class="hero-media">
+    <img src="/assets/img/pedagogical_prompting_hero.jpg" alt="Pedagogical prompting hero image">
+  </div>
+
+  <div class="hero-content">
+
+    <div class="project-label">PROJECT</div>
+    <h1 class="project-title">Pedagogical Prompting</h1>
+
+    <p class="project-desc">
+      A research program focused on how novices learn to prompt AI productively for learning and problem solving.
+    </p>
+
+    <div class="project-section-title">Related Papers</div>
+    <div class="related-papers">
+      <span class="paper-pill">CAEAI 2026</span> Improving Student–AI Interaction Through Pedagogical Prompting  
+      <br>
+      <span class="paper-pill">CHI EA 2024</span> GPT-Generated Programming Hints  
+      <br>
+      <span class="paper-pill">CSEDM 2024</span> Help Requests with LLM-Powered Chatbots  
+      <br>
+      <span class="paper-pill">SIGCSE 2026</span> Student Choice & Multimodal AI in Programming  
+    </div>
+
+    <div class="project-section-title">Team</div>
+    <p class="team-desc">
+      HCII Learnvia × ActiveAI research team with K–12 collaborators.
     </p>
 
   </div>
-</div>
+
+</section>
