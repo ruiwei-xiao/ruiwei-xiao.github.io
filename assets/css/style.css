@@ -573,196 +573,183 @@ section, main {
   margin-top: 70px !important;
 }
 /* ============================= */
-/*        Projects Layout        */
+/*   Hero Project Feature Blocks */
+/*   (ActiveAI / Pedagogical)    */
 /* ============================= */
 
-.projects-shell {
-  margin-top: 40px;
+.project-feature {
+  position: relative;
+  width: 100%;
+  margin: 28px 0 44px;
+  border-radius: 28px;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  min-height: 320px;
+
+  box-shadow:
+    0 22px 60px rgba(0,0,0,0.10),
+    0 6px 14px rgba(0,0,0,0.06);
+
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.project-feature:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.14),
+    0 10px 22px rgba(0,0,0,0.08);
+}
+
+/* Left media area */
+.project-media {
+  position: relative;
+  height: 100%;
+  background: #f3f4f6;
+}
+
+.project-media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+  transition: transform .6s ease;
+}
+
+.project-feature:hover .project-media img{
+  transform: scale(1.06);
+}
+
+/* Right content area */
+.project-content {
+  position: relative;
+  padding: 36px 38px;
   display: flex;
   flex-direction: column;
-  gap: 56px;
-}
-
-/* 每个 Project 一行：左大块 + 右侧论文列 */
-.project-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
-  gap: 32px;
-  align-items: flex-start;
-}
-
-/* 左侧大 Project 卡（现在是灰色占位，可以之后换成渐变 / 图） */
-.project-hero {
-  min-height: 260px;
-  border-radius: 28px;
-  background: #e5e5e5;         /* 先用你截图里的灰色 */
-  display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 28px 32px;
+  gap: 10px;
 }
 
-.project-hero-inner {
-  max-width: 80%;
-}
-
-.project-hero h3 {
-  margin: 0 0 8px;
-  font-size: 1.4rem;
-}
-
-.project-hero p {
-  margin: 0 0 12px;
-  font-size: 0.98rem;
-  color: #4b5563;
-}
-
-.project-hero ul {
-  margin: 0;
-  padding-left: 20px;
-  color: #4b5563;
-  font-size: 0.95rem;
-}
-
-/* 小小的 Project pill */
-.project-pill {
-  display: inline-block;
-  margin-bottom: 10px;
-  padding: 3px 10px;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  background: #f3f4f6;
-  color: #6b7280;
-}
-
-/* 右侧：复用 pub-card 样式，只调间距即可 */
-.project-related .pub-card {
-  margin-bottom: 20px;
-}
-
-/* 响应式：窄屏时改为上下堆叠 */
-@media (max-width: 900px) {
-  .project-row {
-    grid-template-columns: 1fr;
-  }
-
-  .project-hero {
-    min-height: 220px;
-  }
-}
-
-/* ===== Section container ===== */
-.about-section {
-  margin-top: 40px;
-  padding-right: 20px;
-}
-
-/* ===== About text block ===== */
-.about-container {
-  margin-bottom: 50px;
-}
-
-.about-title {
-  font-size: 2rem;
-  margin-bottom: 12px;
-  font-weight: 700;
-}
-
-.about-description {
-  font-size: 1.05rem;
-  line-height: 1.65;
-  color: #374151;
-  max-width: 680px;
-}
-
-/* ===== About text block (keep light & airy) ===== */
-.about-container {
-  margin-bottom: 56px;
-}
-
-.about-title {
-  font-size: 2rem;
-  margin-bottom: 12px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-.about-description {
-  font-size: 1.02rem;
-  line-height: 1.7;
-  color: #374151;
-  max-width: 720px;
-}
-
-/* ===== Edgeless Project Blocks ===== */
-.project-card {
-  /* no border, no shadow, no obvious card */
-  background: transparent;
-  padding: 0;
-  margin-bottom: 56px;
-}
-
-/* Project title = section anchor */
-.project-title {
-  font-size: 1.5rem;
-  font-weight: 650;
-  margin: 0 0 14px 0;
-  letter-spacing: -0.01em;
-}
-
-/* Subtle “air” background only for content area */
-.project-body {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 28px;
-  align-items: center;
-
-  padding: 18px 0 4px 0;
+/* Light version (like your ActiveAI example: bright, airy) */
+.project-feature--light .project-content {
   background:
-    radial-gradient(circle at top left, rgba(210,225,255,0.18), transparent 60%),
-    radial-gradient(circle at bottom right, rgba(205,255,235,0.16), transparent 60%);
-  border-radius: 18px; /* very soft, not card-like */
+    linear-gradient(90deg,
+      rgba(255,255,255,0.00) 0%,
+      rgba(255,255,255,0.65) 12%,
+      rgba(255,255,255,0.92) 40%,
+      rgba(255,255,255,0.98) 100%);
+  color: #0f172a;
 }
 
-/* Left text */
-.project-text {
+/* Dark version (like your Pedagogical example: dark overlay text) */
+.project-feature--dark .project-content {
+  background:
+    linear-gradient(90deg,
+      rgba(0,0,0,0.00) 0%,
+      rgba(0,0,0,0.55) 16%,
+      rgba(2,6,23,0.88) 46%,
+      rgba(2,6,23,0.95) 100%);
+  color: #f8fafc;
+}
+
+.project-kicker{
+  font-size: 0.78rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  opacity: .7;
+  font-weight: 700;
+}
+
+.project-title{
+  font-size: 2.0rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 2px 0 6px;
+  font-weight: 750;
+}
+
+.project-desc{
+  font-size: 1.05rem;
+  line-height: 1.55;
+  opacity: .9;
+  margin-bottom: 8px;
+  max-width: 42ch;
+}
+
+/* Related papers + team block */
+.project-meta, .project-team{
+  margin-top: 8px;
+}
+
+.project-meta-title{
+  font-size: 0.82rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  opacity: .7;
+  margin-bottom: 6px;
+}
+
+.project-related{
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: grid;
+  gap: 6px;
   font-size: 0.98rem;
-  line-height: 1.75;
+  line-height: 1.45;
+}
+
+.project-related li{
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  opacity: .95;
+}
+
+/* small venue tag */
+.project-related .mini-tag{
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* auto color based on light/dark parent */
+.project-feature--light .mini-tag{
+  background: rgba(220,225,255,0.9);
+  border: 1px solid rgba(160,170,210,0.55);
   color: #111827;
 }
 
-/* Right image holder (still minimal) */
-.project-media {
-  width: 100%;
-  height: 240px;
-
-  background: rgba(243,244,246,0.9);
-  border-radius: 16px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 0.9rem;
-  color: #9ca3af;
+.project-feature--dark .mini-tag{
+  background: rgba(148,163,255,0.14);
+  border: 1px solid rgba(148,163,255,0.35);
+  color: #f8fafc;
 }
 
-/* Micro separator between projects (edgeless but structured) */
-.project-card + .project-card {
-  padding-top: 36px;
-  border-top: 1px solid rgba(0,0,0,0.06);
-}
-
-/* Mobile */
-@media (max-width: 760px) {
-  .project-body {
+/* Responsive: stack on mobile */
+@media (max-width: 900px){
+  .project-feature{
     grid-template-columns: 1fr;
+    min-height: unset;
   }
-  .project-media {
-    height: 200px;
+  .project-media{
+    height: 220px;
+  }
+  .project-feature--light .project-content,
+  .project-feature--dark .project-content{
+    background: rgba(255,255,255,0.98);
+    color: #0f172a;
+  }
+  .project-title{
+    font-size: 1.6rem;
   }
 }
-
-
