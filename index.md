@@ -9,7 +9,7 @@ title: Ruiwei Xiao
 </header>
 
 <section id="about" class="about-section">
-  I'm a 2nd Year PhD Student in the Human-Computer Interaction Institute (HCII) at Carnegie Mellon University, advised by Professor <a href="https://dev.stamper.org/">John Stamper</a>. I am also the co-founder of <a href="https://www.active-ai.io/">JActiveAI</a>. My research focuses on <a href="">AI in Education</a> and <a href="">AI Literacy</a> using quantitative (e.g., A/B testing, statistical analysis) and qualitative methods (e.g., thematic coding), currently centered on two cross-cultural, multi-institutional projects:
+  I'm a 2nd Year PhD Student in the Human-Computer Interaction Institute (HCII) at Carnegie Mellon University, advised by Professor <a href="https://dev.stamper.org/">John Stamper</a>. I am also the co-founder of <a href="https://www.active-ai.io/">ActiveAI</a>. My research focuses on <a href="">AI in Education</a> and <a href="">AI Literacy</a> using quantitative (e.g., A/B testing, statistical analysis) and qualitative methods (e.g., thematic coding), currently centered on two cross-cultural, multi-institutional projects:
 </section>
 
 
