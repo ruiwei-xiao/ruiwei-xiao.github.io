@@ -6,6 +6,32 @@ permalink: /publications/
 
 <h2>Selected Publications</h2>
 
+<!-- [C.7] LAK 2026 -->
+<div class="pub-card">
+  <div class="pub-left">
+    <div class="pub-tags">
+      <span>[P.1]</span><span>LAK 2026</span>
+    </div>
+    <div class="pub-title">
+      How to Assess AI Literacy: Misalignment Between Self-Reported and Objective-Based Measures.
+    </div>
+    <div class="pub-authors">
+      <strong>Ruiwei Xiao*</strong>, Shan Zhang*, Anthony F. Botelho, Guanze Liao, Thomas K. F. Chiu, John Stamper, Kenneth R. Koedinger
+    </div>
+    <div class="pub-venue">
+      Proceedings of the 16th International Learning Analytics and Knowledge Conference.
+    </div>
+    <div class="pub-buttons">
+      <a href="#">PDF</a>
+      <a href="#">Project</a>
+      <a href="#">BibTeX</a>
+    </div>
+  </div>
+  <div class="pub-right">
+    <img src="/assets/img/lak26.png" alt="AI literacy assessment paper teaser">
+  </div>
+</div>
+
 <!-- [C.6] CHI 2026 -->
 <div class="pub-card">
   <div class="pub-left">
@@ -33,7 +59,7 @@ permalink: /publications/
   </div>
 </div>
 
-<!-- [P.2] CAEAI 2026 -->
+<!-- [P.1] CAEAI 2026 -->
 <div class="pub-card">
   <div class="pub-left">
     <div class="pub-tags">
@@ -59,31 +85,6 @@ permalink: /publications/
   </div>
 </div>
 
-<!-- [P.1] LAK 2026 -->
-<div class="pub-card">
-  <div class="pub-left">
-    <div class="pub-tags">
-      <span>[P.1]</span><span>Preprint 2026</span>
-    </div>
-    <div class="pub-title">
-      How to Assess AI Literacy: Misalignment Between Self-Reported and Objective-Based Measures.
-    </div>
-    <div class="pub-authors">
-      <strong>Ruiwei Xiao*</strong>, Shan Zhang*, Anthony F. Botelho, Guanze Liao, Thomas K. F. Chiu, John Stamper, Kenneth R. Koedinger
-    </div>
-    <div class="pub-venue">
-      Under Review Preprint.
-    </div>
-    <div class="pub-buttons">
-      <a href="#">PDF</a>
-      <a href="#">Project</a>
-      <a href="#">BibTeX</a>
-    </div>
-  </div>
-  <div class="pub-right">
-    <img src="/assets/img/lak26.png" alt="AI literacy assessment paper teaser">
-  </div>
-</div>
 
 <!-- [C.5] SIGCSE 2026 -->
 <div class="pub-card">
