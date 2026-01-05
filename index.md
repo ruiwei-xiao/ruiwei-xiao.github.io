@@ -21,7 +21,6 @@ title: Ruiwei Xiao
 
 <section id="activeai" class="project-hero">
 
- <div class="project-and-hero">
   <div class="project-content">
     <div class="project-section-title">Related Papers</div>
     <div class="related-papers">
@@ -49,7 +48,6 @@ title: Ruiwei Xiao
   <div class="hero-media">
     <img src="/assets/img/activeai_hero.png" alt="ActiveAI hero image">
   </div>
-</div>
 
 </section>
 
