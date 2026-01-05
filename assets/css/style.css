@@ -678,45 +678,44 @@ section, main {
   border-bottom-color: rgba(37,99,235,0.75);
 }
 
-.project-and-hero {
+
+.project-and-hero{
   display: flex;
   gap: 32px;
-  align-items: stretch; /* 关键：左右同高 */
+  align-items: stretch;     /* 左右同高 */
 }
 
-.project-content {
+/* 右边：作为“高度锚点” */
+.hero-media{
   flex: 1;
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
 }
-
-.hero-media {
-  flex: 1;
-  display: flex;
-}
-
-.hero-media img {
+.hero-media img{
   width: 100%;
   height: auto;
   object-fit: contain;
 }
 
-/* 让 Related Papers 在“剩余高度”内滚动 */
-.related-papers {
-  max-height: 100%;
+/* 左边：必须允许内部元素缩小，否则滚动不会生效 */
+.project-content{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;            /* 关键！！！没有这个就会撑开 */
+}
+
+/* 让 related-papers 吃掉可用高度，并在内部滚动 */
+.related-papers{
+  flex: 1;                  /* 关键：占据剩余高度 */
+  min-height: 0;            /* 关键：允许变小以触发滚动 */
   overflow-y: auto;
-  padding-right: 8px; /* 给 scrollbar 留点空间 */
-  margin-bottom: 16px;
+  padding-right: 10px;      /* 给 scrollbar 留空间 */
 }
 
-/* 可选：更好看的滚动条（WebKit） */
-.related-papers::-webkit-scrollbar {
-  width: 6px;
-}
-
-.related-papers::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,0.2);
-  border-radius: 4px;
+/* Team 放在下面，不滚动（如果你希望 Team 也一起滚动，把它放进 related-papers） */
+.team-desc{
+  margin-top: 10px;
 }
 
 
