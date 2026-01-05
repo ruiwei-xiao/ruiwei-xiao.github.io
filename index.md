@@ -9,7 +9,7 @@ title: Ruiwei Xiao
 </header>
 
 <section id="about" class="about-section">
-  I'm a 2nd Year PhD Student in the Human-Computer Interaction Institute (HCII) at Carnegie Mellon University, advised by Professor <a href="https://dev.stamper.org/">John Stamper</a>. I am also the co-founder of <a href="https://www.active-ai.io/">ActiveAI</a>. My research focuses on <a href="">AI in Education</a> and <a href="">AI Literacy</a> using quantitative (e.g., A/B testing, statistical analysis) and qualitative methods (e.g., thematic coding), currently centered on two cross-cultural, multi-institutional projects:
+  I'm a 2nd Year PhD Student in the Human-Computer Interaction Institute (HCII) at Carnegie Mellon University, advised by Professor <a href="https://dev.stamper.org/">John Stamper</a>. I am also the co-founder of <a href="https://www.active-ai.io/">ActiveAI</a>. My research focuses on <a href="https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:ai_in_education">AI in Education</a> and <a href="https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:ai_literacy">AI Literacy</a> using quantitative (e.g., A/B testing, statistical analysis) and qualitative methods (e.g., thematic coding), currently centered on two cross-cultural, multi-institutional projects:
 </section>
 
 
@@ -27,14 +27,14 @@ title: Ruiwei Xiao
     <h1 class="project-title">ActiveAI × AI Literacy For All</h1>
 
     <p class="project-desc">
-      A scalable K–12 AI literacy learning, teaching, and research platform deployed across three countries.
+      A scalable K–12 AI literacy learning, teaching, and research platform deployed at 80+ schools, 7,000+ students and teachers across 3 countries.
     </p>
 
     <div class="project-section-title">Related Papers</div>
     <div class="related-papers">
-      <span class="paper-pill">CHI 2026</span> Do Teachers Dream of GenAI Widening Educational (In)Equality?  
+      <span class="paper-pill">CHI 2026 R&R</span> A cross-cultural qualitative study investigating how generative AI influences stakeholder behavior and educational equity in South Africa, Taiwan, and the United States.
       <br>
-      <span class="paper-pill">LAK 2026</span> Misalignment Between Self-Reported & Objective-Based Measures  
+      <span class="paper-pill">LAK 2026</span> Designed and deployed large-scale self-reported and objective AI literacy measures delpoying on 358 teachers, revealing systematic gaps between perceived competence and demonstrated AI literacy.
       <br>
       <span class="paper-pill">SIGCSE 2025</span> Generating AI Literacy MCQs via Multi-Agent LLMs  
       <br>
