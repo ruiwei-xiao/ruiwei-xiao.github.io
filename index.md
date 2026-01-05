@@ -32,15 +32,15 @@ title: Ruiwei Xiao
 
     <div class="project-section-title">Related Papers</div>
     <div class="related-papers">
-      <span class="paper-pill">Ongoing Project</span> Running a large-scale learning interventions with pre/post-testing across 2,000+ high school students and 500+ teachers.
+      <span class="paper-pill">Ongoing Project</span> Running a large-scale learning interventions with pre- post-tests across 2,000+ students and 500+ teachers.
       <br>
-      <span class="paper-pill">CHI 2026 R&R</span> <span class="paper-pill">AAAI 2025</span> Cross-cultural qualitative study investigating how generative AI influences stakeholder behavior and educational equity.
+      <span class="paper-pill">CHI 2026 R&R</span> <span class="paper-pill">AAAI 2025</span> Cross-cultural qualitative study on how generative AI influences stakeholder behavior and educational equity.
       <br>
       <span class="paper-pill">AAAI 2026</span> <span class="paper-pill">LAK 2026</span> Large-scale experiment on learner behavior, perception and knowledge level.
       <br>
-      <span class="paper-pill">AIED 2025</span> Organized the biggest workshop at AIED 2025, establishing the largest and fastest-growing workshop community at the conference.
+      <span class="paper-pill">AIED 2025</span> Organized the biggest workshop and established AI literacy community at AIED 2025.
       <br>
-      <span class="paper-pill">AIED 2025</span> <span class="paper-pill">SIGCSE 2025</span> <span class="paper-pill">LAK 2025</span> GenAI-integrated tools for AI Literacy material generation and learning analytics.   
+      <span class="paper-pill">AIED 2025</span> <span class="paper-pill">SIGCSE 2025</span> <span class="paper-pill">LAK 2025</span> GenAI-integrated tools for AI literacy material generation and learning analytics.   
     </div>
 
     <div class="project-section-title">Team</div>
