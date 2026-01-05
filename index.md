@@ -21,30 +21,23 @@ title: Ruiwei Xiao
 
 <section id="activeai" class="project-hero">
 
-  <div class="hero-content">
-    <div class="project-label">PROJECT</div>
-
-    <h1 class="project-title">ActiveAI × AI Literacy For All</h1>
-
-    <p class="project-desc">
-      A scalable K–12 AI literacy learning, teaching, and research platform deployed at 80+ schools, 7,000+ students and teachers across 3 countries.
-    </p>
-
+ <div class="project-and-hero">
+  <div class="project-content">
     <div class="project-section-title">Related Papers</div>
     <div class="related-papers">
       <span class="paper-pill">Ongoing Project</span> Running a large-scale field study deploying 4 AI literacy learning modules with pre/post-testing across 2,000 high school students.
       <br>
-      <span class="paper-pill">Ongoing Project</span> Running bi-weekly AI literacy teacher training workshops in partnership with Junyi Academy, with pre/post-testings to evaluate learning outcomes.
+      <span class="paper-pill">Ongoing Project</span> Running bi-weekly AI literacy teacher training workshops in partnership with Junyi Academy, with pre/post-testing to evaluate learning outcomes.
       <br>
       <span class="paper-pill">CHI 2026 R&R</span> <span class="paper-pill">AAAI 2025</span> Conducted a cross-cultural qualitative study investigating how generative AI influences stakeholder behavior and educational equity in South Africa, Taiwan, and the United States.
       <br>
       <span class="paper-pill">AAAI 2026</span> Conducted two in-classroom experiments with 100+ middle school students to evaluate the effects of an AI literacy learning platform on learning efficiency and instructional material quality.
       <br>
-      <span class="paper-pill">LAK 2026</span> Designed and deployed large-scale self-reported and objective AI literacy measures delpoying on 358 teachers, revealing systematic gaps between perceived competence and demonstrated AI literacy.
+      <span class="paper-pill">LAK 2026</span> Designed and deployed large-scale self-reported and objective AI literacy measures with 358 teachers, revealing systematic gaps between perceived competence and demonstrated AI literacy.
       <br>
-      <span class="paper-pill">AIED 2025</span> Organized the “AI Literacy for All” workshop at AIED 2025, coordinating the review of 20+ papers and convening over 100 participants, establishing the largest and fastest-growing workshop community at the conference.
+      <span class="paper-pill">AIED 2025</span> Organized the “AI Literacy for All” workshop at AIED 2025, coordinating the review of 20+ papers and convening over 100 participants.
       <br>
-      <span class="paper-pill">AIED 2025</span> <span class="paper-pill">SIGCSE 2025</span> <span class="paper-pill">LAK 2025</span> GenAI-integrated tools for AI Literacy material generation and learning analytics.   
+      <span class="paper-pill">AIED 2025</span> <span class="paper-pill">SIGCSE 2025</span> <span class="paper-pill">LAK 2025</span> GenAI-integrated tools for AI literacy material generation and learning analytics.
     </div>
 
     <div class="project-section-title">Team</div>
@@ -52,10 +45,11 @@ title: Ruiwei Xiao
       Collaborators from CMU, NTHU, and partner K–12 schools.
     </p>
   </div>
-  
+
   <div class="hero-media">
     <img src="/assets/img/activeai_hero.png" alt="ActiveAI hero image">
   </div>
+</div>
 
 </section>
 
