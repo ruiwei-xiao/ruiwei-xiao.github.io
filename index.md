@@ -32,17 +32,13 @@ title: Ruiwei Xiao
 
     <div class="project-section-title">Related Papers</div>
     <div class="related-papers">
-      <span class="paper-pill">Ongoing Project</span> Running a large-scale field study deploying 4 AI literacy learning modules with pre/post-testing across 2,000 high school students.
+      <span class="paper-pill">Ongoing Project</span> Running a large-scale learning interventions with pre/post-testing across 2,000+ high school students and 500+ teachers.
       <br>
-      <span class="paper-pill">Ongoing Project</span> Running bi-weekly AI literacy teacher training workshops in partnership with Junyi Academy, with pre/post-testings to evaluate learning outcomes.
+      <span class="paper-pill">CHI 2026 R&R</span> <span class="paper-pill">AAAI 2025</span> Cross-cultural qualitative study investigating how generative AI influences stakeholder behavior and educational equity.
       <br>
-      <span class="paper-pill">CHI 2026 R&R</span> <span class="paper-pill">AAAI 2025</span> Conducted a cross-cultural qualitative study investigating how generative AI influences stakeholder behavior and educational equity in South Africa, Taiwan, and the United States.
+      <span class="paper-pill">AAAI 2026</span> <span class="paper-pill">LAK 2026</span> Large-scale experiment on learner behavior, perception and knowledge level.
       <br>
-      <span class="paper-pill">AAAI 2026</span> Conducted two in-classroom experiments with 100+ middle school students to evaluate the effects of an AI literacy learning platform on learning efficiency and instructional material quality.
-      <br>
-      <span class="paper-pill">LAK 2026</span> Designed and deployed large-scale self-reported and objective AI literacy measures delpoying on 358 teachers, revealing systematic gaps between perceived competence and demonstrated AI literacy.
-      <br>
-      <span class="paper-pill">AIED 2025</span> Organized the “AI Literacy for All” workshop at AIED 2025, coordinating the review of 20+ papers and convening over 100 participants, establishing the largest and fastest-growing workshop community at the conference.
+      <span class="paper-pill">AIED 2025</span> Organized the biggest workshop at AIED 2025, establishing the largest and fastest-growing workshop community at the conference.
       <br>
       <span class="paper-pill">AIED 2025</span> <span class="paper-pill">SIGCSE 2025</span> <span class="paper-pill">LAK 2025</span> GenAI-integrated tools for AI Literacy material generation and learning analytics.   
     </div>
