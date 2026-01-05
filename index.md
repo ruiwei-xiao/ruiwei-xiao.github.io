@@ -42,7 +42,7 @@ title: Ruiwei Xiao
       <br>
       <span class="paper-pill">AIED 2025</span> <span class="paper-pill">SIGCSE 2025</span> <span class="paper-pill">LAK 2025</span> GenAI-integrated tools for AI literacy material generation and learning analytics.   
     </div>
-
+  </div>
   
   <div class="hero-media">
     <img src="/assets/img/activeai_hero.png" alt="ActiveAI hero image">
@@ -82,5 +82,7 @@ title: Ruiwei Xiao
       <span class="paper-pill">SIGCSE 2026</span> Student Choice & Multimodal AI in Programming  
     </div>
 
+
+  </div>
 
 </section>
