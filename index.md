@@ -43,11 +43,6 @@ title: Ruiwei Xiao
       <span class="paper-pill">AIED 2025</span> <span class="paper-pill">SIGCSE 2025</span> <span class="paper-pill">LAK 2025</span> GenAI-integrated tools for AI literacy material generation and learning analytics.   
     </div>
 
-    <div class="project-section-title">Team</div>
-    <p class="team-desc">
-      Collaborators from CMU, NTHU, and partner K–12 schools.
-    </p>
-  </div>
   
   <div class="hero-media">
     <img src="/assets/img/activeai_hero.png" alt="ActiveAI hero image">
@@ -87,11 +82,5 @@ title: Ruiwei Xiao
       <span class="paper-pill">SIGCSE 2026</span> Student Choice & Multimodal AI in Programming  
     </div>
 
-    <div class="project-section-title">Team</div>
-    <p class="team-desc">
-      HCII Learnvia × ActiveAI research team with K–12 collaborators.
-    </p>
-
-  </div>
 
 </section>
