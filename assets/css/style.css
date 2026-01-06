@@ -186,6 +186,9 @@ body {
 /* ============================= */
 
 .main {
+  background: #ffffff;
+  position: relative;
+  z-index: 2;
   flex: 1;
 }
 
