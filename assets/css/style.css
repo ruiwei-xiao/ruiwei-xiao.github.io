@@ -662,6 +662,7 @@ section, main {
 }
 
 .about-section {
+  margin-top: -12px;  
   font-family: inherit;          /* 让它跟全站一致 */
   font-size: 0.95rem;
   line-height: 1.6;
