@@ -10,7 +10,7 @@ permalink: /publications/
 <div class="pub-card">
   <div class="pub-left">
     <div class="pub-tags">
-      <span>[P.1]</span><span>LAK 2026</span>
+      <span>[C.7]</span><span>LAK 2026</span>
     </div>
     <div class="pub-title">
       How to Assess AI Literacy: Misalignment Between Self-Reported and Objective-Based Measures.
@@ -59,7 +59,7 @@ permalink: /publications/
 <div class="pub-card">
   <div class="pub-left">
     <div class="pub-tags">
-      <span>[P.2]</span><span>Preprint 2026</span>
+      <span>[P.1]</span><span>Preprint 2026</span>
     </div>
     <div class="pub-title">
       Improving Student–AI Interaction Through Pedagogical Prompting: An Example in Computer Science Education.
@@ -96,9 +96,7 @@ permalink: /publications/
       Proceedings of the 57th ACM Technical Symposium on Computer Science Education (SIGCSE’26).
     </div>
     <div class="pub-buttons">
-      <a href="#">PDF</a>
-      <a href="#">Project</a>
-      <a href="#">BibTeX</a>
+      <a href="https://arxiv.org/pdf/2510.05417">PDF</a>
     </div>
   </div>
   <div class="pub-right">
@@ -113,7 +111,7 @@ permalink: /publications/
       <span>[C.4]</span><span>AAAI 2026</span>
     </div>
     <div class="pub-title">
-      Learning to Use AI for Learning: How Can We Effectively Teach and Measure Prompting Literacy for K-12 Students?
+      Learning to Use AI for Learning: Teaching Responsible Use of AI Chatbot to K-12 Students Through an AI Literacy Module
     </div>
     <div class="pub-authors">
       <strong>Ruiwei Xiao</strong>, Xinying Hou, Ying-Jui Tseng, Hsuan Nieu, Guanze Liao, John Stamper, Kenneth R. Koedinger
@@ -122,9 +120,7 @@ permalink: /publications/
       Proceedings of the AAAI Conference on Artificial Intelligence (AAAI’26).
     </div>
     <div class="pub-buttons">
-      <a href="#">PDF</a>
-      <a href="#">Project</a>
-      <a href="#">BibTeX</a>
+      <a href="https://arxiv.org/abs/2508.13962">PDF</a>
     </div>
   </div>
   <div class="pub-right">
@@ -148,9 +144,7 @@ permalink: /publications/
       Proceedings of the AAAI Conference on Artificial Intelligence (AAAI’25).
     </div>
     <div class="pub-buttons">
-      <a href="#">PDF</a>
-      <a href="#">Project</a>
-      <a href="#">BibTeX</a>
+      <a href="https://doi.org/10.1609/aaai.v39i28.35187">PDF</a>
     </div>
   </div>
   <div class="pub-right">
