@@ -626,7 +626,7 @@ section, main {
 }
 
 .project-desc {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #374151;
   margin-bottom: 22px;
 }
@@ -643,7 +643,7 @@ section, main {
 
 .related-papers {
   font-size: 0.8rem;      /* 比正文小一号 */
-  line-height: 1.5;
+  line-height: 1.8;
   color: #374151;         /* 可选：稍微浅一点 */
 }
 
