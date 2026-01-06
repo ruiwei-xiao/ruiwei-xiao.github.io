@@ -577,6 +577,11 @@ html {
 section, main {
   margin-top: 50px !important;
 }
+
+#about.about-section {
+  margin-top: 20px !important;  /* 或 0 / 10px，看你想多靠上 */
+}
+
 /* ----------------------------------------------------- */
 /* Edgeless Full-Width Project Hero Layout               */
 /* ----------------------------------------------------- */
