@@ -68,12 +68,12 @@ title: Ruiwei Xiao
     <h1 class="project-title">Pedagogical Prompting</h1>
 
     <p class="project-desc">
-      A research program focused on how novices learn to prompt AI productively for learning and problem solving.
+      Equipping 1,000+ of University of Toronto CS students every year with metacognitive skills for a generative AI–enabled future.
     </p>
 
     <div class="project-section-title">Related Papers</div>
     <div class="related-papers">
-      <span class="paper-pill">CAEAI 2026</span> Improving Student–AI Interaction Through Pedagogical Prompting  
+      <span class="paper-pill">Under Review</span> Improving Student–AI Interaction Through Pedagogical Prompting  
       <br>
       <span class="paper-pill">CHI EA 2024</span> GPT-Generated Programming Hints  
       <br>
