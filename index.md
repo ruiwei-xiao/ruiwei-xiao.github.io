@@ -36,7 +36,7 @@ title: Ruiwei Xiao
       <br>
       <span class="paper-pill">CHI 2026</span> <span class="paper-pill">AAAI 2025</span> Cross-cultural qualitative study of generative AI’s impacts on stakeholders' behavior and educational equity.
       <br>
-      <span class="paper-pill">AAAI 2026</span> <span class="paper-pill">LAK 2026</span> Large-scale experiment on learner behavior, perception and knowledge level.
+      <span class="paper-pill">AAAI 2026</span> <span class="paper-pill">LAK 2026</span> Large-scale experiment on 100+ students and 300+ teachers' behavior, perception and knowledge level.
       <br>
       <span class="paper-pill">AIED 2025</span> Organized the biggest workshop and established AI literacy community at AIED 2025.
       <br>
@@ -68,18 +68,19 @@ title: Ruiwei Xiao
     <h1 class="project-title">Pedagogical Prompting</h1>
 
     <p class="project-desc">
-      Equipping 1,000+ of University of Toronto CS students every year with metacognitive skills for a generative AI–enabled future.
+      Equipping 1,000+ of university students every year with generative AI-related metacognitive skills for a generative AI–enabled future.
     </p>
 
     <div class="project-section-title">Related Papers</div>
     <div class="related-papers">
-      <span class="paper-pill">Under Review</span> Improving Student–AI Interaction Through Pedagogical Prompting  
+      <span class="paper-pill">Ongoing Project</span> Longitudinal controlled experiment examining the effects of an AI literacy intervention on academic performance among 1,000+ CS novices.
       <br>
-      <span class="paper-pill">CHI EA 2024</span> GPT-Generated Programming Hints  
+      <span class="paper-pill">Under Review</span><span class="paper-pill">AIED 2024</span><span class="paper-pill">CHI EA 2024</span> Explored how generative AI can enhance learning sciences through a literature review and mixed-methods analysis.
       <br>
-      <span class="paper-pill">CSEDM 2024</span> Help Requests with LLM-Powered Chatbots  
+      <span class="paper-pill">L@S 2024</span> <span class="paper-pill">CSEDM 2024</span> Conducted educational data mining on student interaction logs from generative AI systems, examining causal and correlational relationships between learner behaviors and academic performance.
       <br>
-      <span class="paper-pill">SIGCSE 2026</span> Student Choice & Multimodal AI in Programming  
+      <span class="paper-pill">SIGCSE 2026</span> Conducted a qualitative study of learners' interaction with multimodal generative AI systems, examining learners' modality choices through observations and interviews.
+      
     </div>
 
 
