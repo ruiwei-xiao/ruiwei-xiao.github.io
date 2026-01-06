@@ -73,6 +73,9 @@ permalink: /publications/
     <div class="pub-buttons">
       <a href="https://arxiv.org/abs/2506.19107" target="_blank">PDF</a>
     </div>
+    <div class="pub-buttons">
+      <a href="https://youtu.be/utXIUhBMDuU?si=nUs1quICSyDb9Xgo" target="_blank">Video</a>
+    </div>
   </div>
   <div class="pub-right">
     <img src="/assets/img/pedagogicalprompting.png" alt="Pedagogical prompting paper teaser">
@@ -194,9 +197,7 @@ permalink: /publications/
       Companion Proceedings of the 15th International Learning Analytics and Knowledge Conference (LAK’25).
     </div>
     <div class="pub-buttons">
-      <a href="#">PDF</a>
-      <a href="#">Project</a>
-      <a href="#">BibTeX</a>
+      <a href="https://arxiv.org/pdf/2412.14200">PDF</a>
     </div>
   </div>
   <div class="pub-right">
