@@ -22,9 +22,7 @@ permalink: /publications/
       Proceedings of the 16th International Learning Analytics and Knowledge Conference.
     </div>
     <div class="pub-buttons">
-      <a href="#">PDF</a>
-      <a href="#">Project</a>
-      <a href="#">BibTeX</a>
+      <a href="https://drive.google.com/file/d/1jRHOo36yOHVYLI8szffrFzJAumpHg0jD/view?usp=sharing">PDF</a>
     </div>
   </div>
   <div class="pub-right">
@@ -48,9 +46,7 @@ permalink: /publications/
       Proceedings of CHI 2026 (to appear after R&R)
     </div>
     <div class="pub-buttons">
-      <a href="https://arxiv.org/abs/2506.19107" target="_blank">PDF</a>
-      <a href="#">Project</a>
-      <a href="#">BibTeX</a>
+      <a href="https://arxiv.org/pdf/2509.10782" target="_blank">PDF</a>
     </div>
   </div>
   <div class="pub-right">
@@ -76,8 +72,6 @@ permalink: /publications/
     </div>
     <div class="pub-buttons">
       <a href="https://arxiv.org/abs/2506.19107" target="_blank">PDF</a>
-      <a href="#">Project</a>
-      <a href="#">BibTeX</a>
     </div>
   </div>
   <div class="pub-right">
