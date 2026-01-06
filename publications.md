@@ -72,8 +72,6 @@ permalink: /publications/
     </div>
     <div class="pub-buttons">
       <a href="https://arxiv.org/abs/2506.19107" target="_blank">PDF</a>
-    </div>
-    <div class="pub-buttons">
       <a href="https://youtu.be/utXIUhBMDuU?si=nUs1quICSyDb9Xgo" target="_blank">Video</a>
     </div>
   </div>
@@ -171,9 +169,7 @@ permalink: /publications/
       International Conference on Artificial Intelligence in Education (AIED’25).
     </div>
     <div class="pub-buttons">
-      <a href="#">PDF</a>
-      <a href="#">Project</a>
-      <a href="#">BibTeX</a>
+      <a href="https://arxiv.org/pdf/2505.08083">PDF</a>
     </div>
   </div>
   <div class="pub-right">
@@ -222,9 +218,7 @@ permalink: /publications/
       Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA’24).
     </div>
     <div class="pub-buttons">
-      <a href="#">PDF</a>
-      <a href="#">Project</a>
-      <a href="#">BibTeX</a>
+      <a href="https://dl.acm.org/doi/pdf/10.1145/3613905.3650937">PDF</a>
     </div>
   </div>
   <div class="pub-right">
@@ -248,9 +242,7 @@ permalink: /publications/
       International Conference on Artificial Intelligence in Education (AIED’24).
     </div>
     <div class="pub-buttons">
-      <a href="#">PDF</a>
-      <a href="#">Project</a>
-      <a href="#">BibTeX</a>
+      <a href="https://arxiv.org/pdf/2405.04645">PDF</a>
     </div>
   </div>
   <div class="pub-right">
@@ -274,9 +266,7 @@ permalink: /publications/
       Proceedings of the 11th ACM Conference on Learning at Scale (L@S’24).
     </div>
     <div class="pub-buttons">
-      <a href="#">PDF</a>
-      <a href="#">Project</a>
-      <a href="#">BibTeX</a>
+      <a href="https://dl.acm.org/doi/pdf/10.1145/3657604.3662042">PDF</a>
     </div>
   </div>
   <div class="pub-right">
@@ -300,9 +290,7 @@ permalink: /publications/
       CSEDM’24: 8th Educational Data Mining in Computer Science Education Workshop (CSEDM’24).
     </div>
     <div class="pub-buttons">
-      <a href="#">PDF</a>
-      <a href="#">Project</a>
-      <a href="#">BibTeX</a>
+      <a href="https://utoronto.scholaris.ca/server/api/core/bitstreams/3cf197ca-56ae-4191-8c41-f48f3f8b46b4/content">PDF</a>
     </div>
   </div>
   <div class="pub-right">
