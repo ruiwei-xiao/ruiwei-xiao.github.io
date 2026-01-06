@@ -75,7 +75,7 @@ title: Ruiwei Xiao
     <div class="related-papers">
       <span class="paper-pill">Ongoing Project</span> Longitudinal controlled experiment examining the effects of an AI literacy intervention on academic performance among 1,000+ CS novices.
       <br>
-      <span class="paper-pill">Under Review</span><span class="paper-pill">AIED 2024</span><span class="paper-pill">CHI EA 2024</span> Explored how generative AI can enhance learning sciences through a literature review and mixed-methods analysis.
+      <span class="paper-pill">AIED 2024</span><span class="paper-pill">CHI EA 2024</span> Explored how generative AI can enhance learning sciences through a literature review and mixed-methods analysis.
       <br>
       <span class="paper-pill">L@S 2024</span> <span class="paper-pill">CSEDM 2024</span> Conducted educational data mining on student interaction logs from generative AI systems, examining causal and correlational relationships between learner behaviors and academic performance.
       <br>
