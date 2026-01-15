@@ -34,7 +34,7 @@ title: Ruiwei Xiao
     <div class="related-papers">
       <span class="paper-pill">Ongoing Project</span> Running a large-scale learning interventions with pre- post-tests across 2,000+ students and 500+ teachers.
       <br>
-      <span class="paper-pill">CHI 2026 R&R</span> <span class="paper-pill">AAAI 2025</span> Cross-cultural qualitative study of generative AI’s impacts on stakeholders' behavior and educational equity.
+      <span class="paper-pill">CHI 2026</span> <span class="paper-pill">AAAI 2025</span> Cross-cultural qualitative study of generative AI’s impacts on stakeholders' behavior and educational equity.
       <br>
       <span class="paper-pill">AAAI 2026</span> <span class="paper-pill">LAK 2026</span> Large-scale experiment on 100+ students and 300+ teachers' behavior, perception and knowledge level.
       <br>
