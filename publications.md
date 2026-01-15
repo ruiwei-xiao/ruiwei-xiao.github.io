@@ -43,7 +43,7 @@ permalink: /publications/
       <strong>Ruiwei Xiao</strong>, Qing Xiao, Xinying Hou, Phenyo Phemelo Moletsane, Hanqi Li, Hong Shen, John Stamper
     </div>
     <div class="pub-venue">
-      Proceedings of CHI 2026 (to appear after R&R)
+      Proceedings of CHI 2026
     </div>
     <div class="pub-buttons">
       <a href="https://arxiv.org/pdf/2509.10782" target="_blank">PDF</a>
