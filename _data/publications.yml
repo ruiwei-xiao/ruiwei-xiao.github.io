@@ -1,0 +1,139 @@
+# Newest first. project: activeai | prompting. featured: shown on the homepage.
+# role: 1st | co-1st | co — used for the "1st author" filter and tag.
+
+- id: C.7
+  venue: LAK 2026
+  year: 2026
+  title: "How to Assess AI Literacy: Misalignment Between Self-Reported and Objective-Based Measures"
+  authors: "<strong>Ruiwei Xiao*</strong>, Shan Zhang*, Anthony F. Botelho, Guanze Liao, Thomas K. F. Chiu, John Stamper, Kenneth R. Koedinger"
+  venue_full: "Proceedings of the 16th International Learning Analytics and Knowledge Conference"
+  image: /assets/img/lak26.png
+  pdf: https://drive.google.com/file/d/1jRHOo36yOHVYLI8szffrFzJAumpHg0jD/view?usp=sharing
+  project: activeai
+  role: co-1st
+  featured: true
+
+- id: C.6
+  venue: CHI 2026
+  year: 2026
+  title: "Do Teachers Dream of GenAI Widening Educational (In)Equality?"
+  authors: "<strong>Ruiwei Xiao</strong>, Qing Xiao, Xinying Hou, Phenyo Phemelo Moletsane, Hanqi Li, Hong Shen, John Stamper"
+  venue_full: "Proceedings of CHI 2026"
+  image: /assets/img/chi26equality.png
+  pdf: https://arxiv.org/pdf/2509.10782
+  project: activeai
+  role: 1st
+  featured: true
+
+- id: P.1
+  venue: Preprint
+  year: 2026
+  title: "Improving Student–AI Interaction Through Pedagogical Prompting: An Example in Computer Science Education"
+  authors: "<strong>Ruiwei Xiao</strong>, Xinying Hou*, Runlong Ye*, Majeed Kazemitabaar*, Nicholas Diana, Michael Liut, John Stamper"
+  venue_full: "Under review"
+  image: /assets/img/pedagogicalprompting.png
+  pdf: https://arxiv.org/abs/2506.19107
+  video: https://youtu.be/utXIUhBMDuU
+  project: prompting
+  role: 1st
+  featured: true
+
+- id: C.5
+  venue: SIGCSE 2026
+  year: 2026
+  title: "Exploring Student Choice and the Use of Multimodal Generative AI in Programming Learning"
+  authors: "<strong>Ruiwei Xiao*</strong>, Xinying Hou*, Runlong Ye, Michael Liut, John Stamper"
+  venue_full: "Proceedings of the 57th ACM Technical Symposium on Computer Science Education (SIGCSE’26)"
+  image: /assets/img/c4_sigcse26.png
+  pdf: https://arxiv.org/pdf/2510.05417
+  project: prompting
+  role: co-1st
+
+- id: C.4
+  venue: AAAI 2026
+  year: 2026
+  title: "Learning to Use AI for Learning: Teaching Responsible Use of AI Chatbot to K-12 Students Through an AI Literacy Module"
+  authors: "<strong>Ruiwei Xiao</strong>, Xinying Hou, Ying-Jui Tseng, Hsuan Nieu, Guanze Liao, John Stamper, Kenneth R. Koedinger"
+  venue_full: "Proceedings of the AAAI Conference on Artificial Intelligence (AAAI’26)"
+  image: /assets/img/c5_aaai26.png
+  pdf: https://arxiv.org/abs/2508.13962
+  project: activeai
+  role: 1st
+  featured: true
+
+- id: C.3
+  venue: AAAI 2025
+  year: 2025
+  title: "“From Unseen Needs to Classroom Solutions”: Exploring AI Literacy Challenges & Opportunities with Project-Based Learning Toolkit in K-12 Education"
+  authors: "<strong>Ruiwei Xiaoᴹ*</strong>, Hanqi Li*, Hsuan Nieu, Ying-Jui Tseng, Guanze Liao"
+  venue_full: "Proceedings of the AAAI Conference on Artificial Intelligence (AAAI’25)"
+  image: /assets/img/c6_aaai25.png
+  pdf: https://doi.org/10.1609/aaai.v39i28.35187
+  project: activeai
+  role: co-1st
+
+- id: EA.3
+  venue: AIED 2025
+  year: 2025
+  title: "LLMs to Support K–12 Teachers in Culturally Relevant Pedagogy: An AI Literacy Example"
+  authors: "Jiayi Wang, <strong>Ruiwei Xiaoᴹ</strong>, Xinying Hou, Hanqi Li, Ying-Jui Tseng, John Stamper, Kenneth R. Koedinger"
+  venue_full: "International Conference on Artificial Intelligence in Education (AIED’25)"
+  image: /assets/img/c7_aied25.png
+  pdf: https://arxiv.org/pdf/2505.08083
+  project: activeai
+  role: co
+
+- id: EA.2
+  venue: LAK 2025
+  year: 2025
+  title: "ActiveAI: Enabling K-12 AI Literacy Education & Analytics at Scale"
+  authors: "<strong>Ruiwei Xiao</strong>, Ying-Jui Tseng, Hanqi Li, Hsuan Nieu, Guanze Liao, John Stamper, Kenneth R. Koedinger"
+  venue_full: "Companion Proceedings of the 15th International Learning Analytics and Knowledge Conference (LAK’25)"
+  image: /assets/img/c8_lak25.png
+  pdf: https://arxiv.org/pdf/2412.14200
+  project: activeai
+  role: 1st
+
+- id: EA.1
+  venue: CHI EA 2024
+  year: 2024
+  title: "Exploring How Multiple Levels of GPT-Generated Programming Hints Support or Disappoint Novices"
+  authors: "<strong>Ruiwei Xiao</strong>, Xinying Hou, John Stamper"
+  venue_full: "Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA’24)"
+  image: /assets/img/c10_chiea24.png
+  pdf: https://dl.acm.org/doi/pdf/10.1145/3613905.3650937
+  project: prompting
+  role: 1st
+
+- id: C.2
+  venue: AIED 2024
+  year: 2024
+  title: "Enhancing LLM-Based Feedback: Insights from Intelligent Tutoring Systems and the Learning Sciences"
+  authors: "John Stamper, <strong>Ruiwei Xiao</strong>, Xinying Hou"
+  venue_full: "International Conference on Artificial Intelligence in Education (AIED’24)"
+  image: /assets/img/c11_aied24.png
+  pdf: https://arxiv.org/pdf/2405.04645
+  project: prompting
+  role: co
+
+- id: C.1
+  venue: L@S 2024
+  year: 2024
+  title: "Supporting Self-Reflection at Scale with Large Language Models: Insights from Randomized Field Experiments in Classrooms"
+  authors: "Harsh Kumar, <strong>Ruiwei Xiao</strong>, Benjamin Lawson, Ilya Musabirov, Jiakai Shi, Xinyuan Wang, Huayin Luo, Joseph Jay Williams, Anna N. Rafferty, John Stamper, Michael Liut"
+  venue_full: "Proceedings of the 11th ACM Conference on Learning at Scale (L@S’24)"
+  image: /assets/img/c12_ls24.png
+  pdf: https://dl.acm.org/doi/pdf/10.1145/3657604.3662042
+  project: prompting
+  role: co
+
+- id: W.1
+  venue: CSEDM 2024
+  year: 2024
+  title: "A Preliminary Analysis of Students’ Help Requests with an LLM-Powered Chatbot When Completing CS1 Assignments"
+  authors: "<strong>Ruiwei Xiao</strong>, Xinying Hou, Harsh Kumar, Steven Moore, John Stamper, Michael Liut"
+  venue_full: "8th Educational Data Mining in Computer Science Education Workshop (CSEDM’24)"
+  image: /assets/img/c13_csedm24.png
+  pdf: https://utoronto.scholaris.ca/server/api/core/bitstreams/3cf197ca-56ae-4191-8c41-f48f3f8b46b4/content
+  project: prompting
+  role: 1st

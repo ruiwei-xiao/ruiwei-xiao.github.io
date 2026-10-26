@@ -1,0 +1,17 @@
+{% assign p = include.pub %}
+<div class="card" data-project="{{ p.project }}" data-role="{{ p.role }}">
+  <div class="thumb"><img src="{{ p.image | relative_url }}" alt="" loading="lazy"></div>
+  <div class="body">
+    <div class="tags">
+      <span class="tag b">{{ p.venue }}</span>
+      {% if p.role == '1st' %}<span class="tag">1st author</span>{% elsif p.role == 'co-1st' %}<span class="tag">Co-1st author</span>{% endif %}
+    </div>
+    <h4>{{ p.title }}</h4>
+    <p class="authors">{{ p.authors }}</p>
+    {% if include.full %}<p class="venue">{{ p.venue_full }}</p>{% endif %}
+    <div class="btns">
+      {% if p.pdf %}<a class="btn" href="{{ p.pdf }}" target="_blank">PDF</a>{% endif %}
+      {% if p.video %}<a class="btn ghost" href="{{ p.video }}" target="_blank">Video</a>{% endif %}
+    </div>
+  </div>
+</div>

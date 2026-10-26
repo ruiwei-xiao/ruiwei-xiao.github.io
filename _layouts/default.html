@@ -4,142 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 
 <body>
-  <!-- 只给 Projects 页用的小交互：点击左侧项目切右侧卡片 -->
-  <!-- <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const items = document.querySelectorAll('.project-item');
-    const panels = document.querySelectorAll('.project-panel');
-
-    if (!items.length) return; // 不是 projects 页就直接退出
-
-    items.forEach(item => {
-      item.addEventListener('click', () => {
-        const key = item.dataset.project;
-
-        items.forEach(i => i.classList.toggle('is-active', i === item));
-        panels.forEach(p => p.classList.toggle('is-active', p.dataset.project === key));
-      });
-    });
-  });
-  </script> -->
-
-  <div class="wrapper">
-
-    <!-- ===================== -->
-    <!--       Sidebar         -->
-    <!-- ===================== -->
-    <aside class="sidebar">
-      <!-- 头像 -->
-      <img src="https://www.cs.cmu.edu/~hcdl/images/ruiwei_xiao.jpg"
-           alt="Profile"
-           class="sidebar-photo">
-
-      <!-- 名字 -->
-      <h1 class="sidebar-name">Ruiwei Xiao</h1>
-
-      <!-- 两行简介 -->
-      <p class="sidebar-subtitle">2nd Year PhD Student at CMU HCII</p>
-      <p class="sidebar-role2">Co-Founder of ActiveAI</p>
-
-      <!-- 社交 icon 一排 -->
-      <div class="social-row">
-        <a href="https://scholar.google.com/citations?user=izYxC3EAAAAJ" target="_blank">
-          <img src="https://img.icons8.com/ios-filled/50/graduation-cap.png" alt="Google Scholar">
-        </a>
-        <a href="https://linkedin.com/in/rx98" target="_blank">
-          <img src="https://img.icons8.com/ios-filled/50/linkedin.png" alt="LinkedIn">
-        </a>
-        <a href="https://github.com/Ruiwei-Xiao" target="_blank">
-          <img src="https://img.icons8.com/ios-glyphs/50/github.png" alt="GitHub">
-        </a>
-        <!-- CMU HCII logo -->
-        <a href="https://www.hcii.cmu.edu/people/ruiwei-xiao" target="_blank">
-          <img src="https://img.icons8.com/ios-filled/50/university.png" alt="HCII">
-        </a>
-        <!-- CV icon（可以指向 pdf） -->
-        <a href="https://drive.google.com/file/d/12XQAa_tvCNml65rYvvtBqdnH0Qc25q6O/view?usp=sharing" target="_blank">
-          <img src="https://img.icons8.com/ios-filled/50/resume.png" alt="CV">
-        </a>
+  <!-- 顶部导航：首页上点击切换身份；其他页面跳回首页对应身份 -->
+  <nav class="nav">
+    <div class="wrap">
+      <a href="{{ '/' | relative_url }}" class="logo">ruiwei<i>.</i>xiao</a>
+      <div class="links">
+        <a href="{{ '/#research' | relative_url }}" data-go="research"{% if page.url == '/publications/' %} class="on"{% endif %}>Research</a>
+        <a href="{{ '/#practice' | relative_url }}" data-go="practice">Practice</a>
+        <a href="{{ '/#life' | relative_url }}" data-go="life">Life</a>
+        <a href="{{ site.cv_url }}" target="_blank" class="hide-sm">CV</a>
       </div>
+    </div>
+  </nav>
 
-      <!-- News -->
-      <div class="sidebar-news">
-        <div class="sidebar-news-title">NEWS</div>
-        <ul class="news-list-small">
-          <li>
-            <span class="news-tag">2026-03</span>
-            One co-authored paper accepted to AIED’26
-          </li>
-          <li>
-            <span class="news-tag">2026-03</span>
-            2nd ALIT4ALL Workshop proposal accepted to Festival of Learning (AIED’26)
-          </li>
-          <li>
-            <span class="news-tag">2026-02</span>
-            One co-authored paper accepted to ISLS’26
-          </li>
-          <li>
-            <span class="news-tag">2026-01</span>
-            One 1st-author paper accepted to CHI’26
-          </li>
-          <li>
-            <span class="news-tag">2025-12</span>
-            One co-1st-author paper accepted to LAK’26
-          </li>
-          <li>
-            <span class="news-tag">2025-11</span>
-            ActiveAI × CSforALL: launches Hour of AI
-          </li>
-          <li>
-            <span class="news-tag">2025-10</span>
-            One 1st-author paper passed CHI’26 R&amp;R
-          </li>
-          <li>
-            <span class="news-tag">2025-10</span>
-            One 1st-author paper accepted to AAAI’26
-          </li>
-          <li>
-            <span class="news-tag">2025-09</span>
-            One co-1st-author paper accepted to SIGCSE’26
-          </li>
-        </ul>
-      </div>
-    </aside>
+  <main class="wrap">
+    {{ content }}
+  </main>
 
-    <!-- ===================== -->
-    <!--      Main Content     -->
-    <!-- ===================== -->
-    <main class="main">
-      <!-- 顶部极简导航（所有页面公用） -->
-      <nav class="top-nav">
-        <div class="nav-content">
-          <div class="nav-left">
-            <span class="nav-logo"></span>
-          </div>
-          <div class="nav-center">
-            <a href="{{ '/' | relative_url }}"
-               class="nav-link{% if page.url == '/' %} is-active{% endif %}">
-              About
-            </a>
-            <a href="{{ '/publications/' | relative_url }}"
-               class="nav-link{% if page.url == '/publications/' %} is-active{% endif %}">
-              Publications
-            </a>
-            <!-- <a href="{{ '/projects/' | relative_url }}"
-               class="nav-link{% if page.url == '/projects/' %} is-active{% endif %}">
-              Projects
-            </a> -->
-          </div>
-        </div>
-      </nav>
+  <footer>© {{ site.time | date: '%Y' }} Ruiwei Xiao</footer>
 
-      <!-- 每个页面自己的内容 -->
-      {{ content }}
-    </main>
-  </div>
+  <script src="{{ '/assets/js/site.js' | relative_url }}"></script>
 </body>
 </html>

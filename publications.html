@@ -1,0 +1,28 @@
+---
+layout: default
+title: Publications – Ruiwei Xiao
+permalink: /publications/
+---
+{% assign pubs = site.data.publications %}
+
+<section class="page-head">
+  <h1>Publications</h1>
+  <p class="sub">* equal contribution</p>
+  <div class="seg filters" role="tablist">
+    <button data-filter="all" class="on">All</button>
+    <button data-filter="activeai">ActiveAI</button>
+    <button data-filter="prompting">Pedagogical Prompting</button>
+    <button data-filter="first">1st author</button>
+  </div>
+</section>
+
+{% assign years = pubs | group_by: "year" %}
+{% for y in years %}
+<div class="sec year-block">
+  <div class="sec-h"><span class="dot"></span><h3>{{ y.name }}</h3><span class="right"><span class="count">{{ y.items.size }}</span> papers</span></div>
+  <div class="grid">
+    {% for p in y.items %}{% include pub-card.html pub=p full=true %}{% endfor %}
+  </div>
+</div>
+{% endfor %}
+<p class="empty" hidden>No papers match this filter.</p>

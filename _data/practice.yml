@@ -1,0 +1,52 @@
+# Practitioner section. Items with placeholder: true render as muted "coming soon" cards.
+
+materials:
+  - title: "AILF-aligned K–12 AI literacy module library"
+    tag: Curriculum
+    meta: "19 modules"
+    icon: "🧭"
+    text: "Interactive modules across 問AI · 用AI · 管AI · 造AI (Engage, Create, Manage, Design with AI), mapped to the OECD/EC AI Literacy Framework."
+    link: https://app.active-ai.io/
+    link_label: Explore modules
+  - title: "Hour of AI"
+    tag: Case
+    meta: "with CSforALL"
+    icon: "🕐"
+    text: "A one-hour AI literacy experience for every classroom, launched with CSforALL."
+    link: https://app.active-ai.io/hour_of_ai
+    link_label: Try it
+  - title: "Hometown four-panel comics with AI"
+    tag: Case
+    meta: "Changhua, 2026"
+    icon: "🎨"
+    text: "180 elementary students used AI to make comics about their hometown, then checked the output for errors and bias."
+    link: "https://official.junyiacademy.org/blog/%e5%9d%87%e4%b8%80%e5%b9%b3%e5%8f%b0%e3%80%81%e6%b0%91%e7%94%9f%e5%9c%8b%e5%b0%8f%e6%94%9c%e6%89%8b-google%e3%80%80%e6%8e%a8%e5%8b%95%e5%bd%b0%e5%8c%96-ai-%e7%b4%a0%e9%a4%8a/"
+    link_label: Read the story
+  - title: "More materials and cases"
+    tag: Case
+    meta: "Coming soon"
+    icon: "🧩"
+    text: "Teacher guides, project-based toolkits, and classroom cases."
+    placeholder: true
+
+partners:
+  - name: Junyi Academy
+    url: https://www.junyiacademy.org/
+  - name: Google
+    url: https://www.google.com/
+  - name: CSforALL
+    url: https://www.csforall.org/
+  - name: More partners soon
+    placeholder: true
+
+press:
+  - date: 2026-10-23
+    title: "均一平台、民生國小攜手 Google 推動彰化 AI 素養"
+    outlet: Junyi Academy
+    partners: [Junyi Academy, Google]
+    link: "https://official.junyiacademy.org/blog/%e5%9d%87%e4%b8%80%e5%b9%b3%e5%8f%b0%e3%80%81%e6%b0%91%e7%94%9f%e5%9c%8b%e5%b0%8f%e6%94%9c%e6%89%8b-google%e3%80%80%e6%8e%a8%e5%8b%95%e5%bd%b0%e5%8c%96-ai-%e7%b4%a0%e9%a4%8a/"
+  - date: 2025-11
+    title: "ActiveAI × CSforALL launch Hour of AI"
+    outlet: Press link coming soon
+    partners: [CSforALL]
+    placeholder: true

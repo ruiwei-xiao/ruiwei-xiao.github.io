@@ -1,0 +1,169 @@
+---
+layout: default
+title: Ruiwei Xiao
+---
+{% assign pubs = site.data.publications %}
+{% assign practice = site.data.practice %}
+
+<section class="hero">
+  <div class="avatar"><img src="https://www.cs.cmu.edu/~hcdl/images/ruiwei_xiao.jpg" alt="Ruiwei Xiao"></div>
+  <h1>Ruiwei Xiao</h1>
+  <p class="sub">AI literacy education researcher and practitioner.</p>
+  <p class="sub">PhD student at <a href="https://www.hcii.cmu.edu/people/ruiwei-xiao" target="_blank">CMU HCII</a> · Co-founder of <a href="https://www.active-ai.io/" target="_blank">ActiveAI</a></p>
+  <div class="icons">
+    <a href="https://scholar.google.com/citations?user=izYxC3EAAAAJ" target="_blank" aria-label="Google Scholar"><svg viewBox="0 0 24 24"><path d="M22 9 12 4 2 9l10 5 10-5Z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg></a>
+    <a href="https://linkedin.com/in/rx98" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></a>
+    <a href="https://github.com/Ruiwei-Xiao" target="_blank" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a>
+    <a href="{{ site.cv_url }}" target="_blank" aria-label="CV"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></a>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>{{ pubs.size }}</b><span>papers</span></div>
+    <div class="stat"><b>80+</b><span>schools</span></div>
+    <div class="stat"><b>7,000+</b><span>learners</span></div>
+  </div>
+  <div class="seg" role="tablist">
+    <button data-tab="research" class="on">Researcher</button>
+    <button data-tab="practice">Practitioner</button>
+    <button data-tab="life">Life</button>
+  </div>
+</section>
+
+<!-- ===================== RESEARCHER ===================== -->
+<section class="panel on" id="p-research">
+  <div class="lede">
+    <h2>AI in education, AI literacy</h2>
+    <p>Advised by <a href="https://dev.stamper.org/" target="_blank">John Stamper</a>. I combine quantitative (A/B testing, statistical analysis) and qualitative methods (thematic coding) in cross-cultural, multi-institutional studies.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sec-h"><span class="dot"></span><h3>Projects</h3><small>Research threads</small><span class="right">2 ongoing</span></div>
+    <div class="grid">
+      <div class="card">
+        <div class="thumb"><img src="{{ '/assets/img/activeai_hero.png' | relative_url }}" alt=""></div>
+        <div class="body">
+          <div class="tags"><span class="tag b">Project 1</span><span class="tag">K–12</span></div>
+          <h4>ActiveAI × AI Literacy For All</h4>
+          <p>A scalable K–12 AI literacy learning, teaching, and research platform deployed at 80+ schools, with 7,000+ students and teachers across 3 countries.</p>
+          <div class="btns"><a class="btn" href="{{ '/publications/?project=activeai' | relative_url }}">See papers</a></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="thumb"><img src="{{ '/assets/img/pedagogical_prompting_hero.png' | relative_url }}" alt=""></div>
+        <div class="body">
+          <div class="tags"><span class="tag b">Project 2</span><span class="tag">Higher ed</span></div>
+          <h4>Pedagogical Prompting</h4>
+          <p>Equipping 1,000+ university students every year with generative AI–related metacognitive skills.</p>
+          <div class="btns"><a class="btn" href="{{ '/publications/?project=prompting' | relative_url }}">See papers</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-h"><span class="dot"></span><h3>Publications</h3><small>Selected</small><a class="right" href="{{ '/publications/' | relative_url }}">All {{ pubs.size }} papers →</a></div>
+    <div class="grid">
+      {% for p in pubs %}{% if p.featured %}{% include pub-card.html pub=p %}{% endif %}{% endfor %}
+      <a class="card muted wide more" href="{{ '/publications/' | relative_url }}">
+        <h4>See all {{ pubs.size }} papers</h4>
+        <p>{% for p in pubs %}{% unless p.featured %}{{ p.venue }}{% unless forloop.last %} · {% endunless %}{% endunless %}{% endfor %}</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRACTITIONER ===================== -->
+<section class="panel green" id="p-practice">
+  <div class="lede">
+    <h2>Building ActiveAI</h2>
+    <p>I design AI literacy learning materials and bring them into real classrooms with schools, nonprofits, and industry partners.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sec-h"><span class="dot"></span><h3>ActiveAI</h3><small>Co-founder</small></div>
+    <div class="card wide">
+      <div class="thumb"><img src="{{ '/assets/img/activeai_hero.png' | relative_url }}" alt=""></div>
+      <div class="body grow">
+        <div class="tags"><span class="tag g">Platform</span><span class="tag">K–12</span></div>
+        <h4>K–12 AI literacy learning platform</h4>
+        <p>Interactive learning, teaching, and research platform used by students and teachers across three countries.</p>
+        <div class="metrics"><div><b>80+</b><span>schools</span></div><div><b>7,000+</b><span>students &amp; teachers</span></div><div><b>3</b><span>countries</span></div></div>
+        <div class="btns"><a class="btn" href="https://www.active-ai.io/" target="_blank">Visit ActiveAI</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-h"><span class="dot"></span><h3>Learning materials</h3><small>Designed by me</small></div>
+    <div class="grid">
+      {% for m in practice.materials %}
+      <div class="card{% if m.placeholder %} muted{% endif %}">
+        <div class="thumb">{{ m.icon }}</div>
+        <div class="body">
+          <div class="tags"><span class="tag g">{{ m.tag }}</span><span class="tag">{{ m.meta }}</span></div>
+          <h4>{{ m.title }}</h4>
+          <p>{{ m.text }}</p>
+          {% if m.link %}<div class="btns"><a class="btn" href="{{ m.link }}" target="_blank">{{ m.link_label }}</a></div>{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-h"><span class="dot"></span><h3>Partners</h3><small>Who we work with</small></div>
+    <div class="partners">
+      {% for pt in practice.partners %}
+      {% if pt.placeholder %}<span class="partner muted">{{ pt.name }}</span>{% else %}<a class="partner" href="{{ pt.url }}" target="_blank">{{ pt.name }}</a>{% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-h"><span class="dot"></span><h3>In the news</h3><small>Press</small><span class="right">{{ practice.press.size }} stories</span></div>
+    <div class="list">
+      {% for n in practice.press %}
+      <a class="row{% if n.placeholder %} muted{% endif %}"{% if n.link %} href="{{ n.link }}" target="_blank"{% endif %}>
+        <time>{{ n.date }}</time>
+        <div class="row-main">
+          <div class="row-title">{{ n.title }}</div>
+          <div class="row-meta">{{ n.outlet }}</div>
+        </div>
+        <div class="chips">{% for pt in n.partners %}<span class="tag g">{{ pt }}</span>{% endfor %}</div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LIFE ===================== -->
+<section class="panel orange" id="p-life">
+  <div class="lede">
+    <h2>Outside the lab</h2>
+    <p>The things that keep me curious.</p>
+  </div>
+  <div class="sec">
+    <div class="sec-h"><span class="dot"></span><h3>Life</h3><small>Off duty</small></div>
+    <div class="grid">
+      <div class="card muted"><div class="thumb">📷</div><div class="body"><div class="tags"><span class="tag o">Photos</span><span class="tag">Coming soon</span></div><h4>Photo wall</h4><p>Places and moments.</p></div></div>
+      <div class="card muted"><div class="thumb">✈️</div><div class="body"><div class="tags"><span class="tag o">Travel</span><span class="tag">Coming soon</span></div><h4>Travel log</h4><p>Cities I've lived in and visited.</p></div></div>
+      <div class="card muted"><div class="thumb">📚</div><div class="body"><div class="tags"><span class="tag o">Reading</span><span class="tag">Coming soon</span></div><h4>Bookshelf</h4><p>What I'm reading now.</p></div></div>
+      <div class="card muted"><div class="thumb">✍️</div><div class="body"><div class="tags"><span class="tag o">Writing</span><span class="tag">Coming soon</span></div><h4>Notes</h4><p>Short essays and reflections.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NEWS（三个身份共用） ===================== -->
+<section class="sec">
+  <div class="sec-h"><span class="dot ink"></span><h3>News</h3><small>Latest</small></div>
+  <div class="list news">
+    {% for n in site.data.news %}
+    <div class="row{% if forloop.index > 6 %} extra{% endif %}">
+      <time>{{ n.date }}</time>
+      <span class="d {{ n.section }}"></span>
+      <div class="row-main">{% if n.link %}<a href="{{ n.link }}" target="_blank">{{ n.text }}</a>{% else %}{{ n.text }}{% endif %}</div>
+      {% if n.partners %}<div class="chips">{% for pt in n.partners %}<span class="tag g">{{ pt }}</span>{% endfor %}</div>{% endif %}
+    </div>
+    {% endfor %}
+    {% if site.data.news.size > 6 %}<button class="row more-btn" type="button">Show all {{ site.data.news.size }}</button>{% endif %}
+  </div>
+</section>
