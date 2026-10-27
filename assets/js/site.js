@@ -1,36 +1,102 @@
-// 首页：Researcher / Practitioner / Life 切换（同步 URL hash 和顶部导航）
+// 首页：顶部导航随滚动高亮当前版块（Publications / Learning design）
 (function () {
-  const tabs = [...document.querySelectorAll('[data-tab]')];
   const links = [...document.querySelectorAll('[data-go]')];
-  if (!tabs.length) return;
+  const sections = links.map(a => document.getElementById(a.dataset.go)).filter(Boolean);
+  if (!sections.length) return;
 
-  const keys = tabs.map(b => b.dataset.tab);
-  function show(key, scroll) {
-    tabs.forEach(b => b.classList.toggle('on', b.dataset.tab === key));
-    links.forEach(a => a.classList.toggle('on', a.dataset.go === key));
-    document.querySelectorAll('.panel').forEach(p => p.classList.toggle('on', p.id === 'p-' + key));
-    if (scroll) document.querySelector('.seg').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  function update() {
+    const y = scrollY + innerHeight * 0.35;
+    let current = null;
+    sections.forEach(s => { if (s.offsetTop <= y) current = s.id; });
+    links.forEach(a => a.classList.toggle('on', a.dataset.go === current));
   }
-  function select(key, scroll) {
-    history.replaceState(null, '', '#' + key);
-    show(key, scroll);
-  }
-
-  tabs.forEach(b => b.addEventListener('click', () => select(b.dataset.tab)));
-  links.forEach(a => a.addEventListener('click', e => { e.preventDefault(); select(a.dataset.go, true); }));
-
-  const fromHash = () => {
-    const key = location.hash.slice(1);
-    show(keys.includes(key) ? key : 'research');
-  };
-  fromHash();
-  addEventListener('hashchange', fromHash);
+  addEventListener('scroll', update, { passive: true });
+  update();
 })();
 
-// 首页 News：默认只显示前几条
+// 深浅色切换：点击后记住选择；没选过就继续跟随系统
 (function () {
-  const btn = document.querySelector('.news .more-btn');
-  if (btn) btn.addEventListener('click', () => btn.closest('.news').classList.add('open'));
+  const root = document.documentElement;
+  const btn = document.querySelector('.theme-toggle');
+  const stored = () => { try { return localStorage.getItem('theme'); } catch (e) { return null; } };
+
+  if (btn) btn.addEventListener('click', () => {
+    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    if (!stored()) root.dataset.theme = e.matches ? 'dark' : 'light';
+  });
+})();
+
+// 首屏 "AI literacy education" 打字效果（系统开启减少动态效果时直接显示全文）
+(function () {
+  const el = document.querySelector('.typed');
+  if (!el || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  // 隐形的完整文字撑住宽度（不依赖字体加载时机），打出来的文字叠在同一位置
+  const text = el.textContent;
+  el.textContent = '';
+  const ghost = document.createElement('span');
+  const live = document.createElement('span');
+  const out = document.createElement('span');
+  const caret = document.createElement('span');
+  ghost.className = 'ghost';
+  ghost.textContent = text;
+  caret.className = 'caret';
+  live.append(out, caret);
+  el.append(ghost, live);
+
+  let i = 0;
+  (function type() {
+    out.textContent = text.slice(0, ++i);
+    if (i < text.length) setTimeout(type, 45 + Math.random() * 50);
+    else setTimeout(() => caret.classList.add('gone'), 2600);
+  })();
+})();
+
+// 首页 Learning Design：Coming soon 的 module 默认折叠
+(function () {
+  document.querySelectorAll('.mod-more').forEach(btn => btn.addEventListener('click', () => {
+    const list = btn.closest('.modules');
+    const folded = list.classList.toggle('folded');
+    btn.textContent = folded ? btn.dataset.more : btn.dataset.less;
+  }));
+})();
+
+// 首页 In the news：头条 slider（手机滑动 / 箭头 / 圆点；6 秒自动轮播，悬停暂停，减少动画时不轮播）
+(function () {
+  const slider = document.querySelector('.slider');
+  if (!slider) return;
+  const track = slider.querySelector('.slides');
+  const slides = [...track.children];
+  const dots = [...slider.querySelectorAll('.dots button')];
+  let i = 0, timer;
+
+  const mark = () => dots.forEach((d, k) => d.classList.toggle('on', k === i));
+  const go = n => { i = (n + slides.length) % slides.length; track.style.transform = `translateX(${-100 * i}%)`; mark(); };
+  // 手机上左右滑动切换
+  let x0 = null;
+  track.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 40) go(i + (dx < 0 ? 1 : -1));
+    x0 = null;
+  });
+  slider.querySelector('.prev').addEventListener('click', () => go(i - 1));
+  slider.querySelector('.next').addEventListener('click', () => go(i + 1));
+  dots.forEach((d, k) => d.addEventListener('click', () => go(k)));
+  mark();
+
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const stop = () => clearInterval(timer);
+  const start = () => { stop(); timer = setInterval(() => go(i + 1), 6000); };
+  slider.addEventListener('mouseenter', stop);
+  slider.addEventListener('mouseleave', start);
+  slider.addEventListener('focusin', stop);
+  start();
 })();
 
 // Publications 页：按项目 / 一作筛选，支持 ?project=activeai
@@ -43,7 +109,7 @@
     let total = 0;
     document.querySelectorAll('.year-block').forEach(block => {
       let n = 0;
-      block.querySelectorAll('.card').forEach(card => {
+      block.querySelectorAll('.pub-row').forEach(card => {
         const role = card.dataset.role;
         const match = key === 'all' ||
           (key === 'first' ? role === '1st' || role === 'co-1st' : card.dataset.project === key);
@@ -54,7 +120,7 @@
       block.querySelector('.count').textContent = n;
       total += n;
     });
-    document.querySelector('.empty').hidden = total > 0;
+    document.querySelector('.no-results').hidden = total > 0;
   }
 
   buttons.forEach(b => b.addEventListener('click', () => {

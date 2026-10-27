@@ -17,12 +17,14 @@ permalink: /publications/
 </section>
 
 {% assign years = pubs | group_by: "year" %}
+<div class="pub-page">
 {% for y in years %}
 <div class="sec year-block">
   <div class="sec-h"><span class="dot"></span><h3>{{ y.name }}</h3><span class="right"><span class="count">{{ y.items.size }}</span> papers</span></div>
-  <div class="grid">
-    {% for p in y.items %}{% include pub-card.html pub=p full=true %}{% endfor %}
+  <div class="pub-list">
+    {% for p in y.items %}{% include pub-row.html pub=p full=true %}{% endfor %}
   </div>
 </div>
 {% endfor %}
-<p class="empty" hidden>No papers match this filter.</p>
+</div>
+<p class="no-results" hidden>No papers match this filter.</p>

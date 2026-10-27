@@ -1,0 +1,16 @@
+{% assign p = include.pub %}
+{% assign me = '<span class="me">Ruiwei Xiao</span>' %}
+{% assign short = p.venue | replace: ' 20', " '" %}
+<!-- 一行文字引用：左侧会议标签（一作/共同一作为实心），右侧标题、作者、奖项、链接 -->
+<article class="pub-row{% if p.role == '1st' or p.role == 'co-1st' %} lead{% endif %}" data-project="{{ p.project }}" data-role="{{ p.role }}">
+  <span class="pr-venue">{{ short }}</span>
+  <div class="pr-main">
+    <h4 class="pr-title">{% if p.links.paper %}<a href="{{ p.links.paper }}" target="_blank">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</h4>
+    <p class="pub-authors">{{ p.authors | replace: 'Ruiwei Xiao', me }}</p>
+    {% if include.full and p.venue_full and p.venue_full != p.venue %}<p class="pub-venue-full">{{ p.venue_full }}</p>{% endif %}
+    {% if p.award or p.links %}<div class="pr-links">
+      {% if p.award %}<span class="pr-award">{{ p.award }}</span>{% endif %}
+      {% for l in p.links %}<a href="{{ l[1] }}" target="_blank">{{ l[0] }}</a>{% endfor %}
+    </div>{% endif %}
+  </div>
+</article>

@@ -1,52 +1,224 @@
-# Practitioner section. Items with placeholder: true render as muted "coming soon" cards.
-
-materials:
-  - title: "AILF-aligned K–12 AI literacy module library"
-    tag: Curriculum
-    meta: "19 modules"
-    icon: "🧭"
-    text: "Interactive modules across 問AI · 用AI · 管AI · 造AI (Engage, Create, Manage, Design with AI), mapped to the OECD/EC AI Literacy Framework."
-    link: https://app.active-ai.io/
-    link_label: Explore modules
-  - title: "Hour of AI"
-    tag: Case
-    meta: "with CSforALL"
-    icon: "🕐"
-    text: "A one-hour AI literacy experience for every classroom, launched with CSforALL."
+# Learning Design 版块：和 Publications 一样的左右布局。每个受众一块；
+# modules 按 AILF 四个能力分组，soon: true 表示 Coming soon（默认折叠，点 "Show all" 展开）。
+# 没有 modules 的受众右侧只显示 Coming soon。chip：左侧标签文字（默认取组名第一个词）；meta：描述后的小字；link：单条链接（默认用受众的 link）。
+audiences:
+  - name: K–12
+    side: ActiveAI
+    text: "19 interactive modules across the four AILF competencies, mapped to the OECD/EC AI Literacy Framework."
     link: https://app.active-ai.io/hour_of_ai
-    link_label: Try it
-  - title: "Hometown four-panel comics with AI"
-    tag: Case
-    meta: "Changhua, 2026"
-    icon: "🎨"
-    text: "180 elementary students used AI to make comics about their hometown, then checked the output for errors and bias."
-    link: "https://official.junyiacademy.org/blog/%e5%9d%87%e4%b8%80%e5%b9%b3%e5%8f%b0%e3%80%81%e6%b0%91%e7%94%9f%e5%9c%8b%e5%b0%8f%e6%94%9c%e6%89%8b-google%e3%80%80%e6%8e%a8%e5%8b%95%e5%bd%b0%e5%8c%96-ai-%e7%b4%a0%e9%a4%8a/"
-    link_label: Read the story
-  - title: "More materials and cases"
-    tag: Case
-    meta: "Coming soon"
-    icon: "🧩"
-    text: "Teacher guides, project-based toolkits, and classroom cases."
-    placeholder: true
+    link_label: Try Hour of AI
+    groups:
+      - key: engage
+        name: Engage with AI
+        modules:
+          - title: "AI Around You: How Does AI Do It?"
+            text: "Recognize the roles and effects of AI in different contexts"
+          - title: "Are language models just playing word prediction?"
+            text: "Accurately explain how an AI system performs a task"
+          - title: "How do AI agents work and get debugged?"
+            text: "Evaluate whether to accept, revise, or reject AI output"
+          - title: "Why did TikTok recommend this? Understanding recommender effects"
+            text: "Examine how predictive AI suggestions expand or limit perspectives"
+          - title: "Does AI need water? Comparing its energy and resource use"
+            text: "Compare AI systems' consumption of energy and natural resources"
+            soon: true
+          - title: "Can AI amplify bias?"
+            text: "Explain how AI can amplify social bias"
+            soon: true
+          - title: "Is this an ethical use of AI?"
+            text: "Analyze whether AI use aligns with ethical principles and human values"
+            soon: true
+      - key: create
+        name: Create with AI
+        modules:
+          - title: "Use AI to make your own idea better"
+            text: "Use AI to explore new perspectives and approaches built on original ideas"
+          - title: "Bring an idea to life with different AI tools"
+            text: "Use different types of AI to visualize, prototype, and combine ideas"
+          - title: "Make AI your coach"
+            text: "Guide generative AI to give feedback, improve work, and support reflection"
+            soon: true
+          - title: "Does this count as plagiarism?"
+            text: "Analyze how AI protects or harms authenticity and intellectual property"
+            soon: true
+      - key: manage
+        name: Manage AI
+        modules:
+          - title: "How Can AI Help You Learn?"
+            text: "Decide whether to use AI based on the nature of a task"
+          - title: "Which AI fits the task? Choosing the right approach"
+            text: "Compare how AI systems work and choose an appropriate approach"
+            soon: true
+          - title: "Which steps should go to AI? Decompose the task first"
+            text: "Decompose problems and decide when and how AI should automate or assist"
+          - title: "Are we using AI well? Check as you go"
+            text: "Continuously monitor and evaluate AI use during problem solving"
+            soon: true
+      - key: shape
+        name: Shape AI
+        modules:
+          - title: "How does image-generating AI work?"
+            text: "Investigate an AI system's intended behavior, users, and limitations"
+          - title: "Is this AI ready to launch? Be an AI quality reviewer"
+            text: "Evaluate AI using criteria, expected outcomes, tests, and user feedback"
+            soon: true
+          - title: "Why can your phone auto-tag photos? Bias in machine learning"
+            text: "Examine how data sources, choices, and information flow affect AI output"
+          - title: "Make AI better"
+            text: "Improve AI systems to advance human well-being and social good"
+            soon: true
+      - key: assess
+        name: Assessment
+        chip: Game
+        modules:
+          - title: "AI World Park: gamified AI literacy assessment"
+            text: "Students show what they know about AI by playing through a theme-park adventure, in Chinese or English"
+            link: https://four-games-ten.vercel.app/
+  - name: Higher education
+    side: Pedagogical Prompting
+    text: "One lesson teaching college students to prompt AI as a tutor, not a solution giver. Validated with 431 students."
+    link: https://llm-prompt-builder.vercel.app/
+    link_label: Try all four versions
+    groups:
+      - key: prompt
+        name: Lightest to most engaging
+        chip: Version
+        modules:
+          - title: "Brief reminder"
+            text: "Read two sentences: use GenAI as a tutor, not a shortcut"
+            meta: "< 1 min · +8 pts"
+          - title: "Worked examples"
+            text: "Read comics of a peer writing a learning-oriented prompt"
+            meta: "~3 min · +39 pts"
+          - title: "Component selection"
+            text: "Pick the best option for each of six prompt components"
+            meta: "~11 min · +45 pts"
+          - title: "Select-then-write"
+            text: "Write each component yourself, with AI feedback"
+            meta: "~37 min · +51 pts, most durable"
+  - name: Educators
+    side: CMU Open Learning Initiative
+    text: "Self-paced training that helps higher-education educators bring AI into their teaching."
+    link: https://oli.cmu.edu/courses/ai-for-learning/
+    link_label: View the course
+    groups:
+      - key: course
+        name: Online course
+        chip: Course
+        modules:
+          - title: "AI for Learning: Integrating AI into your teaching"
+            text: "Recognize AI's capabilities and limits, apply prompt engineering, evaluate AI outputs, then build a chatbot for your own practice"
+            meta: "87 educators · 214 chatbots"
 
-partners:
-  - name: Junyi Academy
-    url: https://www.junyiacademy.org/
+# 首屏 "As seen in" logo 条（统一单色）；label: 在图标旁加文字；height: 单独调整高度（默认 24px）
+seen_in:
+  - name: Carnegie Mellon University
+    logo: /assets/img/logos/cmu.svg
+    height: 35
   - name: Google
-    url: https://www.google.com/
+    logo: /assets/img/logos/google.svg
+  - name: Microsoft
+    logo: /assets/img/logos/microsoft.svg
   - name: CSforALL
-    url: https://www.csforall.org/
-  - name: More partners soon
-    placeholder: true
+    logo: /assets/img/logos/csforall.png
+  - name: Hour of AI
+    logo: /assets/img/logos/hourofai.png
+  - name: Junyi Academy
+    logo: /assets/img/logos/junyi-mark.png
+    label: Junyi Academy
 
+# 新闻报道，新到旧。section: research | practice（决定颜色点）；partners 显示在每条右侧。
+# 中文报道：页面只显示 title_en；title 保留原文标题备查，不显示。
+# image：报道里的第一张图（存在 assets/img/press/）；image_fit: contain 用于 logo / 论文配图，不裁切；
+# image_position: top 让裁切时保留图片顶部。
+# role: 你在这条新闻里的角色；impact: 一句影响/规模；headline: true 的 3 条做成大卡片，其余为紧凑列表
 press:
   - date: 2026-10-23
+    title_en: "Junyi Academy, Minsheng Elementary School, and Google Team Up to Advance AI Literacy in Changhua"
     title: "均一平台、民生國小攜手 Google 推動彰化 AI 素養"
     outlet: Junyi Academy
+    section: practice
     partners: [Junyi Academy, Google]
     link: "https://official.junyiacademy.org/blog/%e5%9d%87%e4%b8%80%e5%b9%b3%e5%8f%b0%e3%80%81%e6%b0%91%e7%94%9f%e5%9c%8b%e5%b0%8f%e6%94%9c%e6%89%8b-google%e3%80%80%e6%8e%a8%e5%8b%95%e5%bd%b0%e5%8c%96-ai-%e7%b4%a0%e9%a4%8a/"
+    role: "Co-founder, ActiveAI"
+    impact: "180 students · Changhua"
+    headline: true
+    image: /assets/img/press/junyi-google.jpg
+  - date: 2026-08-06
+    title: "CMU at Festival of Learning 2026"
+    outlet: CMU HCII News
+    section: research
+    partners: [CMU HCII]
+    link: https://hcii.cmu.edu/news/cmu-festival-learning-2026
+    role: "Workshop organizer · paper · demo"
+    impact: "ALIT4ALL at AIED 2026"
+    image: /assets/img/press/hcii-fol-2026.jpg
+  - date: 2026-07-09
+    title_en: "When AI Enters the Classroom: Junyi Academy × Active AI Help Students Master AI"
+    title: "當 AI 走進教室——均一平台 × Active AI 攜手景美女中、中崙高中國中部，陪孩子學會駕馭 AI"
+    outlet: Junyi Academy
+    section: practice
+    partners: [Junyi Academy]
+    link: "https://official.junyiacademy.org/blog/%e7%95%b6-ai-%e8%b5%b0%e9%80%b2%e6%95%99%e5%ae%a4-%e5%9d%87%e4%b8%80%e5%b9%b3%e5%8f%b0-x-active-ai-%e6%94%9c%e6%89%8b%e6%99%af%e7%be%8e%e5%a5%b3%e4%b8%ad%e3%80%81%e4%b8%ad/"
+    role: "Co-founder, ActiveAI"
+    impact: "2 Taipei schools"
+    image: /assets/img/press/junyi-taipei.jpg
+  - date: 2026-03-25
+    title: "CMU at CHI 2026"
+    outlet: CMU HCII News
+    section: research
+    partners: [CMU HCII]
+    link: https://hcii.cmu.edu/news/cmu-chi-2026
+    role: "Co-first author"
+    impact: "CHI 2026 paper"
+    image: /assets/img/press/hcii-chi-2026.jpg
+    image_fit: contain
+  - date: 2026-03-06
+    title_en: "Tainan Partners with Junyi Academy to Bring AI Literacy to Elementary Schools Citywide"
+    title: "響應國家 AI 戰略！臺南攜手均一以行動力回應賴總統「AI 人才建設」願景"
+    outlet: Tainan City Government Education Bureau
+    section: practice
+    partners: [Tainan City Government, Junyi Academy]
+    link: https://www.tainan.gov.tw/News_Content.aspx?n=16907&s=8800845
+    role: "Co-founder, ActiveAI"
+    impact: "3,000 students · 150+ schools"
+    image: /assets/img/press/tainan.jpg
+  - date: 2025-12-19
+    title: "Microsoft Taiwan × Junyi Academy: Hour of AI at Microsoft's Taiwan R&D center"
+    outlet: Microsoft Taiwan
+    section: practice
+    partners: [Microsoft, Junyi Academy]
+    link: https://www.instagram.com/p/DScKHyUDDSi/
+    role: "Co-founder, ActiveAI"
+    impact: "30 fifth-graders · Microsoft Taiwan"
+    image: /assets/img/press/microsoft-tw.jpg
   - date: 2025-11
-    title: "ActiveAI × CSforALL launch Hour of AI"
-    outlet: Press link coming soon
-    partners: [CSforALL]
-    placeholder: true
+    title: "ActiveAI: Interactive K12 AI Literacy Modules, featured on Hour of AI"
+    outlet: Hour of AI
+    section: practice
+    partners: [CSforALL, Junyi Academy]
+    link: https://hourofai.org/en-US/activities
+    role: "Co-founder & learning designer, ActiveAI"
+    impact: "Global Hour of AI catalog"
+    headline: true
+    image: /assets/img/wall/classroom.jpg
+  - date: 2025-08-04
+    title: "What's Next for AI and Education"
+    outlet: CMU HCII News
+    section: research
+    partners: [CMU HCII]
+    link: https://hcii.cmu.edu/news/whats-next-ai-and-education
+    role: "Lead organizer, ALIT4ALL"
+    impact: "1st international AI literacy workshop at AIED"
+    headline: true
+    image: /assets/img/wall/aied-talk.jpg
+  - date: 2024-05-12
+    title: "CMU at CHI 2024"
+    outlet: CMU HCII News
+    section: research
+    partners: [CMU HCII]
+    link: https://hcii.cmu.edu/news/cmu-chi-2024
+    role: "First author"
+    impact: "CHI 2024 Late-Breaking Work"
+    image: /assets/img/press/hcii-chi-2024.jpg
+    image_fit: contain
