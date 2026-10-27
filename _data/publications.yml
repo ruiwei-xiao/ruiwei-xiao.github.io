@@ -18,7 +18,9 @@
   venue_full: "Preprint"
   year: 2026
   topics: [AI in education, HCI]
+  project: prompting
   role: co
+  featured: true
   links:
     paper: https://arxiv.org/abs/2610.23530
 
