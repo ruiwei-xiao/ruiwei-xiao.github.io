@@ -140,3 +140,16 @@ document.querySelector('.uc-peek')?.addEventListener('click', () => {
   document.documentElement.classList.add('uc-off');
   try { sessionStorage.setItem('uc-peek', '1'); } catch (e) {}
 });
+
+// 首页 Publications：Selected / All 两个 tab 切换
+(function () {
+  const tabs = [...document.querySelectorAll('.pub-tabs [data-tab]')];
+  tabs.forEach(t => t.addEventListener('click', () => {
+    tabs.forEach(b => {
+      const on = b === t;
+      b.classList.toggle('on', on);
+      b.setAttribute('aria-selected', on);
+      document.getElementById(b.getAttribute('aria-controls')).hidden = !on;
+    });
+  }));
+})();

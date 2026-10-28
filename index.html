@@ -74,11 +74,16 @@ title: Ruiwei Xiao
 
 <!-- ===================== PUBLICATIONS ===================== -->
 <section class="panel" id="publications">
+  <!-- 两个 tab：Selected（精选）/ All（全部）；都按研究方向分组，组内新到旧 -->
   <div class="lede">
-    <div class="eyebrow">Publications</div>
+    <div class="seg pub-tabs" role="tablist">
+      <button type="button" role="tab" class="on" aria-selected="true" aria-controls="pubs-selected" data-tab="selected">Selected Publications</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="pubs-all" data-tab="all">All Publications</button>
+    </div>
+    <p class="pub-legend">* denotes equal contribution · <span class="mentee">Green</span> denotes mentee</p>
   </div>
 
-  <div class="thrusts">
+  <div class="thrusts pub-pane" id="pubs-selected" role="tabpanel">
     {% for t in site.data.research.thrusts %}
     <div class="thrust">
       <div class="thrust-h">
@@ -93,7 +98,22 @@ title: Ruiwei Xiao
     </div>
     {% endfor %}
   </div>
-  <a class="see-all" href="{{ '/publications/' | relative_url }}">Full list →</a>
+
+  <div class="thrusts pub-pane" id="pubs-all" role="tabpanel" hidden>
+    {% for t in site.data.research.thrusts %}
+    <div class="thrust">
+      <div class="thrust-h">
+        <span class="thrust-side">{{ t.side }}</span>
+        <h3>{{ t.title }}</h3>
+        <p>{{ t.question }}</p>
+      </div>
+      {% assign group = pubs | where: "group", t.key | sort: "date" | reverse %}
+      <div class="pub-list">
+        {% for p in group %}{% include pub-row.html pub=p full=true %}{% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 </section>
 
 <!-- ===================== LEARNING DESIGN ===================== -->
