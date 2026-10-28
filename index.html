@@ -4,6 +4,25 @@ title: Ruiwei Xiao
 ---
 {% assign pubs = site.data.publications %}
 {% assign practice = site.data.practice %}
+<!-- 结构化数据：告诉搜索引擎这是 Ruiwei Xiao 本人的主页 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Ruiwei Xiao",
+    "url": "{{ site.url }}/",
+    "image": "{{ site.image }}",
+    "jobTitle": "PhD Student",
+    "description": "{{ site.description }}",
+    "affiliation": { "@type": "Organization", "name": "Human-Computer Interaction Institute, Carnegie Mellon University", "url": "https://www.hcii.cmu.edu/" },
+    "worksFor": { "@type": "Organization", "name": "ActiveAI", "url": "https://www.active-ai.io/" },
+    "knowsAbout": ["AI literacy", "AI in education", "Learning sciences", "Human-computer interaction"],
+    "sameAs": {{ site.social.links | jsonify }}
+  }
+}
+</script>
 
 <section class="hero">
   <!-- 首屏背景：照片墙 + 蒙版（浅色模式白、深色模式黑） -->

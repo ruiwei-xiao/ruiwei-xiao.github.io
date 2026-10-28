@@ -1,5 +1,25 @@
 title: Ruiwei Xiao
 description: AI literacy education researcher and practitioner. PhD student at CMU HCII, co-founder of ActiveAI.
+# 搜索引擎：jekyll-seo-tag 生成标题 / 描述 / 分享预览 / 基础结构化数据，jekyll-sitemap 生成 sitemap.xml 和 robots.txt
+url: https://ruiwei-xiao.github.io
+tagline: AI Literacy Education Researcher at CMU HCII
+author: Ruiwei Xiao
+image: https://www.cs.cmu.edu/~hcdl/images/ruiwei_xiao.jpg
+lang: en_US
+social:
+  name: Ruiwei Xiao
+  links:
+    - https://scholar.google.com/citations?user=izYxC3EAAAAJ
+    - https://linkedin.com/in/rx98
+    - https://github.com/Ruiwei-Xiao
+    - https://www.hcii.cmu.edu/people/ruiwei-xiao
+defaults:
+  - scope: { path: "" }
+    values: { image: "https://www.cs.cmu.edu/~hcdl/images/ruiwei_xiao.jpg" }
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
 markdown: kramdown
 highlighter: rouge
 
