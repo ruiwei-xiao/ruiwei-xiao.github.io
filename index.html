@@ -67,7 +67,8 @@ title: Ruiwei Xiao
   <!-- As seen in：合作方 / 报道来源 logo -->
   <a class="seen-in" href="#press">
     <span class="seen-label">As seen in</span>
-    <span class="seen-logos">{% for o in practice.seen_in %}<span class="seen-item" title="{{ o.name }}"><img src="{{ o.logo | relative_url }}" alt="{% unless o.label %}{{ o.name }}{% endunless %}"{% if o.height %} style="height: {{ o.height }}px"{% endif %}>{% if o.label %}<span>{{ o.label }}</span>{% endif %}</span>{% endfor %}</span>
+    <!-- 循环滚动：同一组 logo 放两遍，整条向左移一半后无缝衔接；悬停暂停 -->
+    <span class="seen-logos"><span class="seen-track"><span class="seen-set">{% for o in practice.seen_in %}<span class="seen-item" title="{{ o.name }}"><img src="{{ o.logo | relative_url }}" alt="{% unless o.label %}{{ o.name }}{% endunless %}"{% if o.height %} style="--h: {{ o.height }}px"{% endif %}>{% if o.label %}<span>{{ o.label }}</span>{% endif %}</span>{% endfor %}</span><span class="seen-set" aria-hidden="true">{% for o in practice.seen_in %}<span class="seen-item" title="{{ o.name }}"><img src="{{ o.logo | relative_url }}" alt=""{% if o.height %} style="--h: {{ o.height }}px"{% endif %}>{% if o.label %}<span>{{ o.label }}</span>{% endif %}</span>{% endfor %}</span></span></span>
   </a>
 </section>
 

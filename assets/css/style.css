@@ -129,12 +129,17 @@ h1 { font-size: 64px; line-height: 1.1; font-weight: 700; letter-spacing: -1.5px
 .stat span { font-size: 14px; color: var(--faint); }
 
 /* As seen in：横跨首屏两栏的一排单色 logo（浅色模式黑、深色模式白），悬停变实 */
-.seen-in { grid-column: 1 / -1; display: flex; align-items: center; gap: 32px; padding: 15px 28px; border: 1px solid var(--line); border-radius: 20px; background: color-mix(in srgb, var(--surface) 75%, transparent); backdrop-filter: blur(6px); }
+.seen-in { grid-column: 1 / -1; min-width: 0; display: flex; align-items: center; gap: 32px; padding: 15px 28px; border: 1px solid var(--line); border-radius: 20px; background: color-mix(in srgb, var(--surface) 75%, transparent); backdrop-filter: blur(6px); }
 .seen-label { flex: none; font-size: 12px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--faint); }
-.seen-logos { flex: 1; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px 36px; }
+.seen-logos { flex: 1; min-width: 0; max-width: 100%; align-self: stretch; display: flex; align-items: center; overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.seen-track { display: flex; width: max-content; animation: seen-scroll 40s linear infinite; }
+.seen-in:hover .seen-track, .seen-in:focus-visible .seen-track { animation-play-state: paused; }
+.seen-set { display: flex; align-items: center; gap: 64px; padding-right: 64px; }
+@keyframes seen-scroll { to { transform: translateX(-50%); } }
 .seen-item { display: inline-flex; align-items: center; gap: 8px; opacity: .5; transition: opacity .2s; }
 .seen-item:hover { opacity: .9; }
-.seen-item img { height: 24px; width: auto; max-width: 150px; object-fit: contain; filter: grayscale(1) brightness(0); }
+.seen-item img { height: var(--h, 24px); width: auto; max-width: 150px; object-fit: contain; filter: grayscale(1) brightness(0); }
 .seen-item span { font-size: 17px; font-weight: 700; letter-spacing: -.2px; color: #000; white-space: nowrap; }
 [data-theme="dark"] .seen-item { opacity: .6; }
 [data-theme="dark"] .seen-item img { filter: grayscale(1) brightness(0) invert(1); }
@@ -362,7 +367,6 @@ footer { text-align: center; color: var(--faint); font-size: 13px; padding: 72px
   .hero-side .stats { max-width: 420px; margin-left: auto; margin-right: auto; }
   .hero-bio { text-align: left; max-width: 640px; margin: 0 auto; }
   .seen-in { flex-direction: column; gap: 14px; }
-  .seen-logos { justify-content: center; }
 }
 
 /* ---------- mobile ---------- */
@@ -404,9 +408,9 @@ footer { text-align: center; color: var(--faint); font-size: 13px; padding: 72px
   .lede .statement { font-size: 18px; }
   .thrust-h { position: static; }
   .seen-in { padding: 18px 16px; }
-  .seen-logos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 10px; justify-items: center; align-items: center; }
-  .seen-item img { height: 18px; max-width: 100%; }
-  .seen-item span { font-size: 12px; }
+  .seen-set { gap: 40px; padding-right: 40px; }
+  .seen-item img { height: calc(var(--h, 24px) * .8); }
+  .seen-item span { font-size: 14px; }
   .pub-body { padding: 18px 18px 20px; }
   .pub-title { font-size: 17px; }
   .card { padding: 22px; gap: 16px; flex-direction: column; }
@@ -447,7 +451,14 @@ footer { text-align: center; color: var(--faint); font-size: 13px; padding: 72px
   .links a { font-size: 13px; }
 }
 
-@media (prefers-reduced-motion: reduce) { .pub:hover { transform: none; } .slides { transition: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .pub:hover { transform: none; } .slides { transition: none; }
+  /* 不播放 logo 滚动：只显示一组，居中换行 */
+  .seen-logos { -webkit-mask-image: none; mask-image: none; }
+  .seen-track { animation: none; width: auto; }
+  .seen-set { flex-wrap: wrap; justify-content: center; gap: 18px 40px; padding-right: 0; }
+  .seen-set[aria-hidden] { display: none; }
+}
 
 /* ===================== Under construction 蒙版 ===================== */
 .uc { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 16px;

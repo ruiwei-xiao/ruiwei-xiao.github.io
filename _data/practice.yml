@@ -115,14 +115,19 @@ seen_in:
   - name: Carnegie Mellon University
     logo: /assets/img/logos/cmu.svg
     height: 35
+  - name: NSF I-Corps
+    logo: /assets/img/logos/nsf-icorps.png
+    height: 30
   - name: Google
     logo: /assets/img/logos/google.svg
   - name: Microsoft
     logo: /assets/img/logos/microsoft.svg
   - name: CSforALL
     logo: /assets/img/logos/csforall.png
+    height: 21
   - name: Hour of AI
     logo: /assets/img/logos/hourofai.png
+    height: 21
   - name: Junyi Academy
     logo: /assets/img/logos/junyi-mark.png
     label: Junyi Academy
