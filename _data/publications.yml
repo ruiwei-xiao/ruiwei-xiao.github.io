@@ -135,17 +135,17 @@
     paper: https://drive.google.com/file/d/1jRHOo36yOHVYLI8szffrFzJAumpHg0jD/view?usp=sharing
 
 - title: "Do Teachers Dream of GenAI Widening Educational (In)equality? Envisioning the Future of K-12 GenAI Education from Global Teachers' Perspectives"
-  authors: "Ruiwei Xiao, Qing Xiao, Xinying Hou, Phenyo Phemelo Moletsane, Hanqi Li, Hong Shen, John Stamper"
+  authors: "Ruiwei Xiao*, Qing Xiao*, Xinying Hou, Phenyo Phemelo Moletsane, Hanqi Li, Hong Shen, John Stamper"
   venue: CHI 2026
   venue_full: "Proceedings of the CHI Conference on Human Factors in Computing Systems (CHI’26)"
   year: 2026
-  date: 2026-04-13
+  date: 2026-04-28
   featured: true
   group: literacy
   topics: [AI literacy, HCI]
   image: /assets/img/chi26equality.png
   project: activeai
-  role: 1st
+  role: co-1st
   links:
     paper: https://arxiv.org/pdf/2509.10782
 
@@ -154,7 +154,7 @@
   venue: Preprint
   venue_full: "Under review"
   year: 2026
-  date: 2026-01-01
+  date: 2026-05-01
   featured: true
   group: literacy
   topics: [CS education, AI in education]
