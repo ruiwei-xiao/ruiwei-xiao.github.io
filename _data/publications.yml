@@ -9,7 +9,7 @@
 # group:      literacy | aied | workshop — 论文页（full list）只显示有 group 的论文
 # featured:   同时显示在首页，按 group 分块
 # date:       用于排序（新到旧）；会议论文用会议日期，预印本用大致时间
-# mentee:     你指导的学生（作者全名），作者列表里显示为绿色，链接见 mentees.yml
+# mentees:    你指导的学生（作者全名列表），作者列表里显示为绿色，链接见 mentees.yml
 # award:      optional badge, e.g. "Best Paper Honorable Mention" or "Oral Presentation"
 # image:      optional teaser; cards without one get a soft placeholder
 # links:      any of paper, code, dataset, project, poster, slides, video, website
@@ -23,7 +23,7 @@
   date: 2026-10-01
   featured: true
   group: aied
-  mentee: Ziqi Liu
+  mentees: [Ziqi Liu]
   topics: [AI in education, HCI]
   project: prompting
   role: co
@@ -61,7 +61,7 @@
   year: 2026
   date: 2026-08-09
   group: aied
-  mentee: Jiayi Wang
+  mentees: [Jiayi Wang]
   topics: [AI literacy]
   role: co
   links:
@@ -89,7 +89,7 @@
   date: 2026-07-01
   featured: true
   group: aied
-  mentee: Miina Koyama
+  mentees: [Miina Koyama]
   topics: [AI in education, HCI]
   role: co
   links:
@@ -103,7 +103,7 @@
   date: 2026-07-01
   featured: true
   group: aied
-  mentee: Jiayi Wang
+  mentees: [Jiayi Wang]
   topics: [AI in education]
   role: co
   links:
@@ -194,15 +194,29 @@
   links:
     paper: https://arxiv.org/abs/2508.13962
 
+- title: "Misalignment Between Educators' Testing and End Users' Behavior: What 17,000+ Chatbot Messages Reveal About AI Literacy Training for Teachers"
+  authors: "Ruiwei Xiao, Jiayi Wang, Miina Koyama, Yue Wang, Qing Xiao, Xinying Hou, Norman Bier, John Stamper"
+  venue: Preprint
+  year: 2026
+  date: 2026-04-30
+  featured: true
+  group: literacy
+  mentees: [Jiayi Wang, Miina Koyama]
+  role: 1st
+  links:
+    paper: https://drive.google.com/file/d/1WDMjWfE46MR2xt3bTF587kAxObP6wfnt/view?usp=sharing
+
 - title: "Bridging GenAI policy and practice: Brief instruction improves learning-oriented prompting in an introductory programming course"
   authors: "Ruiwei Xiao, Runlong Ye, Xinying Hou, Jessica Wen, Harsh Kumar, Michael Liut, John Stamper"
-  venue: Coming soon
+  venue: Preprint
   year: 2026
   date: 2026-12-01
   featured: true
   group: literacy
   project: prompting
   role: 1st
+  links:
+    paper: https://drive.google.com/file/d/1Yj6ueThyawoqUxWqZSNlQUtf9T_l3vXP/view?usp=sharing
 
 # ---------- 2025 ----------
 - title: "LLMs to Support K–12 Teachers in Culturally Relevant Pedagogy: An AI Literacy Example"
@@ -213,7 +227,7 @@
   date: 2025-07-22
   featured: true
   group: aied
-  mentee: Jiayi Wang
+  mentees: [Jiayi Wang]
   topics: [AI literacy, AI in education]
   image: /assets/img/c7_aied25.png
   project: activeai
@@ -242,7 +256,7 @@
   year: 2025
   date: 2025-02-25
   group: literacy
-  mentee: Hanqi Li
+  mentees: [Hanqi Li]
   topics: [AI literacy, HCI]
   image: /assets/img/c6_aaai25.png
   project: activeai
@@ -257,7 +271,7 @@
   year: 2025
   date: 2025-02-26
   group: aied
-  mentee: Jiayi Wang
+  mentees: [Jiayi Wang]
   topics: [AI literacy, AI in education]
   role: co
   links:
