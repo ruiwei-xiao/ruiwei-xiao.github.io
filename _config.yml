@@ -29,4 +29,4 @@ highlighter: rouge
 cv_url: https://drive.google.com/file/d/12XQAa_tvCNml65rYvvtBqdnH0Qc25q6O/view?usp=sharing
 
 # 整站 "Under construction" 蒙版；改成 false 即可去掉
-under_construction: true
+under_construction: false
