@@ -1,11 +1,15 @@
-# 首页 Publications 版块：研究方向。
-# 每个方向列出 publications.yml 里 featured: true 且 project 等于 key 的论文。
+# 首页 Publications 版块：三组论文。
+# 每组列出 publications.yml 里 group 等于 key 的论文，按 order 排序。
 thrusts:
-  - key: activeai
+  - key: literacy
     side: The human side
     title: AI literacy for every learner
     question: "What should K–12 students and teachers know about AI, and how do we teach and measure it at scale?"
-  - key: prompting
+  - key: aied
     side: The AI side
     title: AI that supports learning
     question: "How can students and AI tutors interact so that AI strengthens learning instead of replacing it?"
+  - key: workshop
+    side: Community
+    title: Workshops
+    question: "Bringing researchers and practitioners together to advance AI literacy education for all."

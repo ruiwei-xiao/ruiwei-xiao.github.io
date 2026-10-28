@@ -86,13 +86,14 @@ title: Ruiwei Xiao
         <h3>{{ t.title }}</h3>
         <p>{{ t.question }}</p>
       </div>
+      {% assign group = pubs | where: "featured", true | where: "group", t.key | sort: "date" | reverse %}
       <div class="pub-list">
-        {% for p in pubs %}{% if p.featured and p.project == t.key %}{% include pub-row.html pub=p %}{% endif %}{% endfor %}
+        {% for p in group %}{% include pub-row.html pub=p %}{% endfor %}
       </div>
     </div>
     {% endfor %}
   </div>
-  <a class="see-all" href="{{ '/publications/' | relative_url }}">See all {{ pubs.size }} papers →</a>
+  <a class="see-all" href="{{ '/publications/' | relative_url }}">Full list →</a>
 </section>
 
 <!-- ===================== LEARNING DESIGN ===================== -->

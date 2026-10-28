@@ -6,10 +6,11 @@
   <span class="pr-venue">{{ short }}</span>
   <div class="pr-main">
     <h4 class="pr-title">{% if p.links.paper %}<a href="{{ p.links.paper }}" target="_blank">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</h4>
-    <p class="pub-authors">{{ p.authors | replace: 'Ruiwei Xiao', me }}</p>
+    {% if p.authors != '' %}<p class="pub-authors">{{ p.authors | replace: 'Ruiwei Xiao', me }}</p>{% endif %}
     {% if include.full and p.venue_full and p.venue_full != p.venue %}<p class="pub-venue-full">{{ p.venue_full }}</p>{% endif %}
-    {% if p.award or p.links %}<div class="pr-links">
+    {% if p.award or p.links or p.mentee %}<div class="pr-links">
       {% if p.award %}<span class="pr-award">{{ p.award }}</span>{% endif %}
+      {% if p.mentee %}<span class="pr-mentee">Mentee: {{ p.mentee }}</span>{% endif %}
       {% for l in p.links %}<a href="{{ l[1] }}" target="_blank">{{ l[0] }}</a>{% endfor %}
     </div>{% endif %}
   </div>

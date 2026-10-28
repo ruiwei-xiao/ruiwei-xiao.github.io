@@ -6,10 +6,13 @@
 # topics:     small colored dots on the card (see .topic-* in style.css)
 # project:    activeai | prompting — used by the publications page filters
 # role:       1st | co-1st | co — used by the "1st author" filter
-# featured:   shown on the homepage
+# group:      literacy | aied | workshop — 论文页（full list）只显示有 group 的论文
+# featured:   同时显示在首页，按 group 分块
+# date:       用于排序（新到旧）；会议论文用会议日期，预印本用大致时间
+# mentee:     由你指导的学生，显示为 "Mentee: 名字"
 # award:      optional badge, e.g. "Best Paper Honorable Mention" or "Oral Presentation"
 # image:      optional teaser; cards without one get a soft placeholder
-# links:      any of paper, code, dataset, project, poster, slides, video
+# links:      any of paper, code, dataset, project, poster, slides, video, website
 
 # ---------- 2026 ----------
 - title: "EduWild: How Teacher-Configured Chatbots Fail in Real-World Use and How to Fix Them"
@@ -17,10 +20,13 @@
   venue: Preprint
   venue_full: "Preprint"
   year: 2026
+  date: 2026-10-01
+  featured: true
+  group: aied
+  mentee: Ziqi
   topics: [AI in education, HCI]
   project: prompting
   role: co
-  featured: true
   links:
     paper: https://arxiv.org/abs/2610.23530
 
@@ -29,16 +35,20 @@
   venue: Preprint
   venue_full: "Preprint"
   year: 2026
+  date: 2026-09-01
+  group: literacy
   topics: [HCI, AI in education]
   role: co
   links:
     paper: https://arxiv.org/abs/2609.13479
 
-- title: "Bridging Cultural Distance Between Models Default and Local Classroom Demands: How Global Teachers Adopt GenAI to Support Everyday Teaching Practices"
+- title: "How K-12 Teachers Adapt Generative AI to Local Classroom Demands: Cultural Distance Between GenAI Defaults and Everyday Teaching Practices"
   authors: "Ruiwei Xiao, Qing Xiao, Xinying Hou, Hanqi Jane Li, Phenyo Phemelo Moletsane, Hong Shen, John Stamper"
   venue: Preprint
   venue_full: "Preprint"
   year: 2026
+  date: 2026-01-01
+  group: literacy
   topics: [AI in education, HCI]
   role: 1st
   links:
@@ -49,6 +59,9 @@
   venue: KDD 2026 Workshop
   venue_full: "KDD 2026 Workshop (AIED Day)"
   year: 2026
+  date: 2026-08-09
+  group: aied
+  mentee: Jiayi
   topics: [AI literacy]
   role: co
   links:
@@ -59,16 +72,24 @@
   venue: AIED 2026
   venue_full: "International Conference on Artificial Intelligence in Education (AIED’26), Workshop"
   year: 2026
+  date: 2026-07-01
+  featured: true
+  group: workshop
   topics: [AI literacy]
   role: 1st
   links:
     paper: https://link.springer.com/chapter/10.1007/978-3-032-29794-5_8
+    website: https://sites.google.com/view/ai-literacy-for-all-2026/home
 
 - title: "PromptDecipher: Supporting AI Tutor Authoring Through Editable Simulated Interactions"
   authors: "Miina Koyama, Ruiwei Xiao, John Stamper"
   venue: L@S 2026 Demo
   venue_full: "ACM Conference on Learning at Scale (L@S’26), Demo"
   year: 2026
+  date: 2026-07-01
+  featured: true
+  group: aied
+  mentee: Miina
   topics: [AI in education, HCI]
   role: co
   links:
@@ -79,6 +100,10 @@
   venue: AIED 2026
   venue_full: "International Conference on Artificial Intelligence in Education (AIED’26)"
   year: 2026
+  date: 2026-07-01
+  featured: true
+  group: aied
+  mentee: Jiayi
   topics: [AI in education]
   role: co
   links:
@@ -99,11 +124,13 @@
   venue: LAK 2026
   venue_full: "Proceedings of the 16th International Learning Analytics and Knowledge Conference (LAK’26)"
   year: 2026
+  date: 2026-04-27
+  featured: true
+  group: literacy
   topics: [AI literacy, Learning analytics]
   image: /assets/img/lak26.png
   project: activeai
   role: co-1st
-  featured: true
   links:
     paper: https://drive.google.com/file/d/1jRHOo36yOHVYLI8szffrFzJAumpHg0jD/view?usp=sharing
 
@@ -112,11 +139,13 @@
   venue: CHI 2026
   venue_full: "Proceedings of the CHI Conference on Human Factors in Computing Systems (CHI’26)"
   year: 2026
+  date: 2026-04-13
+  featured: true
+  group: literacy
   topics: [AI literacy, HCI]
   image: /assets/img/chi26equality.png
   project: activeai
   role: 1st
-  featured: true
   links:
     paper: https://arxiv.org/pdf/2509.10782
 
@@ -125,11 +154,13 @@
   venue: Preprint
   venue_full: "Under review"
   year: 2026
+  date: 2026-01-01
+  featured: true
+  group: literacy
   topics: [CS education, AI in education]
   image: /assets/img/pedagogicalprompting.png
   project: prompting
   role: 1st
-  featured: true
   links:
     paper: https://arxiv.org/abs/2506.19107
     video: https://youtu.be/utXIUhBMDuU
@@ -139,11 +170,12 @@
   venue: SIGCSE 2026
   venue_full: "Proceedings of the 57th ACM Technical Symposium on Computer Science Education (SIGCSE’26)"
   year: 2026
+  date: 2026-02-18
+  group: aied
   topics: [CS education, HCI]
   image: /assets/img/c4_sigcse26.png
   project: prompting
   role: co-1st
-  featured: true
   links:
     paper: https://arxiv.org/pdf/2510.05417
 
@@ -152,13 +184,25 @@
   venue: AAAI 2026
   venue_full: "Proceedings of the AAAI Conference on Artificial Intelligence (AAAI’26)"
   year: 2026
+  date: 2026-01-20
+  featured: true
+  group: literacy
   topics: [AI literacy, AI in education]
   image: /assets/img/c5_aaai26.png
   project: activeai
   role: 1st
-  featured: true
   links:
     paper: https://arxiv.org/abs/2508.13962
+
+- title: "Bridging GenAI policy and practice: Brief instruction improves learning-oriented prompting in an introductory programming course"
+  authors: "Ruiwei Xiao, Runlong Ye, Xinying Hou, Jessica Wen, Harsh Kumar, Michael Liut, John Stamper"
+  venue: Coming soon
+  year: 2026
+  date: 2026-12-01
+  featured: true
+  group: literacy
+  project: prompting
+  role: 1st
 
 # ---------- 2025 ----------
 - title: "LLMs to Support K–12 Teachers in Culturally Relevant Pedagogy: An AI Literacy Example"
@@ -166,6 +210,10 @@
   venue: AIED 2025
   venue_full: "International Conference on Artificial Intelligence in Education (AIED’25)"
   year: 2025
+  date: 2025-07-22
+  featured: true
+  group: aied
+  mentee: Jiayi
   topics: [AI literacy, AI in education]
   image: /assets/img/c7_aied25.png
   project: activeai
@@ -178,21 +226,27 @@
   venue: AIED 2025
   venue_full: "International Conference on Artificial Intelligence in Education (AIED’25), Workshop"
   year: 2025
+  date: 2025-07-22
+  featured: true
+  group: workshop
   topics: [AI literacy]
   role: 1st
   links:
     paper: https://dev.stamper.org/publications/AIED2025Xiao.pdf
+    website: https://ai-literacy-for-all-aied2025-activeai.vercel.app/
 
 - title: "“From Unseen Needs to Classroom Solutions”: Exploring AI Literacy Challenges & Opportunities with Project-Based Learning Toolkit in K-12 Education"
   authors: "Ruiwei Xiaoᴹ*, Hanqi Li*, Hsuan Nieu, Ying-Jui Tseng, Guanze Liao"
   venue: AAAI 2025
   venue_full: "Proceedings of the AAAI Conference on Artificial Intelligence (AAAI’25)"
   year: 2025
+  date: 2025-02-25
+  group: literacy
+  mentee: Jane
   topics: [AI literacy, HCI]
   image: /assets/img/c6_aaai25.png
   project: activeai
   role: co-1st
-  featured: true
   links:
     paper: https://doi.org/10.1609/aaai.v39i28.35187
 
@@ -201,6 +255,9 @@
   venue: SIGCSE 2025
   venue_full: "Proceedings of the 56th ACM Technical Symposium on Computer Science Education (SIGCSE’25)"
   year: 2025
+  date: 2025-02-26
+  group: aied
+  mentee: Jiayi
   topics: [AI literacy, AI in education]
   role: co
   links:
@@ -221,11 +278,12 @@
   venue: LAK 2025
   venue_full: "Companion Proceedings of the 15th International Learning Analytics and Knowledge Conference (LAK’25)"
   year: 2025
+  date: 2025-03-03
+  group: aied
   topics: [AI literacy, Learning analytics]
   image: /assets/img/c8_lak25.png
   project: activeai
   role: 1st
-  featured: true
   links:
     paper: https://arxiv.org/pdf/2412.14200
 
@@ -235,6 +293,8 @@
   venue: L@S 2024
   venue_full: "Proceedings of the 11th ACM Conference on Learning at Scale (L@S’24)"
   year: 2024
+  date: 2024-07-18
+  group: aied
   topics: [AI in education, Learning analytics]
   image: /assets/img/c12_ls24.png
   project: prompting
@@ -247,6 +307,9 @@
   venue: AIED 2024
   venue_full: "International Conference on Artificial Intelligence in Education (AIED’24)"
   year: 2024
+  date: 2024-07-08
+  featured: true
+  group: aied
   topics: [AI in education]
   image: /assets/img/c11_aied24.png
   project: prompting
@@ -259,6 +322,8 @@
   venue: CSEDM 2024
   venue_full: "8th Educational Data Mining in Computer Science Education Workshop (CSEDM’24)"
   year: 2024
+  date: 2024-07-14
+  group: aied
   topics: [CS education, Learning analytics]
   image: /assets/img/c13_csedm24.png
   project: prompting
@@ -271,11 +336,13 @@
   venue: CHI EA 2024
   venue_full: "Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA’24)"
   year: 2024
+  date: 2024-05-11
+  featured: true
+  group: aied
   topics: [CS education, HCI]
   image: /assets/img/c10_chiea24.png
   project: prompting
   role: 1st
-  featured: true
   links:
     paper: https://dl.acm.org/doi/pdf/10.1145/3613905.3650937
 
@@ -284,6 +351,8 @@
   venue: SIGCSE 2024
   venue_full: "Proceedings of the 55th ACM Technical Symposium on Computer Science Education (SIGCSE’24)"
   year: 2024
+  date: 2024-03-20
+  group: literacy
   topics: [AI literacy]
   role: co
   links:
