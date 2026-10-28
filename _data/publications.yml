@@ -83,7 +83,7 @@
 
 - title: "PromptDecipher: Supporting AI Tutor Authoring Through Editable Simulated Interactions"
   authors: "Miina Koyama, Ruiwei Xiao, John Stamper"
-  venue: L@S 2026 Demo
+  venue: L@S 2026
   venue_full: "ACM Conference on Learning at Scale (L@S’26), Demo"
   year: 2026
   date: 2026-07-01
@@ -333,7 +333,7 @@
 
 - title: "Exploring How Multiple Levels of GPT-Generated Programming Hints Support or Disappoint Novices"
   authors: "Ruiwei Xiao, Xinying Hou, John Stamper"
-  venue: CHI EA 2024
+  venue: CHI 2024
   venue_full: "Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA’24)"
   year: 2024
   date: 2024-05-11
