@@ -16,6 +16,9 @@ social:
 defaults:
   - scope: { path: "" }
     values: { image: "https://www.cs.cmu.edu/~hcdl/images/ruiwei_xiao.jpg" }
+  # Google Search Console 验证文件：保留在网站上，但不进 sitemap
+  - scope: { path: "googlef07ef01a8961009b.html" }
+    values: { sitemap: false }
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
