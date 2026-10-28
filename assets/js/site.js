@@ -134,3 +134,9 @@
   const initial = new URLSearchParams(location.search).get('project');
   apply(buttons.some(b => b.dataset.filter === initial) ? initial : 'all');
 })();
+
+// Under construction 蒙版：点 "Take a peek" 后本次会话内隐藏
+document.querySelector('.uc-peek')?.addEventListener('click', () => {
+  document.documentElement.classList.add('uc-off');
+  try { sessionStorage.setItem('uc-peek', '1'); } catch (e) {}
+});

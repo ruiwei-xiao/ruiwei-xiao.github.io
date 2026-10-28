@@ -43,6 +43,19 @@
     {{ content }}
   </main>
 
+  {% if site.under_construction %}
+  <!-- 施工中蒙版：模糊遮住整站；点 "Take a peek" 本次会话内隐藏（_config.yml 的 under_construction 控制开关） -->
+  <div class="uc" role="dialog" aria-modal="true" aria-labelledby="uc-title">
+    <div class="uc-card">
+      <svg class="uc-icon" viewBox="0 0 24 24"><path d="M2 20h20M5 20V9l7-5 7 5v11M9 20v-6h6v6"/></svg>
+      <h2 id="uc-title">Under construction</h2>
+      <p>This site is being redesigned. Please check back soon.</p>
+      <button class="uc-peek" type="button">Take a peek →</button>
+    </div>
+  </div>
+  <script>try { if (sessionStorage.getItem('uc-peek')) document.documentElement.classList.add('uc-off'); } catch (e) {}</script>
+  {% endif %}
+
   <footer>© {{ site.time | date: '%Y' }} Ruiwei Xiao</footer>
 
   <script src="{{ '/assets/js/site.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
