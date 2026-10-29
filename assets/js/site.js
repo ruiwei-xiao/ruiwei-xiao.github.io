@@ -168,3 +168,53 @@ document.querySelectorAll('.pub-tabs').forEach(group => {
     intros.forEach(i => { i.hidden = i.dataset.card !== card.dataset.card; });
   }));
 })();
+
+// 首页 Contact：按来意 + 项目 + 名字生成邮件；用户手动改过主题或正文后不再自动覆盖（可点 Reset 恢复）
+(function () {
+  const data = document.getElementById('contact-data');
+  if (!data) return;
+  const { email, categories } = JSON.parse(data.textContent);
+  const $ = id => document.getElementById(id);
+  const subject = $('ct-subject'), body = $('ct-body'), send = $('ct-send'), copy = $('ct-copy'), reset = $('ct-reset');
+  const catBtns = [...document.querySelectorAll('[data-pick="category"] button')];
+  const projBtns = [...document.querySelectorAll('[data-pick="projects"] button')];
+  let edited = false;
+
+  const list = a => a.length < 2 ? a.join('') : a.length === 2 ? a.join(' and ') : a.slice(0, -1).join(', ') + ', and ' + a[a.length - 1];
+  function fill(t) {
+    const name = $('ct-name').value.trim() || '[Your name]';
+    const org = $('ct-org').value.trim();
+    const projects = list(projBtns.filter(b => b.getAttribute('aria-pressed') === 'true').map(b => b.dataset.key)) || 'AI literacy education';
+    return t.replace(/\{name\}/g, name).replace(/\{from\}/g, org ? ' from ' + org : '').replace(/\{projects\}/g, projects);
+  }
+  function updateLink() {
+    send.href = 'mailto:' + email + '?subject=' + encodeURIComponent(subject.value) + '&body=' + encodeURIComponent(body.value);
+  }
+  function render() {
+    if (!edited) {
+      const c = categories.find(c => c.key === catBtns.find(b => b.getAttribute('aria-pressed') === 'true').dataset.key);
+      subject.value = fill(c.subject);
+      body.value = fill(c.body).trim();
+    }
+    reset.hidden = !edited;
+    updateLink();
+  }
+
+  catBtns.forEach(b => b.addEventListener('click', () => {
+    catBtns.forEach(x => x.setAttribute('aria-pressed', x === b));
+    edited = false; render();
+  }));
+  projBtns.forEach(b => b.addEventListener('click', () => {
+    b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') !== 'true'); render();
+  }));
+  ['ct-name', 'ct-org'].forEach(id => $(id).addEventListener('input', render));
+  [subject, body].forEach(el => el.addEventListener('input', () => { edited = true; reset.hidden = false; updateLink(); }));
+  reset.addEventListener('click', () => { edited = false; render(); });
+  copy.addEventListener('click', async () => {
+    const text = 'To: ' + email + '\nSubject: ' + subject.value + '\n\n' + body.value;
+    try { await navigator.clipboard.writeText(text); copy.textContent = 'Copied'; }
+    catch (e) { copy.textContent = 'Copy failed'; }
+    setTimeout(() => { copy.textContent = 'Copy email'; }, 1800);
+  });
+  render();
+})();

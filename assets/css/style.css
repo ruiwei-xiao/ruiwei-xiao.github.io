@@ -14,7 +14,7 @@
   --mask-1: rgba(255,255,255,.97); --mask-2: rgba(255,255,255,.95); --mask-3: rgba(255,255,255,.92);
   --hl-1: rgba(61,111,230,.16); --hl-2: rgba(58,164,106,.16);   /* 高亮下面的荧光笔 */
   --glow-edge: rgba(255,255,255,.7); --glow: rgba(61,111,230,.06); --glow-2: rgba(61,111,230,.05);
-  --sec-pub: #f8f9fe; --sec-ld: #f6fbf8; --sec-press: #f9f9fb;   /* 各版块背景：极浅的蓝 / 绿 / 灰 */
+  --sec-pub: #f8f9fe; --sec-ld: #f6fbf8; --sec-press: #f9f9fb; --sec-contact: #fdfaf6;   /* 各版块背景：极浅的蓝 / 绿 / 灰 / 暖白 */
   color-scheme: light;
 }
 /* 深色模式：由 <html data-theme="dark"> 控制（默认跟随系统，导航栏按钮可切换） */
@@ -32,7 +32,7 @@
   --mask-1: rgba(15,18,32,.96); --mask-2: rgba(15,18,32,.94); --mask-3: rgba(15,18,32,.9);
   --hl-1: rgba(109,147,242,.24); --hl-2: rgba(76,191,127,.24);
   --glow-edge: rgba(0,0,0,.45); --glow: rgba(0,0,0,.28); --glow-2: rgba(0,0,0,.32);   /* 深色：黑色细边 + 柔和的黑色晕染 */
-  --sec-pub: #121629; --sec-ld: #111a1f; --sec-press: #13162a;
+  --sec-pub: #121629; --sec-ld: #111a1f; --sec-press: #13162a; --sec-contact: #17162a;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -531,13 +531,39 @@ html:not(.uc-off):has(.uc) { overflow: hidden; }
 .uc-peek { margin-top: 20px; padding: 0; border: 0; background: none; font: inherit; font-size: 14px; color: var(--muted); cursor: pointer; }
 .uc-peek:hover { color: var(--ink); }
 
+/* Contact：左边选来意 / 项目 / 名字，右边是自动生成、可编辑的邮件 */
+.contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 56px; align-items: start; }
+.contact-q { margin: 0 0 12px; font-size: 15px; font-weight: 600; color: var(--ink); }
+.contact-q span, .contact-fields label i { font-style: normal; font-weight: 400; color: var(--faint); }
+.chips-pick { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+.chips-pick button { padding: 8px 14px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--surface); font: inherit; font-size: 14px; color: var(--muted); cursor: pointer; transition: .15s; }
+.chips-pick button:hover { color: var(--ink); border-color: var(--muted); }
+.chips-pick button[aria-pressed="true"] { border-color: var(--ink); background: var(--ink); color: var(--bg); }
+.contact-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.contact label { display: grid; gap: 6px; font-size: 13px; font-weight: 600; color: var(--muted); }
+.contact input, .contact textarea { width: 100%; box-sizing: border-box; padding: 10px 12px; border: 1px solid var(--line-strong); border-radius: 10px; background: var(--surface); font: inherit; font-size: 14.5px; font-weight: 400; line-height: 1.55; color: var(--ink); }
+.contact input:focus, .contact textarea:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px var(--blue-bg); }
+.contact textarea { resize: vertical; min-height: 260px; }
+.contact-mail { display: grid; gap: 14px; padding: 24px; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); box-shadow: 0 12px 32px var(--shadow); }
+.mail-to { margin: 0; font-size: 14px; color: var(--muted); }
+.mail-to a { margin-left: 6px; color: var(--ink); font-weight: 600; }
+.mail-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+.mail-send { padding: 11px 20px; border-radius: 999px; background: var(--solid); color: var(--on-solid); font-weight: 600; font-size: 14.5px; }
+.mail-send:hover { background: var(--solid-hover); }
+.mail-copy { padding: 10px 18px; border: 1px solid var(--line-strong); border-radius: 999px; background: none; font: inherit; font-size: 14.5px; font-weight: 500; color: var(--ink); cursor: pointer; }
+.mail-copy:hover { background: var(--soft); }
+.mail-reset { margin-left: auto; padding: 0; border: 0; background: none; font: inherit; font-size: 13px; color: var(--faint); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+
 /* 版块背景：Publications / Learning Design / In the news 各有极浅的底色，铺满整个屏幕宽度；
    底色本身就分隔版块，所以去掉分隔线，上下间距改成版块内边距（颜色才能接上） */
-#publications, #learning-design, #press { margin-top: 0; padding: 88px 0; border-top: 0; box-shadow: 0 0 0 100vmax var(--sec-bg); clip-path: inset(0 -100vmax); background: var(--sec-bg); }
+#publications, #learning-design, #press, #contact { margin-top: 0; padding: 88px 0; border-top: 0; box-shadow: 0 0 0 100vmax var(--sec-bg); clip-path: inset(0 -100vmax); background: var(--sec-bg); }
 #publications { --sec-bg: var(--sec-pub); }
 #learning-design { --sec-bg: var(--sec-ld); }
 #press { --sec-bg: var(--sec-press); }
+#contact { --sec-bg: var(--sec-contact); scroll-margin-top: 40px; }
 #press + * { margin-top: 0; }
 @media (max-width: 760px) {
-  #publications, #learning-design, #press { padding: 56px 0; }
+  #publications, #learning-design, #press, #contact { padding: 56px 0; }
+  .contact { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .contact-fields { grid-template-columns: minmax(0, 1fr); }
 }
