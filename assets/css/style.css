@@ -130,9 +130,8 @@ h1 { font-size: 64px; line-height: 1.1; font-weight: 700; letter-spacing: -1.5px
 .stat span { font-size: 14px; color: var(--faint); }
 
 /* Supported by & partnered with：横跨首屏两栏的一排单色 logo（浅色模式黑、深色模式白），悬停变实 */
-.seen-band { padding: 36px 0 40px; border-top: 1px solid var(--line); background: var(--bg); box-shadow: 0 0 0 100vmax var(--bg); clip-path: inset(0 -100vmax); }   /* 首屏下方单独一条，铺满屏宽 */
-.seen-in { min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 22px; }
-.seen-label { font-size: 11px; font-weight: 600; line-height: 1.6; letter-spacing: 2px; text-transform: uppercase; color: var(--faint); text-align: center; }
+.seen-in { grid-column: 1 / -1; min-width: 0; display: flex; align-items: center; gap: 32px; padding: 8px 0; }   /* 极简：无边框、无底色 */
+.seen-label { flex: none; max-width: 150px; font-size: 11px; font-weight: 600; line-height: 1.6; letter-spacing: 2px; text-transform: uppercase; color: var(--faint); }
 .seen-logos { flex: 1; min-width: 0; max-width: 100%; align-self: stretch; display: flex; align-items: center; overflow: hidden;
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
 .seen-track { display: flex; width: max-content; animation: seen-scroll 40s linear infinite; }
@@ -412,6 +411,8 @@ footer { position: relative; isolation: isolate; overflow: hidden; text-align: c
   .hero-side .icons { justify-content: center; }
   .hero-side .stats { max-width: 420px; margin-left: auto; margin-right: auto; }
   .hero-bio { text-align: left; max-width: 640px; margin: 0 auto; }
+  .seen-in { flex-direction: column; gap: 14px; }
+  .seen-label { max-width: none; text-align: center; }
 }
 
 /* ---------- mobile ---------- */
@@ -463,6 +464,7 @@ footer { position: relative; isolation: isolate; overflow: hidden; text-align: c
   .deck-steps > li + li::before { left: 52px; }
   .lede .statement { font-size: 18px; }
   .thrust-h { position: static; }
+  .seen-in { padding: 8px 0; }
   .seen-set { gap: 40px; padding-right: 40px; }
   .seen-item img { height: calc(var(--h, 24px) * .8); }
   .seen-item span { font-size: 14px; }
