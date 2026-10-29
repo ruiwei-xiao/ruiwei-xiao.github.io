@@ -117,10 +117,14 @@ title: Ruiwei Xiao
 
 <!-- ===================== LEARNING DESIGN ===================== -->
 <section class="panel green" id="learning-design">
-  <div class="sec-h"><span class="dot"></span><h3>Learning Design</h3><small>Practice</small>{% assign lessons = 0 %}{% for a in practice.audiences %}{% assign lessons = lessons | plus: a.lessons %}{% endfor %}<span class="right">{{ lessons }} lessons</span></div>
+  <div class="sec-h"><span class="dot"></span><h3>Learning Design</h3><small>Practice</small>
+    <span class="right pub-tabs" role="tablist">
+      <button type="button" role="tab" class="on" aria-selected="true" aria-controls="ld-bento" data-tab="bento">Portfolio<span class="tab-x"> view</span></button><span aria-hidden="true">·</span><button type="button" role="tab" aria-selected="false" aria-controls="ld-list" data-tab="list">List<span class="tab-x"> view</span></button>
+    </span>
+  </div>
 
-  <!-- Bento 作品集：第一个受众是大卡（截图 + 数字），其余在右侧叠放；完整 module 清单不在首页展示 -->
-  <div class="bento">
+  <!-- Portfolio view（默认）：Bento 作品集，第一个受众是大卡（截图 + 数字），其余在右侧叠放 -->
+  <div class="bento" id="ld-bento" role="tabpanel">
     {% for a in practice.audiences %}
     <div class="bento-tile{% if forloop.first %} bento-main{% endif %}">
       {% if a.image %}<a class="bento-img" href="{{ a.link }}" target="_blank"><img src="{{ a.image | relative_url }}" alt="{{ a.product }} screenshot" loading="lazy"></a>{% endif %}
@@ -137,13 +141,48 @@ title: Ruiwei Xiao
     </div>
     {% endfor %}
   </div>
+
+  <!-- List view：和 Publications 同样的左右布局，左边受众，右边 module 列表；Coming soon 的 module 默认折叠 -->
+  <div class="thrusts" id="ld-list" role="tabpanel" hidden>
+    {% for a in practice.audiences %}
+    <div class="thrust">
+      <div class="thrust-h">
+        {% if a.side %}<span class="thrust-side">{{ a.side }}</span>{% endif %}
+        <h3>{{ a.name }}</h3>
+        {% if a.text %}<p>{{ a.text }}</p>{% endif %}
+        {% if a.link %}<a class="thrust-link" href="{{ a.link }}" target="_blank">{{ a.link_label }} →</a>{% endif %}
+      </div>
+      {% if a.groups %}
+      {% assign soon = 0 %}{% for g in a.groups %}{% for m in g.modules %}{% if m.soon %}{% assign soon = soon | plus: 1 %}{% endif %}{% endfor %}{% endfor %}
+      <div class="pub-list modules folded">
+        {% for g in a.groups %}
+        <p class="mod-group">{{ g.name }}</p>
+        {% assign short = g.chip | default: g.name | split: ' ' | first %}
+        {% for m in g.modules %}
+        <article class="pub-row mod {{ g.key }}{% if m.soon %} soon{% else %} lead{% endif %}">
+          <span class="pr-venue">{{ short }} {{ forloop.index }}</span>
+          <div class="pr-main">
+            <h4 class="pr-title">{% if m.soon %}{{ m.title }}{% else %}<a href="{{ m.link | default: a.link }}" target="_blank">{{ m.title }}</a>{% endif %}</h4>
+            <p class="pub-authors">{{ m.text }}{% if m.meta %}<span class="mod-soon">{{ m.meta }}</span>{% endif %}{% if m.soon %}<span class="mod-soon">Coming soon</span>{% endif %}</p>
+          </div>
+        </article>
+        {% endfor %}
+        {% endfor %}
+        {% if soon > 0 %}<button class="see-all mod-more" type="button" data-more="Show {{ soon }} coming soon" data-less="Hide coming soon">Show {{ soon }} coming soon</button>{% endif %}
+      </div>
+      {% else %}
+      <p class="mod-coming">Coming soon</p>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
 </section>
 
 <!-- ===================== IN THE NEWS（研究 + 学习设计共用） ===================== -->
 <section class="sec" id="press">
   <div class="sec-h"><span class="dot ink"></span><h3>In the news</h3><small>Press</small>
     <span class="right pub-tabs" role="tablist">
-      <button type="button" role="tab" class="on" aria-selected="true" aria-controls="press-slider" data-tab="slides">Slide view</button><span aria-hidden="true">·</span><button type="button" role="tab" aria-selected="false" aria-controls="press-list" data-tab="list">List view</button>
+      <button type="button" role="tab" class="on" aria-selected="true" aria-controls="press-slider" data-tab="slides">Slide<span class="tab-x"> view</span></button><span aria-hidden="true">·</span><button type="button" role="tab" aria-selected="false" aria-controls="press-list" data-tab="list">List<span class="tab-x"> view</span></button>
     </span>
   </div>
 

@@ -369,7 +369,7 @@ a.row:hover .row-title { text-decoration: underline; text-underline-offset: 3px;
 .pub-authors a.mentee { text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--green) 40%, transparent); text-underline-offset: 3px; }
 .pub-authors a.mentee:hover { text-decoration-color: currentColor; }
 .pub-tabs { display: flex; align-items: center; gap: 10px; color: var(--faint); }
-.pub-tabs button { border: 0; background: none; padding: 0; font: inherit; color: var(--faint); cursor: pointer; }
+.pub-tabs button { border: 0; background: none; padding: 0; font: inherit; color: var(--faint); cursor: pointer; white-space: nowrap; }
 .pub-tabs button:hover { color: var(--ink); }
 .pub-tabs button.on { color: var(--ink); font-weight: 500; text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; }
 .pub-legend { font-size: 13px; color: var(--faint); }
@@ -452,6 +452,7 @@ footer { text-align: center; color: var(--faint); font-size: 13px; padding: 72px
   .thumb { width: 64px; height: 64px; border-radius: 14px; }
   .metrics b { font-size: 18px; }
   .sec-h small { display: none; }
+  .pub-tabs .tab-x { display: none; }   /* 手机上 tab 只留 Portfolio / List，省掉 view */
   #publications .sec-h { flex-wrap: wrap; row-gap: 6px; }
   #publications .pub-legend { order: 3; flex-basis: 100%; padding-left: 28px; }
   .list { padding: 4px 18px; }
