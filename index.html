@@ -74,6 +74,8 @@ title: Ruiwei Xiao
 
 <!-- ===================== PUBLICATIONS ===================== -->
 <section class="panel" id="publications">
+  {% assign all_pubs = site.data.publications | where_exp: "p", "p.group" %}
+  <div class="sec-h"><span class="dot"></span><h3>Publications</h3><small>Research</small><span class="right">{{ all_pubs.size }} papers</span></div>
   <!-- 两个 tab：Selected（精选）/ All（全部）；都按研究方向分组，组内新到旧 -->
   <div class="lede">
     <div class="seg pub-tabs" role="tablist">
