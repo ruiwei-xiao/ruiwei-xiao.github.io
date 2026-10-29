@@ -276,7 +276,6 @@ a.right:hover { color: var(--ink); }
 .press-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
 .press-main .row-title { font-size: 15px; }
 .press-side { flex: none; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; max-width: 320px; }
-.press-impact-sm { font-size: 14px; font-weight: 700; color: var(--ink); text-align: right; }
 .press-side .chips { justify-content: flex-end; }
 .see-all { display: block; width: max-content; margin: 28px auto 0; padding: 12px 26px; border-radius: 999px; border: 1px solid var(--line); color: var(--ink); font-weight: 500; }
 .see-all:hover { border-color: var(--line-strong); background: var(--soft); }
@@ -438,7 +437,6 @@ footer { text-align: center; color: var(--faint); font-size: 13px; padding: 72px
   .press-thumb { width: 88px; }
   .press-main { flex: 1 1 calc(100% - 100px); }
   .press-side { flex: 1 1 100%; align-items: flex-start; max-width: none; }
-  .press-impact-sm { text-align: left; }
   .press-side .chips { justify-content: flex-start; }
 }
 

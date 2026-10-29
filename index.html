@@ -193,7 +193,6 @@ title: Ruiwei Xiao
         <span class="row-meta">{{ n.outlet }} · {{ n.date }}</span>
       </span>
       <span class="press-side">
-        {% if n.impact %}<span class="press-impact-sm">{{ n.impact }}</span>{% endif %}
         <span class="chips">{% for pt in n.partners %}<span class="tag{% if n.section == 'research' %} b{% else %} g{% endif %}">{{ pt }}</span>{% endfor %}</span>
       </span>
     </a>
