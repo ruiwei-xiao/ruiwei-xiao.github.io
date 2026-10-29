@@ -14,6 +14,7 @@
   --mask-1: rgba(255,255,255,.97); --mask-2: rgba(255,255,255,.95); --mask-3: rgba(255,255,255,.92);
   --hl-1: rgba(61,111,230,.16); --hl-2: rgba(58,164,106,.16);   /* 高亮下面的荧光笔 */
   --glow-edge: rgba(255,255,255,.7); --glow: rgba(61,111,230,.06); --glow-2: rgba(61,111,230,.05);
+  --sec-pub: #f8f9fe; --sec-ld: #f6fbf8; --sec-press: #f9f9fb;   /* 各版块背景：极浅的蓝 / 绿 / 灰 */
   color-scheme: light;
 }
 /* 深色模式：由 <html data-theme="dark"> 控制（默认跟随系统，导航栏按钮可切换） */
@@ -31,6 +32,7 @@
   --mask-1: rgba(15,18,32,.96); --mask-2: rgba(15,18,32,.94); --mask-3: rgba(15,18,32,.9);
   --hl-1: rgba(109,147,242,.24); --hl-2: rgba(76,191,127,.24);
   --glow-edge: rgba(0,0,0,.45); --glow: rgba(0,0,0,.28); --glow-2: rgba(0,0,0,.32);   /* 深色：黑色细边 + 柔和的黑色晕染 */
+  --sec-pub: #121629; --sec-ld: #111a1f; --sec-press: #13162a;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -528,3 +530,14 @@ html:not(.uc-off):has(.uc) { overflow: hidden; }
 .uc-card p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--muted); }
 .uc-peek { margin-top: 20px; padding: 0; border: 0; background: none; font: inherit; font-size: 14px; color: var(--muted); cursor: pointer; }
 .uc-peek:hover { color: var(--ink); }
+
+/* 版块背景：Publications / Learning Design / In the news 各有极浅的底色，铺满整个屏幕宽度；
+   底色本身就分隔版块，所以去掉分隔线，上下间距改成版块内边距（颜色才能接上） */
+#publications, #learning-design, #press { margin-top: 0; padding: 88px 0; border-top: 0; box-shadow: 0 0 0 100vmax var(--sec-bg); clip-path: inset(0 -100vmax); background: var(--sec-bg); }
+#publications { --sec-bg: var(--sec-pub); }
+#learning-design { --sec-bg: var(--sec-ld); }
+#press { --sec-bg: var(--sec-press); }
+#press + * { margin-top: 0; }
+@media (max-width: 760px) {
+  #publications, #learning-design, #press { padding: 56px 0; }
+}
