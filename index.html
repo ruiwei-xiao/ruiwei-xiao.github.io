@@ -183,8 +183,9 @@ title: Ruiwei Xiao
     </div>
   </div>
 
-  <!-- 全部报道：紧凑列表（小缩略图 + 标题） -->
-  <div class="list press-list">
+  <!-- 全部报道：紧凑列表（小缩略图 + 标题），默认隐藏，点按钮展开 -->
+  <button class="see-all press-more" type="button" aria-expanded="false" aria-controls="press-list" data-more="See all {{ practice.press.size }} stories" data-less="Hide stories">See all {{ practice.press.size }} stories</button>
+  <div class="list press-list" id="press-list" hidden>
     {% for n in practice.press %}
     <a class="press-row"{% if n.link %} href="{{ n.link }}" target="_blank"{% endif %}>
       <span class="press-thumb">{% if n.image %}<img src="{{ n.image | relative_url }}" alt="" loading="lazy"{% if n.image_fit == 'contain' %} class="contain"{% endif %}>{% endif %}</span>

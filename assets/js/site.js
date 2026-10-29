@@ -153,3 +153,15 @@ document.querySelector('.uc-peek')?.addEventListener('click', () => {
     });
   }));
 })();
+
+// 首页 In the news：报道列表默认隐藏，点 "See all N stories" 展开 / 收起
+(function () {
+  const btn = document.querySelector('.press-more');
+  if (!btn) return;
+  const list = document.getElementById(btn.getAttribute('aria-controls'));
+  btn.addEventListener('click', () => {
+    list.hidden = !list.hidden;
+    btn.setAttribute('aria-expanded', !list.hidden);
+    btn.textContent = list.hidden ? btn.dataset.more : btn.dataset.less;
+  });
+})();
