@@ -164,6 +164,7 @@ h1 { font-size: 64px; line-height: 1.1; font-weight: 700; letter-spacing: -1.5px
 #publications .sec { margin-top: 20px; }   /* 只有标签，没有标题，卡片紧跟 */
 .panel + .panel, .panel + .sec { border-top: 1px solid var(--line); margin-top: 96px; }
 .panel + .panel { padding-top: 96px; }
+#learning-design { padding-top: 32px; }   /* 标题用 In the news 同款 sec-h，和上方分隔线距离一致 */
 .panel + .sec { padding-top: 32px; }
 .panel { scroll-margin-top: 40px; }
 #press { scroll-margin-top: 80px; }
@@ -400,6 +401,7 @@ footer { text-align: center; color: var(--faint); font-size: 13px; padding: 72px
   .stats { margin-top: 28px; }
   .panel { padding-top: 72px; }
   .panel + .panel { margin-top: 64px; padding-top: 64px; }
+  #learning-design { padding-top: 32px; }
   .panel + .sec { margin-top: 64px; }
   .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
   .stat span { display: block; font-size: 13px; line-height: 1.35; }
