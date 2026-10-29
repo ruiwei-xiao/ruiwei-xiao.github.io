@@ -165,7 +165,8 @@ h1 { font-size: 64px; line-height: 1.1; font-weight: 700; letter-spacing: -1.5px
 .panel + .panel, .panel + .sec { border-top: 1px solid var(--line); margin-top: 96px; }
 .panel + .panel { padding-top: 96px; }
 .panel + .sec { padding-top: 32px; }
-.panel, #news { scroll-margin-top: 40px; }
+.panel { scroll-margin-top: 40px; }
+#press { scroll-margin-top: 80px; }
 .sec { margin-top: 64px; }
 .sec-h { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
 .dot { flex: none; width: 14px; height: 14px; border-radius: 4px; background: var(--blue); }
