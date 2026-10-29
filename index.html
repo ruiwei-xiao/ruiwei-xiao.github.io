@@ -75,14 +75,11 @@ title: Ruiwei Xiao
 <!-- ===================== PUBLICATIONS ===================== -->
 <section class="panel" id="publications">
   {% assign all_pubs = site.data.publications | where_exp: "p", "p.group" %}
-  <div class="sec-h"><span class="dot"></span><h3>Publications</h3><small>Research</small><span class="right">{{ all_pubs.size }} papers</span></div>
-  <!-- 两个 tab：Selected（精选）/ All（全部）；都按研究方向分组，组内新到旧 -->
-  <div class="lede">
-    <div class="seg pub-tabs" role="tablist">
-      <button type="button" role="tab" class="on" aria-selected="true" aria-controls="pubs-selected" data-tab="selected">Selected Publications</button>
-      <button type="button" role="tab" aria-selected="false" aria-controls="pubs-all" data-tab="all">All Publications</button>
-    </div>
-    <p class="pub-legend">* denotes equal contribution · <span class="mentee">Green</span> denotes mentee</p>
+  <!-- 标题行右侧是文字 tab：Selected（精选）/ All（全部）；都按研究方向分组，组内新到旧 -->
+  <div class="sec-h"><span class="dot"></span><h3>Publications</h3><small>Research</small>
+    <span class="right pub-tabs" role="tablist">
+      <button type="button" role="tab" class="on" aria-selected="true" aria-controls="pubs-selected" data-tab="selected">Selected</button><span aria-hidden="true">·</span><button type="button" role="tab" aria-selected="false" aria-controls="pubs-all" data-tab="all">All {{ all_pubs.size }}</button>
+    </span>
   </div>
 
   <div class="thrusts pub-pane" id="pubs-selected" role="tabpanel">
@@ -116,6 +113,7 @@ title: Ruiwei Xiao
     </div>
     {% endfor %}
   </div>
+  <p class="pub-legend">* denotes equal contribution · <span class="mentee">Green</span> denotes mentee</p>
 </section>
 
 <!-- ===================== LEARNING DESIGN ===================== -->
