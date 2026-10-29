@@ -50,8 +50,8 @@ a { color: inherit; text-decoration: none; }
 /* ---------- nav ---------- */
 .nav { position: sticky; top: 0; z-index: 10; background: var(--nav-bg); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
 .nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 61px; }
-.logo { font-family: "JetBrains Mono", monospace; font-size: 22px; letter-spacing: -.5px; }
-.logo i { font-style: normal; color: var(--blue); }
+.logo { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 600; letter-spacing: -.2px; color: var(--ink); }   /* 版头：小头像 + 名字 */
+.logo img { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 1px var(--line); }
 .nav-right { display: flex; align-items: center; gap: 20px; height: 100%; }
 .links { display: flex; gap: 28px; height: 100%; }
 .links a { display: flex; align-items: center; white-space: nowrap; font-size: 15px; font-weight: 500; color: var(--faint); border-bottom: 3px solid transparent; margin-bottom: -1px; }
@@ -425,7 +425,7 @@ footer { position: relative; isolation: isolate; overflow: hidden; text-align: c
   .links { gap: 14px; }
   .links a { font-size: 14px; }
   .links .hide-sm { display: none; }
-  .logo { font-size: 19px; }
+  .logo { font-size: 16px; }
   .theme-toggle { width: 32px; height: 32px; }
   .hero { padding: 32px 0 40px; }
   h1, .page-head h1 { font-size: 40px; }
@@ -502,7 +502,8 @@ footer { position: relative; isolation: isolate; overflow: hidden; text-align: c
 
 /* 很窄的手机：收紧导航，保证深浅色按钮不被挤出屏幕 */
 @media (max-width: 400px) {
-  .logo { font-size: 16px; }
+  .logo { font-size: 15px; gap: 8px; }
+  .logo img { width: 26px; height: 26px; }
   .nav .wrap { gap: 10px; }
   .nav-right { gap: 8px; }
   .links { gap: 10px; }
