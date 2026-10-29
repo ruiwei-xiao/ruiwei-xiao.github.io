@@ -123,23 +123,28 @@ title: Ruiwei Xiao
     </span>
   </div>
 
-  <!-- Card view（默认）：Bento 作品集，第一个受众是大卡（截图 + 数字），其余在右侧叠放 -->
-  <div class="bento" id="ld-bento" role="tabpanel">
-    {% for a in practice.audiences %}
-    <div class="bento-tile{% if forloop.first %} bento-main{% endif %}">
-      {% if a.image %}<a class="bento-img" href="{{ a.link }}" target="_blank"><img src="{{ a.image | relative_url }}" alt="{{ a.product }} screenshot" loading="lazy"></a>{% endif %}
-      <div class="bento-body">
-        <span class="thrust-side">{{ a.name }} · {{ a.side }}</span>
-        <h4><a href="{{ a.link }}" target="_blank">{{ a.product }}</a></h4>
-        <p>{{ a.text }}</p>
-        <div class="bento-stats">{% for st in a.stats %}<span><b>{{ st.value }}</b>{{ st.label }}</span>{% endfor %}</div>
-        <div class="bento-links">
-          <a href="{{ a.link }}" target="_blank">{{ a.link_label }} →</a>
-          {% if a.extra_link %}<a href="{{ a.extra_link }}" target="_blank">{{ a.extra_label }} →</a>{% endif %}
-        </div>
-      </div>
+  <!-- Card view（默认）：左边介绍，右边一叠卡片；点后面卡片的标题把它翻到最前 -->
+  {% assign d = practice.deck %}
+  <div class="deck-wrap" id="ld-bento" role="tabpanel">
+    <div class="deck-intro">
+      <p class="deck-eyebrow">{{ d.eyebrow }}</p>
+      <h4>{{ d.title }}</h4>
+      <p>{{ d.text }}</p>
+      <p class="deck-gains-h">{{ d.gains_title }}</p>
+      <ul class="deck-gains">{% for g in d.gains %}<li>{{ g }}</li>{% endfor %}</ul>
+      <a class="deck-cta" href="{{ d.cta_link }}" target="_blank">{{ d.cta }}</a>
     </div>
-    {% endfor %}
+    <div class="deck">
+      {% for c in d.cards %}
+      <article class="deck-card" data-pos="{{ forloop.index0 }}">
+        <button class="deck-head" type="button" aria-label="Show {{ c.label }}"><span class="deck-dot"></span>{{ c.label }}<span class="deck-tag">{{ c.tag }}</span></button>
+        <ol class="deck-steps">
+          {% for st in c.steps %}<li><span class="deck-num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span><span><b>{{ st.title }}</b><small>{{ st.kind }}</small></span></li>{% endfor %}
+          <li class="deck-next"><span class="deck-num">→</span><a href="{{ c.next_link }}" target="_blank"><b>{{ c.next }}</b><small>Open in a new tab</small></a></li>
+        </ol>
+      </article>
+      {% endfor %}
+    </div>
   </div>
 
   <!-- List view：和 Publications 同样的左右布局，左边受众，右边 module 列表；Coming soon 的 module 默认折叠 -->

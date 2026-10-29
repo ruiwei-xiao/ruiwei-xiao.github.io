@@ -1,23 +1,11 @@
 # Learning Design 版块：和 Publications 一样的左右布局。每个受众一块；
 # modules 按 AILF 四个能力分组，soon: true 表示 Coming soon（默认折叠，点 "Show all" 展开）。
-# 没有 modules 的受众右侧只显示 Coming soon。lessons：该受众的课节数，加总后显示在标题右侧。
-# 首页 Bento 卡片用：product（产品名）、image（截图，第一条是大卡）、stats（大数字 + 说明）、extra_link / extra_label（第二个链接）。
-# modules 清单目前首页不展示，保留备用。chip：左侧标签文字（默认取组名第一个词）；meta：描述后的小字；link：单条链接（默认用受众的 link）。
+# 没有 modules 的受众右侧只显示 Coming soon。lessons：该受众的课节数（目前没有显示）。
+# modules 清单显示在首页 List view 里。chip：左侧标签文字（默认取组名第一个词）；meta：描述后的小字；link：单条链接（默认用受众的 link）。
 audiences:
   - name: K–12
     side: ActiveAI
     lessons: 19
-    product: "Interactive AI literacy modules"
-    image: /assets/img/activeai_hero.png
-    stats:
-      - value: "19"
-        label: modules
-      - value: "4"
-        label: competencies
-      - value: "3,000+"
-        label: students in Tainan
-    extra_link: https://four-games-ten.vercel.app/
-    extra_label: Play AI World Park
     text: "19 interactive modules across the four competencies, mapped to the OECD/EC AI Literacy Framework."
     link: https://app.active-ai.io/hour_of_ai
     link_label: Try Hour of AI
@@ -91,13 +79,6 @@ audiences:
   - name: Higher education
     side: Pedagogical Prompting
     lessons: 1
-    product: "Pedagogical Prompting"
-    image: /assets/img/pedagogical_prompting_hero.png
-    stats:
-      - value: "431"
-        label: students
-      - value: "+51"
-        label: pts, best version
     text: "One lesson teaching college students to prompt AI as a tutor, not a solution giver. Validated with 431 students."
     link: https://llm-prompt-builder.vercel.app/
     link_label: Try all four versions
@@ -121,12 +102,6 @@ audiences:
   - name: Educators
     side: CMU Open Learning Initiative
     lessons: 1
-    product: "AI for Learning"
-    stats:
-      - value: "87"
-        label: educators
-      - value: "214"
-        label: chatbots built
     text: "Self-paced training that helps higher-education educators bring AI into their teaching."
     link: https://oli.cmu.edu/courses/ai-for-learning/
     link_label: View the course
@@ -138,6 +113,72 @@ audiences:
           - title: "AI for Learning: Integrating AI into your teaching"
             text: "Recognize AI's capabilities and limits, apply prompt engineering, evaluate AI outputs, then build a chatbot for your own practice"
             meta: "87 educators · 214 chatbots"
+
+# 首页 Learning Design 的 Card view：左边介绍 + 右边一叠可点击切换的卡片（点后面的卡片标题把它翻到最前）。
+# cards：label 是卡片左上角标签，tag 是右上角小字；steps 是编号条目，kind 是条目下的小字；
+# 最后一行虚线框是链接（next / next_link）。
+deck:
+  eyebrow: "// Selected work"
+  title: "AI literacy, designed for every learner"
+  text: "Interactive lessons, courses, and games that teach students and professionals to understand, use, and shape AI."
+  gains_title: "Impact so far:"
+  gains:
+    - "19 K–12 modules mapped to the OECD/EC AI Literacy Framework"
+    - "A prompting lesson validated with 431 college students"
+    - "87 educators built 214 chatbots in a CMU OLI course"
+  cta: Try Hour of AI
+  cta_link: https://app.active-ai.io/hour_of_ai
+  cards:
+    - label: K–12
+      tag: ActiveAI
+      steps:
+        - title: Engage with AI
+          kind: 7 modules
+        - title: Create with AI
+          kind: 4 modules
+        - title: Manage AI
+          kind: 4 modules
+        - title: Shape AI
+          kind: 4 modules
+      next: Try Hour of AI
+      next_link: https://app.active-ai.io/hour_of_ai
+    - label: Higher education
+      tag: Pedagogical Prompting
+      steps:
+        - title: Brief reminder
+          kind: "< 1 min"
+        - title: Worked examples
+          kind: "~3 min"
+        - title: Component selection
+          kind: "~11 min"
+        - title: Select-then-write
+          kind: "~37 min"
+      next: Try all four versions
+      next_link: https://llm-prompt-builder.vercel.app/
+    - label: Workforce training
+      tag: CMU OLI
+      steps:
+        - title: AI capabilities and limits
+          kind: Course unit
+        - title: Prompt engineering
+          kind: Course unit
+        - title: Evaluating AI outputs
+          kind: Course unit
+        - title: Build your own chatbot
+          kind: Course unit
+      next: View the course
+      next_link: https://oli.cmu.edu/courses/ai-for-learning/
+    - label: Game-based assessment
+      tag: AI World Park
+      steps:
+        - title: AI World Park
+          kind: Theme-park adventure game
+        - title: Show what you know about AI
+          kind: Assessment
+        - title: Play in Chinese or English
+          kind: Bilingual
+      next: Play AI World Park
+      next_link: https://four-games-ten.vercel.app/
 
 # 首屏 "As seen in" logo 条（统一单色）；label: 在图标旁加文字；height: 单独调整高度（默认 24px）
 seen_in:

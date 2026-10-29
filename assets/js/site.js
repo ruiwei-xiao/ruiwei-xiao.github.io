@@ -153,3 +153,16 @@ document.querySelectorAll('.pub-tabs').forEach(group => {
     });
   }));
 });
+
+// 首页 Learning Design 的 Card view：点后面卡片的标题，把它翻到最前，其余卡片依次后移
+(function () {
+  const cards = [...document.querySelectorAll('.deck-card')];
+  cards.forEach(card => card.querySelector('.deck-head').addEventListener('click', () => {
+    const from = +card.dataset.pos;
+    if (!from) return;
+    cards.forEach(c => {
+      const p = +c.dataset.pos;
+      c.dataset.pos = p === from ? 0 : p < from ? p + 1 : p;
+    });
+  }));
+})();
