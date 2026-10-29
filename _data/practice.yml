@@ -118,7 +118,6 @@ audiences:
 # cards：label 是卡片左上角标签，tag 是右上角小字；steps 是编号条目，kind 是条目下的小字；
 # 最后一行虚线框是链接（next / next_link）。
 deck:
-  eyebrow: "Selected work"
   title: "AI literacy, designed for every learner"
   text: "Interactive lessons, courses, and games that teach students and professionals to understand, use, and shape AI."
   gains_title: "Impact so far:"
