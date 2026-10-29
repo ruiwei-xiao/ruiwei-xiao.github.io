@@ -119,11 +119,11 @@ title: Ruiwei Xiao
 <section class="panel green" id="learning-design">
   <div class="sec-h"><span class="dot"></span><h3>Learning Design</h3><small>Practice</small>
     <span class="right pub-tabs" role="tablist">
-      <button type="button" role="tab" class="on" aria-selected="true" aria-controls="ld-bento" data-tab="bento">Portfolio<span class="tab-x"> view</span></button><span aria-hidden="true">·</span><button type="button" role="tab" aria-selected="false" aria-controls="ld-list" data-tab="list">List<span class="tab-x"> view</span></button>
+      <button type="button" role="tab" class="on" aria-selected="true" aria-controls="ld-bento" data-tab="bento">Card<span class="tab-x"> view</span></button><span aria-hidden="true">·</span><button type="button" role="tab" aria-selected="false" aria-controls="ld-list" data-tab="list">List<span class="tab-x"> view</span></button>
     </span>
   </div>
 
-  <!-- Portfolio view（默认）：Bento 作品集，第一个受众是大卡（截图 + 数字），其余在右侧叠放 -->
+  <!-- Card view（默认）：Bento 作品集，第一个受众是大卡（截图 + 数字），其余在右侧叠放 -->
   <div class="bento" id="ld-bento" role="tabpanel">
     {% for a in practice.audiences %}
     <div class="bento-tile{% if forloop.first %} bento-main{% endif %}">
