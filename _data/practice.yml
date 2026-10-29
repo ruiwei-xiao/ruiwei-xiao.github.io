@@ -4,7 +4,7 @@
 audiences:
   - name: K–12
     side: ActiveAI
-    text: "19 interactive modules across the four AILF competencies, mapped to the OECD/EC AI Literacy Framework."
+    text: "19 interactive modules across the four competencies, mapped to the OECD/EC AI Literacy Framework."
     link: https://app.active-ai.io/hour_of_ai
     link_label: Try Hour of AI
     groups:
