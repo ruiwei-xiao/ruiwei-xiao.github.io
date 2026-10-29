@@ -12,7 +12,7 @@
 # mentees:    你指导的学生（作者全名列表），作者列表里显示为绿色，链接见 mentees.yml
 # award:      optional badge, e.g. "Best Paper Honorable Mention" or "Oral Presentation"
 # image:      optional teaser; cards without one get a soft placeholder
-# links:      any of paper, code, dataset, project, poster, slides, video, website
+# links:      any of paper, code, dataset, project, poster, slides, website（paper 只用作标题链接，不显示按钮）
 
 # ---------- 2026 ----------
 - title: "EduWild: How Teacher-Configured Chatbots Fail in Real-World Use and How to Fix Them"
@@ -163,7 +163,6 @@
   role: 1st
   links:
     paper: https://arxiv.org/abs/2506.19107
-    video: https://youtu.be/utXIUhBMDuU
 
 - title: "Exploring Student Choice and the Use of Multimodal Generative AI in Programming Learning"
   authors: "Ruiwei Xiao*, Xinying Hou*, Runlong Ye, Michael Liut, John Stamper"

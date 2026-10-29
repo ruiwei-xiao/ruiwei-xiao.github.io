@@ -10,9 +10,10 @@
     {% for name in p.mentees %}{% assign url = site.data.mentees[name] %}{% if url %}{% capture m %}<a class="mentee" href="{{ url }}" target="_blank">{{ name }}</a>{% endcapture %}{% else %}{% capture m %}<span class="mentee">{{ name }}</span>{% endcapture %}{% endif %}{% assign authors = authors | replace: name, m %}{% endfor %}
     {% if p.authors != '' %}<p class="pub-authors">{{ authors }}</p>{% endif %}
     {% if include.full and p.venue_full and p.venue_full != p.venue %}<p class="pub-venue-full">{{ p.venue_full }}</p>{% endif %}
-    {% if p.award or p.links %}<div class="pr-links">
+    {% capture extra %}{% for l in p.links %}{% unless l[0] == 'paper' or l[0] == 'video' %}<a href="{{ l[1] }}" target="_blank">{{ l[0] }}</a>{% endunless %}{% endfor %}{% endcapture %}
+    {% if p.award or extra != '' %}<div class="pr-links">
       {% if p.award %}<span class="pr-award">{{ p.award }}</span>{% endif %}
-      {% for l in p.links %}<a href="{{ l[1] }}" target="_blank">{{ l[0] }}</a>{% endfor %}
+      {{ extra }}
     </div>{% endif %}
   </div>
 </article>
