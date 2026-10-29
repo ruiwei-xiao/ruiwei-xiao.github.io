@@ -140,7 +140,7 @@ title: Ruiwei Xiao
         <button class="deck-head" type="button" aria-label="Show {{ c.label }}"><span class="deck-dot"></span>{{ c.label }}<span class="deck-tag">{{ c.tag }}</span></button>
         <ol class="deck-steps">
           {% for st in c.steps %}<li><span class="deck-num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span><span><b>{{ st.title }}</b><small>{{ st.kind }}</small></span></li>{% endfor %}
-          <li class="deck-next"><span class="deck-num">→</span><a href="{{ c.next_link }}" target="_blank"><b>{{ c.next }}</b><small>Open in a new tab</small></a></li>
+          <li class="deck-next"><span class="deck-num">→</span><a href="{{ c.next_link }}" target="_blank"><b>{{ c.next }}</b></a></li>
         </ol>
       </article>
       {% endfor %}
