@@ -165,6 +165,7 @@ h1 { font-size: 64px; line-height: 1.1; font-weight: 700; letter-spacing: -1.5px
 .panel + .panel, .panel + .sec { border-top: 1px solid var(--line); margin-top: 96px; }
 .panel + .panel { padding-top: 96px; }
 #learning-design { padding-top: 32px; }   /* 标题用 In the news 同款 sec-h，和上方分隔线距离一致 */
+#learning-design .thrust:first-child { border-top: 0; padding-top: 0; }   /* 标题下不要分隔线 */
 .panel + .sec { padding-top: 32px; }
 .panel { scroll-margin-top: 40px; }
 #press { scroll-margin-top: 80px; }

@@ -1,9 +1,10 @@
 # Learning Design 版块：和 Publications 一样的左右布局。每个受众一块；
 # modules 按 AILF 四个能力分组，soon: true 表示 Coming soon（默认折叠，点 "Show all" 展开）。
-# 没有 modules 的受众右侧只显示 Coming soon。chip：左侧标签文字（默认取组名第一个词）；meta：描述后的小字；link：单条链接（默认用受众的 link）。
+# 没有 modules 的受众右侧只显示 Coming soon。lessons：该受众的课节数，加总后显示在标题右侧。chip：左侧标签文字（默认取组名第一个词）；meta：描述后的小字；link：单条链接（默认用受众的 link）。
 audiences:
   - name: K–12
     side: ActiveAI
+    lessons: 19
     text: "19 interactive modules across the four competencies, mapped to the OECD/EC AI Literacy Framework."
     link: https://app.active-ai.io/hour_of_ai
     link_label: Try Hour of AI
@@ -76,6 +77,7 @@ audiences:
             link: https://four-games-ten.vercel.app/
   - name: Higher education
     side: Pedagogical Prompting
+    lessons: 1
     text: "One lesson teaching college students to prompt AI as a tutor, not a solution giver. Validated with 431 students."
     link: https://llm-prompt-builder.vercel.app/
     link_label: Try all four versions
@@ -98,6 +100,7 @@ audiences:
             meta: "~37 min · +51 pts, most durable"
   - name: Educators
     side: CMU Open Learning Initiative
+    lessons: 1
     text: "Self-paced training that helps higher-education educators bring AI into their teaching."
     link: https://oli.cmu.edu/courses/ai-for-learning/
     link_label: View the course
