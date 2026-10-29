@@ -252,8 +252,9 @@ a.right:hover { color: var(--ink); }
 .slider { position: relative; border: 1px solid var(--line); border-radius: 24px; overflow: hidden; background: var(--surface); }
 .slides { display: flex; transition: transform .5s cubic-bezier(.2, .7, .2, 1); touch-action: pan-y; }
 .slide { flex: 0 0 100%; display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); color: inherit; }
-.slide-img { aspect-ratio: 16 / 10; background: var(--soft); }
+.slide-img { aspect-ratio: 16 / 10; background: var(--soft); overflow: hidden; min-width: 0; }
 .slide-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.slide-img img.contain { object-fit: contain; background: #fff; padding: 24px; box-sizing: border-box; }
 .slide-body { display: flex; flex-direction: column; justify-content: center; gap: 12px; padding: 40px 48px 88px; }
 .slide-meta { font-size: 14px; color: var(--faint); }
 .slide .press-impact { font-size: 30px; margin: 0; }
@@ -275,8 +276,6 @@ a.right:hover { color: var(--ink); }
 .press-thumb img.contain { object-fit: contain; background: #fff; padding: 4px; }
 .press-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
 .press-main .row-title { font-size: 15px; }
-.press-side { flex: none; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; max-width: 320px; }
-.press-side .chips { justify-content: flex-end; }
 .see-all { display: block; width: max-content; margin: 28px auto 0; padding: 12px 26px; border-radius: 999px; border: 1px solid var(--line); color: var(--ink); font-weight: 500; }
 .see-all:hover { border-color: var(--line-strong); background: var(--soft); }
 
@@ -428,7 +427,7 @@ footer { text-align: center; color: var(--faint); font-size: 13px; padding: 72px
   .row time { width: auto; }
   .row-main { flex-basis: 100%; }
   .row .chips { flex: 1 1 100%; justify-content: flex-start; }
-  .slide { grid-template-columns: 1fr; }
+  .slide { grid-template-columns: minmax(0, 1fr); }
   .slide-body { padding: 22px 22px 76px; gap: 8px; }
   .slide .press-impact { font-size: 22px; }
   .slide h4 { font-size: 17px; }
@@ -436,8 +435,6 @@ footer { text-align: center; color: var(--faint); font-size: 13px; padding: 72px
   .press-row { flex-wrap: wrap; align-items: flex-start; gap: 12px; }
   .press-thumb { width: 88px; }
   .press-main { flex: 1 1 calc(100% - 100px); }
-  .press-side { flex: 1 1 100%; align-items: flex-start; max-width: none; }
-  .press-side .chips { justify-content: flex-start; }
 }
 
 /* 导航：窄屏用短标签 */

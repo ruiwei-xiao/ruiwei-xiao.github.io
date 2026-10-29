@@ -162,28 +162,28 @@ title: Ruiwei Xiao
 <section class="sec" id="press">
   <div class="sec-h"><span class="dot ink"></span><h3>In the news</h3><small>Press</small><span class="right">{{ practice.press.size }} stories</span></div>
 
-  <!-- 头条：一个大 slider（headline: true 的报道），可左右滑动 / 点圆点切换，6 秒自动轮播 -->
+  <!-- 大 slider：所有报道轮播，可左右滑动 / 点圆点切换，6 秒自动轮播 -->
   <div class="slider">
     <div class="slides">
-      {% for n in practice.press %}{% if n.headline %}
+      {% for n in practice.press %}
       <a class="slide"{% if n.link %} href="{{ n.link }}" target="_blank"{% endif %}>
-        <div class="slide-img">{% if n.image %}<img src="{{ n.image | relative_url }}" alt=""{% if n.image_position %} style="object-position: {{ n.image_position }}"{% endif %}>{% endif %}</div>
+        <div class="slide-img">{% if n.image %}<img src="{{ n.image | relative_url }}" alt=""{% if n.image_fit == 'contain' %} class="contain"{% endif %}{% if n.image_position %} style="object-position: {{ n.image_position }}"{% endif %}>{% endif %}</div>
         <div class="slide-body">
           <span class="slide-meta">{{ n.outlet }} · {{ n.date }}</span>
           {% if n.impact %}<p class="press-impact">{{ n.impact }}</p>{% endif %}
           <h4>{{ n.title_en | default: n.title }}</h4>
         </div>
       </a>
-      {% endif %}{% endfor %}
+      {% endfor %}
     </div>
     <div class="slider-nav">
       <button class="prev" type="button" aria-label="Previous story"><svg viewBox="0 0 24 24"><path d="m15 6-6 6 6 6"/></svg></button>
-      <span class="dots">{% for n in practice.press %}{% if n.headline %}<button type="button" aria-label="Story {{ forloop.index }}"></button>{% endif %}{% endfor %}</span>
+      <span class="dots">{% for n in practice.press %}<button type="button" aria-label="Story {{ forloop.index }}"></button>{% endfor %}</span>
       <button class="next" type="button" aria-label="Next story"><svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg></button>
     </div>
   </div>
 
-  <!-- 其余：紧凑列表（小缩略图 + 标题 + 影响 + 合作方） -->
+  <!-- 其余：紧凑列表（小缩略图 + 标题） -->
   <div class="list press-list">
     {% for n in practice.press %}{% unless n.headline %}
     <a class="press-row"{% if n.link %} href="{{ n.link }}" target="_blank"{% endif %}>
@@ -191,9 +191,6 @@ title: Ruiwei Xiao
       <span class="press-main">
         <span class="row-title">{{ n.title_en | default: n.title }}</span>
         <span class="row-meta">{{ n.outlet }} · {{ n.date }}</span>
-      </span>
-      <span class="press-side">
-        <span class="chips">{% for pt in n.partners %}<span class="tag{% if n.section == 'research' %} b{% else %} g{% endif %}">{{ pt }}</span>{% endfor %}</span>
       </span>
     </a>
     {% endunless %}{% endfor %}
