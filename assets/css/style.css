@@ -306,6 +306,8 @@ a.row:hover .row-title { text-decoration: underline; text-underline-offset: 3px;
 .thrust-link { display: inline-block; margin-top: 14px; font-size: 14px; font-weight: 600; color: var(--green-tx); }
 /* Learning Design：Card view，左边介绍 + 右边一叠苹果风格卡片（data-pos 0 在最前，其余往上错开、逐张缩小） */
 .deck-wrap { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: 64px; align-items: center; margin-top: 8px; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", Inter, system-ui, sans-serif; }
+.deck-intro { animation: deck-fade .35s ease; }
+@keyframes deck-fade { from { opacity: 0; transform: translateY(6px); } }
 .deck-intro h4 { margin: 0 0 14px; font-size: 34px; line-height: 1.12; font-weight: 700; letter-spacing: -.9px; }
 .deck-intro p { margin: 0; font-size: 16px; line-height: 1.55; color: var(--muted); }
 .deck-intro .deck-gains-h { margin: 22px 0 10px; font-size: 15px; font-weight: 600; color: var(--ink); }
@@ -503,6 +505,7 @@ footer { text-align: center; color: var(--faint); font-size: 13px; padding: 72px
 
 @media (prefers-reduced-motion: reduce) {
   .pub:hover { transform: none; } .slides { transition: none; }
+  .deck-card { transition: none; } .deck-intro { animation: none; }
   /* 不播放 logo 滚动：只显示一组，居中换行 */
   .seen-logos { -webkit-mask-image: none; mask-image: none; }
   .seen-track { animation: none; width: auto; }
