@@ -141,9 +141,9 @@ document.querySelector('.uc-peek')?.addEventListener('click', () => {
   try { sessionStorage.setItem('uc-peek', '1'); } catch (e) {}
 });
 
-// 首页 Publications：Selected / All 两个 tab 切换
-(function () {
-  const tabs = [...document.querySelectorAll('.pub-tabs [data-tab]')];
+// 首页标题行的文字 tab：Publications（Selected / All）、In the news（Slide view / List view）各自切换
+document.querySelectorAll('.pub-tabs').forEach(group => {
+  const tabs = [...group.querySelectorAll('[data-tab]')];
   tabs.forEach(t => t.addEventListener('click', () => {
     tabs.forEach(b => {
       const on = b === t;
@@ -152,16 +152,4 @@ document.querySelector('.uc-peek')?.addEventListener('click', () => {
       document.getElementById(b.getAttribute('aria-controls')).hidden = !on;
     });
   }));
-})();
-
-// 首页 In the news：报道列表默认隐藏，点 "See all N stories" 展开 / 收起
-(function () {
-  const btn = document.querySelector('.press-more');
-  if (!btn) return;
-  const list = document.getElementById(btn.getAttribute('aria-controls'));
-  btn.addEventListener('click', () => {
-    list.hidden = !list.hidden;
-    btn.setAttribute('aria-expanded', !list.hidden);
-    btn.textContent = list.hidden ? btn.dataset.more : btn.dataset.less;
-  });
-})();
+});

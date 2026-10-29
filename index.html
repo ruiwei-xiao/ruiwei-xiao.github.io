@@ -157,10 +157,14 @@ title: Ruiwei Xiao
 
 <!-- ===================== IN THE NEWS（研究 + 学习设计共用） ===================== -->
 <section class="sec" id="press">
-  <div class="sec-h"><span class="dot ink"></span><h3>In the news</h3><small>Press</small><span class="right">{{ practice.press.size }} stories</span></div>
+  <div class="sec-h"><span class="dot ink"></span><h3>In the news</h3><small>Press</small>
+    <span class="right pub-tabs" role="tablist">
+      <button type="button" role="tab" class="on" aria-selected="true" aria-controls="press-slider" data-tab="slides">Slide view</button><span aria-hidden="true">·</span><button type="button" role="tab" aria-selected="false" aria-controls="press-list" data-tab="list">List view</button>
+    </span>
+  </div>
 
-  <!-- 大 slider：所有报道轮播，可左右滑动 / 点圆点切换，6 秒自动轮播 -->
-  <div class="slider">
+  <!-- 两个视图：Slide view（大 slider，所有报道轮播，可左右滑动 / 点圆点切换，6 秒自动轮播）/ List view（紧凑列表） -->
+  <div class="slider" id="press-slider" role="tabpanel">
     <div class="slides">
       {% for n in practice.press %}
       <a class="slide"{% if n.link %} href="{{ n.link }}" target="_blank"{% endif %}>
@@ -180,9 +184,7 @@ title: Ruiwei Xiao
     </div>
   </div>
 
-  <!-- 全部报道：紧凑列表（小缩略图 + 标题），默认隐藏，点按钮展开 -->
-  <button class="see-all press-more" type="button" aria-expanded="false" aria-controls="press-list" data-more="See all {{ practice.press.size }} stories" data-less="Hide stories">See all {{ practice.press.size }} stories</button>
-  <div class="list press-list" id="press-list" hidden>
+  <div class="list press-list" id="press-list" role="tabpanel" hidden>
     {% for n in practice.press %}
     <a class="press-row"{% if n.link %} href="{{ n.link }}" target="_blank"{% endif %}>
       <span class="press-thumb">{% if n.image %}<img src="{{ n.image | relative_url }}" alt="" loading="lazy"{% if n.image_fit == 'contain' %} class="contain"{% endif %}>{% endif %}</span>
