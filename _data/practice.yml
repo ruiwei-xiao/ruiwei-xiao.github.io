@@ -159,7 +159,7 @@ press:
     impact: "ALIT4ALL at AIED 2026"
     image: /assets/img/press/hcii-fol-2026.jpg
   - date: 2026-07-09
-    title_en: "When AI Enters the Classroom: Junyi Academy × Active AI Help Students Master AI"
+    title_en: "When AI Enters the Classroom: Junyi Academy × ActiveAI Help Students Master AI"
     title: "當 AI 走進教室——均一平台 × Active AI 攜手景美女中、中崙高中國中部，陪孩子學會駕馭 AI"
     outlet: Junyi Academy
     section: practice
@@ -179,7 +179,7 @@ press:
     image: /assets/img/press/hcii-chi-2026.jpg
     image_fit: contain
   - date: 2026-03-06
-    title_en: "Tainan Partners with Junyi Academy to Bring AI Literacy to Elementary Schools Citywide"
+    title_en: "Tainan Partners with Junyi Academy × ActiveAI to Bring AI Literacy to Elementary Schools Citywide"
     title: "響應國家 AI 戰略！臺南攜手均一以行動力回應賴總統「AI 人才建設」願景"
     outlet: Tainan City Government Education Bureau
     section: practice
@@ -189,7 +189,7 @@ press:
     impact: "3,000 students · 150+ schools"
     image: /assets/img/press/tainan.jpg
   - date: 2025-12-19
-    title: "Microsoft Taiwan × Junyi Academy: Hour of AI at Microsoft's Taiwan R&D center"
+    title: "Microsoft Taiwan × Junyi Academy × ActiveAI: Hour of AI at Microsoft's Taiwan R&D center"
     outlet: Microsoft Taiwan
     section: practice
     partners: [Microsoft, Junyi Academy]
