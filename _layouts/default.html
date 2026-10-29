@@ -55,7 +55,16 @@
   <script>try { if (sessionStorage.getItem('uc-peek')) document.documentElement.classList.add('uc-off'); } catch (e) {}</script>
   {% endif %}
 
-  <footer>© {{ site.time | date: '%Y' }} Ruiwei Xiao</footer>
+  <!-- 页脚：和首屏一样的照片墙 + 蒙版（这里排成一行） -->
+  <footer>
+    <div class="hero-wall foot-wall" aria-hidden="true">
+      <img src="{{ '/assets/img/wall/hour-of-ai.jpg' | relative_url }}" alt="" loading="lazy">
+      <img src="{{ '/assets/img/wall/alit4all-group.jpg' | relative_url }}" alt="" loading="lazy">
+      <img src="{{ '/assets/img/wall/aied-talk.jpg' | relative_url }}" alt="" loading="lazy">
+      <img src="{{ '/assets/img/wall/classroom.jpg' | relative_url }}" alt="" loading="lazy">
+    </div>
+    © {{ site.time | date: '%Y' }} Ruiwei Xiao. All rights reserved.
+  </footer>
 
   <script src="{{ '/assets/js/site.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 </body>

@@ -400,7 +400,8 @@ a.row:hover .row-title { text-decoration: underline; text-underline-offset: 3px;
 .page-head .seg button { padding: 12px 26px; font-size: 15px; }
 .no-results { text-align: center; color: var(--faint); margin-top: 48px; }
 
-footer { text-align: center; color: var(--faint); font-size: 13px; padding: 72px 0 48px; }
+footer { position: relative; isolation: isolate; overflow: hidden; text-align: center; color: var(--muted); font-size: 13px; padding: 64px 24px; }
+.foot-wall { grid-template-columns: repeat(4, 1fr); grid-template-rows: 1fr; }   /* 页脚照片墙：四张排一行 */
 
 /* ---------- 窄屏：边栏和简介上下叠放，边栏居中 ---------- */
 @media (max-width: 960px) {
