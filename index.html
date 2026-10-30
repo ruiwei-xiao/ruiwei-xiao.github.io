@@ -131,6 +131,11 @@ title: Ruiwei Xiao
       <div class="deck-intro" data-card="{{ forloop.index0 }}"{% unless forloop.first %} hidden{% endunless %}>
         <h4>{{ c.title }}</h4>
         <p>{{ c.text }}</p>
+        <dl class="deck-facts">
+          <dt>Target users</dt><dd>{{ c.audience }}</dd>
+          <dt>Duration</dt><dd>{{ c.duration }}</dd>
+          <dt>Format</dt><dd>{{ c.format }}</dd>
+        </dl>
         <p class="deck-gains-h">{{ c.gains_title }}</p>
         <ul class="deck-gains">{% for g in c.gains %}<li>{{ g }}</li>{% endfor %}</ul>
         <a class="deck-cta" href="{{ c.next_link }}" target="_blank">{{ c.next }}</a>

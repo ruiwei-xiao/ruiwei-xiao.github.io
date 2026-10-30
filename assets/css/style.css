@@ -311,6 +311,9 @@ a.row:hover .row-title { text-decoration: underline; text-underline-offset: 3px;
 @keyframes deck-fade { from { opacity: 0; transform: translateY(6px); } }
 .deck-intro h4 { margin: 0 0 14px; font-size: 34px; line-height: 1.12; font-weight: 700; letter-spacing: -.9px; }
 .deck-intro p { margin: 0; font-size: 16px; line-height: 1.55; color: var(--muted); }
+.deck-facts { display: grid; grid-template-columns: auto 1fr; gap: 9px 20px; margin: 22px 0 0; padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 15px; line-height: 1.45; }
+.deck-facts dt { color: var(--faint); font-weight: 500; }
+.deck-facts dd { margin: 0; color: var(--ink); }
 .deck-intro .deck-gains-h { margin: 22px 0 10px; font-size: 15px; font-weight: 600; color: var(--ink); }
 .deck-gains { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .deck-gains li { position: relative; padding-left: 26px; font-size: 15px; line-height: 1.45; }

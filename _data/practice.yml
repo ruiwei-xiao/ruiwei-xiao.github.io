@@ -115,15 +115,18 @@ audiences:
             meta: "87 educators · 214 chatbots"
 
 # 首页 Learning Design 的 Card view：左边介绍 + 右边一叠可点击切换的卡片（点后面的卡片标题把它翻到最前，左边介绍跟着换）。
-# cards：label 是卡片左上角标签，tag 是右上角小字；title / text / gains_title / gains 是左边介绍；
+# cards：label 是卡片左上角标签，tag 是右上角小字；title / text / audience / duration / format / gains_title / gains 是左边介绍；
 # steps 是编号条目，kind 是条目下的小字；最后一行是链接（next / next_link），也用作左边的按钮。
 deck:
   cards:
     - label: K–12
       tag: ActiveAI
       title: "AI literacy for K–12 classrooms"
+      audience: "K–12 students and teachers"
+      duration: "~15 min per module"
+      format: "Online, interactive modules used in class"
       text: "19 interactive modules across the four competencies, mapped to the OECD/EC AI Literacy Framework."
-      gains_title: "Impact so far:"
+      gains_title: Impact
       gains:
         - "Featured in the global Hour of AI activity catalog"
         - "3,000+ students across 150+ schools in Tainan"
@@ -142,8 +145,11 @@ deck:
     - label: Higher education
       tag: Pedagogical Prompting
       title: "Teaching college students to prompt AI as a tutor"
+      audience: "College students"
+      duration: "Under 1 to ~37 min, by version"
+      format: "Online lesson"
       text: "One lesson in four versions, from a two-sentence reminder to a hands-on writing exercise, so instructors can pick what fits their course."
-      gains_title: "Impact so far:"
+      gains_title: Impact
       gains:
         - "Validated with 431 college students"
         - "Up to +51 pts with the select-then-write version"
@@ -162,8 +168,11 @@ deck:
     - label: Workforce training
       tag: CMU OLI
       title: "Helping educators bring AI into their teaching"
+      audience: "Higher-education educators"
+      duration: "Self-paced"
+      format: "Online course on CMU OLI"
       text: "Self-paced training on CMU's Open Learning Initiative: recognize AI's capabilities and limits, apply prompt engineering, evaluate AI outputs, then build a chatbot."
-      gains_title: "Impact so far:"
+      gains_title: Impact
       gains:
         - "87 educators trained"
         - "214 chatbots built for their own practice"
@@ -182,6 +191,9 @@ deck:
     - label: Game-based assessment
       tag: AI World Park
       title: "Measuring AI literacy through play"
+      audience: "K–12 students"
+      duration: "One play session"
+      format: "Browser game, in Chinese or English"
       text: "Students show what they know about AI by playing through a theme-park adventure instead of filling out a survey."
       gains_title: "Highlights:"
       gains:
