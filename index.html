@@ -227,37 +227,3 @@ title: Ruiwei Xiao
     {% endfor %}
   </div>
 </section>
-
-<!-- ===================== CONTACT ===================== -->
-<!-- 选来意 + 感兴趣的项目 → 右边自动生成一封可编辑的邮件，可以直接用邮件 app 打开发送或复制（模板在 _data/contact.yml） -->
-{% assign ct = site.data.contact %}
-<section class="sec" id="contact">
-  <div class="sec-h"><span class="dot ink"></span><h3>Contact</h3><small>Get in touch</small></div>
-  <div class="contact">
-    <div class="contact-pick">
-      <p class="contact-q">I'm reaching out about</p>
-      <div class="chips-pick" data-pick="category">
-        {% for c in ct.categories %}<button type="button" data-key="{{ c.key }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">{{ c.label }}</button>{% endfor %}
-      </div>
-      <p class="contact-q">Projects I'm interested in <span>(pick any)</span></p>
-      <div class="chips-pick" data-pick="projects">
-        {% for pr in ct.projects %}<button type="button" data-key="{{ pr }}" aria-pressed="false">{{ pr }}</button>{% endfor %}
-      </div>
-      <div class="contact-fields">
-        <label><span>Your name</span><input type="text" id="ct-name" placeholder="Jane Doe" autocomplete="name"></label>
-        <label><span>Organization <i>(optional)</i></span><input type="text" id="ct-org" placeholder="Stanford University" autocomplete="organization"></label>
-      </div>
-    </div>
-    <div class="contact-mail">
-      <p class="mail-to">To <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a></p>
-      <label class="mail-field">Subject<input type="text" id="ct-subject"></label>
-      <label class="mail-field">Message<textarea id="ct-body" rows="12"></textarea></label>
-      <div class="mail-actions">
-        <a class="mail-send" id="ct-send" href="mailto:{{ site.contact_email }}">Open in email app</a>
-        <button type="button" class="mail-copy" id="ct-copy">Copy email</button>
-        <button type="button" class="mail-reset" id="ct-reset" hidden>Reset to template</button>
-      </div>
-    </div>
-  </div>
-  <script type="application/json" id="contact-data">{"email": {{ site.contact_email | jsonify }}, "categories": {{ ct.categories | jsonify }}}</script>
-</section>
