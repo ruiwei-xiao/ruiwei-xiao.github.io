@@ -345,7 +345,7 @@ a.row:hover .row-title { text-decoration: underline; text-underline-offset: 3px;
 .ed-title { font-size: 11px; line-height: 1.35; font-weight: 600; color: var(--ink); }
 .ed-title em { font-style: normal; color: var(--green-tx); }
 .ed-by { margin-top: auto; padding-top: 4px; font-size: 10px; line-height: 1.3; color: var(--faint); }
-.ed.soon .ed-by { color: var(--green-tx); font-weight: 600; }
+.ed-by b { display: block; margin-top: 2px; color: var(--green-tx); font-weight: 600; }
 .ed-arrow { flex: none; color: var(--faint); font-size: 16px; }
 .deck-head { display: flex; align-items: center; gap: 10px; width: 100%; padding: 11px 18px; border: 0; border-bottom: 1px solid var(--line); background: var(--soft); font: inherit; font-size: 14px; font-weight: 600; color: var(--ink); text-align: left; cursor: pointer; }
 .deck-card[data-pos="0"] .deck-head { cursor: default; }

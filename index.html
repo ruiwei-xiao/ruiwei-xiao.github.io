@@ -152,7 +152,7 @@ title: Ruiwei Xiao
             <span class="ed-lang">{{ e.lang }}</span>
             {% if e.cover %}<img class="ed-art" src="{{ e.cover | relative_url }}" alt="" loading="lazy">{% else %}<span class="ed-art ed-glyph">{{ e.glyph }}</span>{% endif %}
             <span class="ed-title">{{ e.title }}</span>
-            <span class="ed-by">{% if e.soon %}Coming soon{% else %}{{ e.by }}{% endif %}</span>
+            <span class="ed-by">{{ e.by }}{% if e.soon %}<b>Coming soon</b>{% endif %}</span>
           </div>{% endfor %}
         </div>
         {% endif %}

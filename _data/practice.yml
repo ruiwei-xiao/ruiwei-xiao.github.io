@@ -116,7 +116,7 @@ audiences:
 
   - name: Framework
     side: OECD AILit · 简体中文
-    text: "A Simplified Chinese edition of the OECD and European Commission AI Literacy Framework, made by ActiveAI with Junyi Academy."
+    text: "A Simplified Chinese edition of the OECD and European Commission AI Literacy Framework, made by Junyi Academy × ActiveAI."
 # 首页 Learning Design 的 Card view：左边介绍 + 右边一叠可点击切换的卡片（点后面的卡片标题把它翻到最前，左边介绍跟着换）。
 # cards：label 是卡片左上角标签，tag 是右上角小字；title / text / audience / duration / format / gains_title / gains 是左边介绍；
 # steps 是编号条目，kind 是条目下的小字；最后一行是链接（next / next_link），也用作左边的按钮；没有 next_link 时显示成不可点的灰色（如 Coming soon）。
@@ -221,7 +221,7 @@ deck:
       format: "Free PDF, CC BY 4.0"
       gains_title: Highlights
       gains:
-        - "Made by ActiveAI with Junyi Academy, building on its Traditional Chinese edition"
+        - "Made by Junyi Academy × ActiveAI, building on our Traditional Chinese edition"
         - "Covers all 19 competences across the four domains"
         - "Free to share and adapt under CC BY 4.0"
       # editions：卡片里的概念图（原版 → 繁中 → 简中），代替 steps；cover 是封面图（中文版用设计交付包里的封面四格图），
@@ -232,11 +232,11 @@ deck:
           cover: /assets/img/ailit-cover-en.jpg
           title: "Empowering Learners for the Age of AI"
         - lang: 繁體中文
-          by: Junyi Academy
+          by: Junyi Academy × ActiveAI
           cover: /assets/img/ailit-cover.jpg
           title: "<em>賦</em>能<em>學習</em>者迎向 AI <em>時</em>代"
         - lang: 简体中文
-          by: ActiveAI × Junyi Academy
+          by: Junyi Academy × ActiveAI
           cover: /assets/img/ailit-cover.jpg
           title: "<em>赋</em>能<em>学习</em>者迎向 AI <em>时</em>代"
           soon: true
