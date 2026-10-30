@@ -155,9 +155,14 @@ document.querySelectorAll('.pub-tabs').forEach(group => {
 });
 
 // 首页 Learning Design 的 Card view：点后面卡片的标题，把它翻到最前，其余卡片依次后移；左边介绍换成这张卡的
+// 自动轮播：每 7 秒把最前面的卡放到最后、下一张翻上来；悬停 / 聚焦 / 不在屏幕内 / 页面隐藏时暂停，减少动画时不轮播
 (function () {
+  const wrap = document.querySelector('.deck-wrap');
   const cards = [...document.querySelectorAll('.deck-card')];
   const intros = [...document.querySelectorAll('.deck-intro')];
+  if (!wrap || !cards.length) return;
+  const showIntro = card => intros.forEach(i => { i.hidden = i.dataset.card !== card.dataset.card; });
+
   cards.forEach(card => card.querySelector('.deck-head').addEventListener('click', () => {
     const from = +card.dataset.pos;
     if (!from) return;
@@ -165,6 +170,26 @@ document.querySelectorAll('.pub-tabs').forEach(group => {
       const p = +c.dataset.pos;
       c.dataset.pos = p === from ? 0 : p < from ? p + 1 : p;
     });
-    intros.forEach(i => { i.hidden = i.dataset.card !== card.dataset.card; });
+    showIntro(card);
+    restart();
   }));
+
+  function next() {
+    const last = cards.length - 1;
+    cards.forEach(c => { const p = +c.dataset.pos; c.dataset.pos = p === 0 ? last : p - 1; });
+    showIntro(cards.find(c => c.dataset.pos === '0'));
+  }
+
+  let timer = null, hover = false, visible = false;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function restart() {
+    clearInterval(timer); timer = null;
+    if (!reduce && !hover && visible && !document.hidden && !wrap.hidden) timer = setInterval(next, 7000);
+  }
+  wrap.addEventListener('mouseenter', () => { hover = true; restart(); });
+  wrap.addEventListener('mouseleave', () => { hover = false; restart(); });
+  wrap.addEventListener('focusin', () => { hover = true; restart(); });
+  wrap.addEventListener('focusout', () => { hover = false; restart(); });
+  document.addEventListener('visibilitychange', restart);
+  new IntersectionObserver(([e]) => { visible = e.isIntersecting; restart(); }, { threshold: 0.3 }).observe(wrap);
 })();
