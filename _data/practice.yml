@@ -229,7 +229,7 @@ deck:
       editions:
         - lang: English
           by: OECD & European Commission
-          glyph: "AILit"
+          cover: /assets/img/ailit-cover-en.jpg
           title: "Empowering Learners for the Age of AI"
         - lang: 繁體中文
           by: Junyi Academy
