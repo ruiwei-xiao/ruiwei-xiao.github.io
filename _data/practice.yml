@@ -114,9 +114,12 @@ audiences:
             text: "Recognize AI's capabilities and limits, apply prompt engineering, evaluate AI outputs, then build a chatbot for your own practice"
             meta: "87 educators · 214 chatbots"
 
+  - name: Framework
+    side: OECD AILit · 简体中文
+    text: "A Simplified Chinese edition of the OECD and European Commission AI Literacy Framework, made by ActiveAI with Junyi Academy."
 # 首页 Learning Design 的 Card view：左边介绍 + 右边一叠可点击切换的卡片（点后面的卡片标题把它翻到最前，左边介绍跟着换）。
 # cards：label 是卡片左上角标签，tag 是右上角小字；title / text / audience / duration / format / gains_title / gains 是左边介绍；
-# steps 是编号条目，kind 是条目下的小字；最后一行是链接（next / next_link），也用作左边的按钮。
+# steps 是编号条目，kind 是条目下的小字；最后一行是链接（next / next_link），也用作左边的按钮；没有 next_link 时显示成不可点的灰色（如 Coming soon）。
 deck:
   cards:
     - label: K–12
@@ -209,6 +212,34 @@ deck:
           kind: Bilingual
       next: Play AI World Park
       next_link: https://four-games-ten.vercel.app/
+    - label: Framework
+      tag: OECD AILit · 简体中文
+      title: "The AILit Framework in Simplified Chinese"
+      text: "A Simplified Chinese edition of the OECD and European Commission AI Literacy Framework for primary and secondary education, for Chinese-speaking educators around the world."
+      audience: "Educators and policymakers who read Simplified Chinese"
+      duration: "Read at your own pace"
+      format: "Free PDF, CC BY 4.0"
+      gains_title: Highlights
+      gains:
+        - "Made by ActiveAI with Junyi Academy, building on its Traditional Chinese edition"
+        - "Covers all 19 competences across the four domains"
+        - "Free to share and adapt under CC BY 4.0"
+      # editions：卡片里的概念图（原版 → 繁中 → 简中），代替 steps；glyph 里 <em> 标出繁简不同的字
+      editions:
+        - lang: English
+          by: OECD & European Commission
+          glyph: "AILit"
+          title: "Empowering Learners for the Age of AI"
+        - lang: 繁體中文
+          by: Junyi Academy
+          glyph: "素<em>養</em>"
+          title: "賦能學習者迎向 AI 時代"
+        - lang: 简体中文
+          by: ActiveAI × Junyi Academy
+          glyph: "素<em>养</em>"
+          title: "赋能学习者迎向 AI 时代"
+          soon: true
+      next: Coming soon
 
 # 首屏 "As seen in" logo 条（统一单色）；link: 点 logo 打开的官网；label: 在图标旁加文字；height: 单独调整高度（默认 24px）
 seen_in:

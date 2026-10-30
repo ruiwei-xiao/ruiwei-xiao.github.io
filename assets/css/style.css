@@ -321,17 +321,31 @@ a.row:hover .row-title { text-decoration: underline; text-underline-offset: 3px;
 .deck-gains li::before { content: "✓"; position: absolute; left: 2px; color: var(--green); font-weight: 700; }
 .deck-cta { display: inline-block; margin-top: 28px; padding: 11px 22px; border-radius: 999px; background: var(--green); color: #fff; font-weight: 600; font-size: 15px; transition: opacity .2s; }
 .deck-cta:hover { opacity: .88; }
-.deck { display: grid; padding-top: 168px; }
+.deck-cta.off { background: var(--line-strong); color: var(--muted); cursor: default; }
+.deck-cta.off:hover { opacity: 1; }
+.deck { display: grid; padding-top: 184px; }
 .deck-card { grid-area: 1 / 1; display: flex; flex-direction: column; border-radius: 18px; background: var(--surface); box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 12px 32px rgba(0,0,0,.12); overflow: hidden; transform-origin: 0 0; transition: transform .55s cubic-bezier(.2, .8, .2, 1), translate .3s cubic-bezier(.2, .8, .2, 1), box-shadow .3s, filter .5s; }
 /* 悬停：卡片轻轻被拿起（用独立的 translate，不覆盖每层的 transform） */
 @media (hover: hover) {
   .deck-card:hover { translate: 0 -6px; box-shadow: 0 2px 4px rgba(0,0,0,.06), 0 20px 44px rgba(0,0,0,.16); }
 }
-.deck-card[data-pos="0"] { z-index: 4; }
-.deck-card[data-pos="1"] { z-index: 3; transform: translate(-10px, -56px) rotate(-2.4deg); filter: brightness(.97); }
-.deck-card[data-pos="2"] { z-index: 2; transform: translate(14px, -112px) rotate(1.8deg); filter: brightness(.94); }
-.deck-card[data-pos="3"] { z-index: 1; transform: translate(-2px, -168px) rotate(-1.5deg); filter: brightness(.91); }
-.deck-card:not([data-pos="0"]) .deck-steps { visibility: hidden; }
+.deck-card[data-pos="0"] { z-index: 5; }
+.deck-card[data-pos="1"] { z-index: 4; transform: translate(-10px, -46px) rotate(-2.4deg); filter: brightness(.97); }
+.deck-card[data-pos="2"] { z-index: 3; transform: translate(14px, -92px) rotate(1.8deg); filter: brightness(.94); }
+.deck-card[data-pos="3"] { z-index: 2; transform: translate(-2px, -138px) rotate(-1.5deg); filter: brightness(.91); }
+.deck-card[data-pos="4"] { z-index: 1; transform: translate(10px, -184px) rotate(1.2deg); filter: brightness(.88); }
+.deck-card:not([data-pos="0"]) .deck-steps, .deck-card:not([data-pos="0"]) .ed-fig { visibility: hidden; }
+/* Framework 卡的概念图：原版 → 繁中 → 简中 三本"封面"，繁简不同的字用绿色标出 */
+.ed-fig { display: flex; align-items: center; gap: 8px; margin: 18px 18px 0; padding: 22px 18px; border-radius: 12px; background: var(--soft); }
+.ed { flex: 1; min-width: 0; aspect-ratio: 3 / 4; display: flex; flex-direction: column; padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); box-shadow: 0 1px 2px rgba(0,0,0,.05), 0 6px 16px rgba(0,0,0,.06); }
+.ed.soon { border: 1.5px dashed var(--green); box-shadow: none; background: var(--green-bg); }
+.ed-lang { font-size: 11px; font-weight: 600; letter-spacing: .5px; color: var(--faint); }
+.ed-glyph { flex: 1; display: flex; align-items: center; justify-content: center; white-space: nowrap; font-size: 30px; font-weight: 700; letter-spacing: -.5px; color: var(--ink); }
+.ed-glyph em { font-style: normal; color: var(--green); }
+.ed-title { font-size: 11px; line-height: 1.35; font-weight: 600; color: var(--ink); }
+.ed-by { margin-top: 6px; font-size: 10px; line-height: 1.3; color: var(--faint); }
+.ed.soon .ed-by { color: var(--green-tx); font-weight: 600; }
+.ed-arrow { flex: none; color: var(--faint); font-size: 16px; }
 .deck-head { display: flex; align-items: center; gap: 10px; width: 100%; padding: 11px 18px; border: 0; border-bottom: 1px solid var(--line); background: var(--soft); font: inherit; font-size: 14px; font-weight: 600; color: var(--ink); text-align: left; cursor: pointer; }
 .deck-card[data-pos="0"] .deck-head { cursor: default; }
 .deck-card:not([data-pos="0"]) .deck-head:hover { color: var(--green-tx); }
@@ -346,6 +360,8 @@ a.row:hover .row-title { text-decoration: underline; text-underline-offset: 3px;
 .deck-next .deck-num { background: none; color: var(--green-tx); font-size: 18px; }
 .deck-next a { flex: 1; }
 .deck-next b { color: var(--green-tx) !important; }
+.deck-next b.off { flex: 1; color: var(--faint) !important; }
+.deck-next:has(b.off) .deck-num { color: var(--faint); }
 .deck-next a:hover b { text-decoration: underline; text-underline-offset: 3px; }
 .mod-group { font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--faint); margin: 28px 0 4px; }
 .mod-group:first-child { margin-top: 0; }
@@ -462,12 +478,19 @@ footer { position: relative; isolation: isolate; overflow: hidden; text-align: c
   .thrust { grid-template-columns: 1fr; gap: 24px; }
   .deck-wrap { grid-template-columns: minmax(0, 1fr); gap: 40px; }
   .deck-intro h4 { font-size: 26px; }
-  .deck { padding-top: 138px; }
-  .deck-card[data-pos="1"] { transform: translate(-4px, -46px) rotate(-1.8deg); }
-  .deck-card[data-pos="2"] { transform: translate(6px, -92px) rotate(1.5deg); }
-  .deck-card[data-pos="3"] { transform: translate(-2px, -138px) rotate(-.9deg); }
+  .deck { padding-top: 160px; }
+  .deck-card[data-pos="1"] { transform: translate(-4px, -40px) rotate(-1.8deg); }
+  .deck-card[data-pos="2"] { transform: translate(6px, -80px) rotate(1.5deg); }
+  .deck-card[data-pos="3"] { transform: translate(-2px, -120px) rotate(-.9deg); }
+  .deck-card[data-pos="4"] { transform: translate(4px, -160px) rotate(.8deg); }
   .deck-tag { display: none; }   /* 手机上右上角小字太挤，隐藏 */
   .deck-steps { margin: 12px; }
+  .ed-fig { margin: 12px 12px 0; padding: 14px 10px; gap: 4px; }
+  .ed { padding: 8px; }
+  .ed-glyph { font-size: 20px; }
+  .ed-title { font-size: 9px; }
+  .ed-by { display: none; }
+  .ed-arrow { font-size: 12px; }
   .deck-steps > li { padding: 11px 12px; gap: 12px; }
   .deck-steps > li + li::before { left: 52px; }
   .lede .statement { font-size: 18px; }

@@ -138,7 +138,7 @@ title: Ruiwei Xiao
         </dl>
         <p class="deck-gains-h">{{ c.gains_title }}</p>
         <ul class="deck-gains">{% for g in c.gains %}<li>{{ g }}</li>{% endfor %}</ul>
-        <a class="deck-cta" href="{{ c.next_link }}" target="_blank">{{ c.next }}</a>
+        {% if c.next_link %}<a class="deck-cta" href="{{ c.next_link }}" target="_blank">{{ c.next }}</a>{% else %}<span class="deck-cta off">{{ c.next }}</span>{% endif %}
       </div>
       {% endfor %}
     </div>
@@ -146,9 +146,19 @@ title: Ruiwei Xiao
       {% for c in d.cards %}
       <article class="deck-card" data-pos="{{ forloop.index0 }}" data-card="{{ forloop.index0 }}">
         <button class="deck-head" type="button" aria-label="Show {{ c.label }}"><span class="deck-dot"></span>{{ c.label }}<span class="deck-tag">{{ c.tag }}</span></button>
+        {% if c.editions %}
+        <div class="ed-fig" role="img" aria-label="{% for e in c.editions %}{{ e.lang }}: {{ e.title }}{% unless forloop.last %}, {% endunless %}{% endfor %}">
+          {% for e in c.editions %}{% unless forloop.first %}<span class="ed-arrow" aria-hidden="true">→</span>{% endunless %}<div class="ed{% if e.soon %} soon{% endif %}" aria-hidden="true">
+            <span class="ed-lang">{{ e.lang }}</span>
+            <span class="ed-glyph">{{ e.glyph }}</span>
+            <span class="ed-title">{{ e.title }}</span>
+            <span class="ed-by">{% if e.soon %}Coming soon{% else %}{{ e.by }}{% endif %}</span>
+          </div>{% endfor %}
+        </div>
+        {% endif %}
         <ol class="deck-steps">
           {% for st in c.steps %}<li><span class="deck-num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span><span><b>{{ st.title }}</b><small>{{ st.kind }}</small></span></li>{% endfor %}
-          <li class="deck-next"><span class="deck-num">→</span><a href="{{ c.next_link }}" target="_blank"><b>{{ c.next }}</b></a></li>
+          <li class="deck-next"><span class="deck-num">→</span>{% if c.next_link %}<a href="{{ c.next_link }}" target="_blank"><b>{{ c.next }}</b></a>{% else %}<b class="off">{{ c.next }}</b>{% endif %}</li>
         </ol>
       </article>
       {% endfor %}
