@@ -155,7 +155,7 @@ document.querySelectorAll('.pub-tabs').forEach(group => {
 });
 
 // 首页 Learning Design 的 Card view：点后面卡片的标题，把它翻到最前，其余卡片依次后移；左边介绍换成这张卡的
-// 自动轮播：每 7 秒把最前面的卡放到最后、下一张翻上来；悬停 / 聚焦 / 不在屏幕内 / 页面隐藏时暂停，减少动画时不轮播
+// 自动轮播：每 5 秒把最前面的卡放到最后、下一张翻上来；悬停 / 聚焦 / 不在屏幕内 / 页面隐藏时暂停，减少动画时不轮播
 (function () {
   const wrap = document.querySelector('.deck-wrap');
   const cards = [...document.querySelectorAll('.deck-card')];
@@ -184,7 +184,7 @@ document.querySelectorAll('.pub-tabs').forEach(group => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   function restart() {
     clearInterval(timer); timer = null;
-    if (!reduce && !hover && visible && !document.hidden && !wrap.hidden) timer = setInterval(next, 7000);
+    if (!reduce && !hover && visible && !document.hidden && !wrap.hidden) timer = setInterval(next, 5000);
   }
   wrap.addEventListener('mouseenter', () => { hover = true; restart(); });
   wrap.addEventListener('mouseleave', () => { hover = false; restart(); });
