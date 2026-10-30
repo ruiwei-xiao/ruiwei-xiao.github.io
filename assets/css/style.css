@@ -322,7 +322,11 @@ a.row:hover .row-title { text-decoration: underline; text-underline-offset: 3px;
 .deck-cta { display: inline-block; margin-top: 28px; padding: 11px 22px; border-radius: 999px; background: var(--green); color: #fff; font-weight: 600; font-size: 15px; transition: opacity .2s; }
 .deck-cta:hover { opacity: .88; }
 .deck { display: grid; padding-top: 168px; }
-.deck-card { grid-area: 1 / 1; display: flex; flex-direction: column; border-radius: 18px; background: var(--surface); box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 12px 32px rgba(0,0,0,.12); overflow: hidden; transform-origin: 0 0; transition: transform .55s cubic-bezier(.2, .8, .2, 1), filter .5s; }
+.deck-card { grid-area: 1 / 1; display: flex; flex-direction: column; border-radius: 18px; background: var(--surface); box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 12px 32px rgba(0,0,0,.12); overflow: hidden; transform-origin: 0 0; transition: transform .55s cubic-bezier(.2, .8, .2, 1), translate .3s cubic-bezier(.2, .8, .2, 1), box-shadow .3s, filter .5s; }
+/* 悬停：卡片轻轻被拿起（用独立的 translate，不覆盖每层的 transform） */
+@media (hover: hover) {
+  .deck-card:hover { translate: 0 -6px; box-shadow: 0 2px 4px rgba(0,0,0,.06), 0 20px 44px rgba(0,0,0,.16); }
+}
 .deck-card[data-pos="0"] { z-index: 4; }
 .deck-card[data-pos="1"] { z-index: 3; transform: translate(-10px, -56px) rotate(-2.4deg); filter: brightness(.97); }
 .deck-card[data-pos="2"] { z-index: 2; transform: translate(14px, -112px) rotate(1.8deg); filter: brightness(.94); }
