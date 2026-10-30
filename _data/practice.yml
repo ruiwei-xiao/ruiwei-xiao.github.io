@@ -140,7 +140,7 @@ deck:
           kind: 4 modules
         - title: Shape AI
           kind: 4 modules
-      next: Try Hour of AI
+      next: Try ActiveAI
       next_link: https://app.active-ai.io/hour_of_ai
     - label: Higher education
       tag: Pedagogical Prompting
