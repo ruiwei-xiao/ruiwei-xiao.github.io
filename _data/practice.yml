@@ -224,7 +224,8 @@ deck:
         - "Made by ActiveAI with Junyi Academy, building on its Traditional Chinese edition"
         - "Covers all 19 competences across the four domains"
         - "Free to share and adapt under CC BY 4.0"
-      # editions：卡片里的概念图（原版 → 繁中 → 简中），代替 steps；glyph 里 <em> 标出繁简不同的字
+      # editions：卡片里的概念图（原版 → 繁中 → 简中），代替 steps；cover 是封面图（中文版用设计交付包里的封面四格图），
+      # 没有 cover 时显示 glyph 大字；title 里的 <em> 标出繁简不同的字
       editions:
         - lang: English
           by: OECD & European Commission
@@ -232,12 +233,12 @@ deck:
           title: "Empowering Learners for the Age of AI"
         - lang: 繁體中文
           by: Junyi Academy
-          glyph: "素<em>養</em>"
-          title: "賦能學習者迎向 AI 時代"
+          cover: /assets/img/ailit-cover.jpg
+          title: "<em>賦</em>能<em>學習</em>者迎向 AI <em>時</em>代"
         - lang: 简体中文
           by: ActiveAI × Junyi Academy
-          glyph: "素<em>养</em>"
-          title: "赋能学习者迎向 AI 时代"
+          cover: /assets/img/ailit-cover.jpg
+          title: "<em>赋</em>能<em>学习</em>者迎向 AI <em>时</em>代"
           soon: true
       next: Coming soon
 

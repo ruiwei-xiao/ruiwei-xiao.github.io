@@ -147,10 +147,10 @@ title: Ruiwei Xiao
       <article class="deck-card" data-pos="{{ forloop.index0 }}" data-card="{{ forloop.index0 }}">
         <button class="deck-head" type="button" aria-label="Show {{ c.label }}"><span class="deck-dot"></span>{{ c.label }}<span class="deck-tag">{{ c.tag }}</span></button>
         {% if c.editions %}
-        <div class="ed-fig" role="img" aria-label="{% for e in c.editions %}{{ e.lang }}: {{ e.title }}{% unless forloop.last %}, {% endunless %}{% endfor %}">
+        <div class="ed-fig" role="img" aria-label="{% for e in c.editions %}{{ e.lang }}: {{ e.title | strip_html }}{% unless forloop.last %}, {% endunless %}{% endfor %}">
           {% for e in c.editions %}{% unless forloop.first %}<span class="ed-arrow" aria-hidden="true">→</span>{% endunless %}<div class="ed{% if e.soon %} soon{% endif %}" aria-hidden="true">
             <span class="ed-lang">{{ e.lang }}</span>
-            <span class="ed-glyph">{{ e.glyph }}</span>
+            {% if e.cover %}<img class="ed-art" src="{{ e.cover | relative_url }}" alt="" loading="lazy">{% else %}<span class="ed-art ed-glyph">{{ e.glyph }}</span>{% endif %}
             <span class="ed-title">{{ e.title }}</span>
             <span class="ed-by">{% if e.soon %}Coming soon{% else %}{{ e.by }}{% endif %}</span>
           </div>{% endfor %}
