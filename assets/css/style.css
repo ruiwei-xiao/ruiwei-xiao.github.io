@@ -135,7 +135,7 @@ h1 { font-size: 64px; line-height: 1.1; font-weight: 700; letter-spacing: -1.5px
 .seen-logos { flex: 1; min-width: 0; max-width: 100%; align-self: stretch; display: flex; align-items: center; overflow: hidden;
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
 .seen-track { display: flex; width: max-content; animation: seen-scroll 40s linear infinite; }
-.seen-in:hover .seen-track, .seen-in:focus-visible .seen-track { animation-play-state: paused; }
+.seen-in:hover .seen-track, .seen-in:focus-within .seen-track { animation-play-state: paused; }
 .seen-set { display: flex; align-items: center; gap: 64px; padding-right: 64px; }
 @keyframes seen-scroll { to { transform: translateX(-50%); } }
 .seen-item { display: inline-flex; align-items: center; gap: 8px; opacity: .5; transition: opacity .2s; }

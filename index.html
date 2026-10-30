@@ -64,12 +64,12 @@ title: Ruiwei Xiao
     <p>Ruiwei Xiao is a PhD student at CMU HCII and co-founder of ActiveAI. Her research and entrepreneurship in AI for Education and AI Literacy have advanced culturally-responsive learning and responsible use of AI in multicultural and multilingual environments, impacting over 50,000 learners worldwide.</p>
     <p>She is also the lead organizer of the ALIT4ALL workshop, the largest AI Literacy workshop bringing together hundreds of researchers and practitioners internationally. Her work has been supported by Gates Foundation and CMU seed grants; her startup, ActiveAI, has been recognized through the NSF I-Corps Regional AI/Robotic Cohort and developed in partnership with Microsoft, Google Data Center, Junyi Academy, and endorsed by multiple city mayors.</p>
   </div>
-  <!-- 资助方 / 合作方 logo -->
-  <a class="seen-in" href="#press">
+  <!-- 资助方 / 合作方 logo：每个链到对应单位官网（_data/practice.yml 的 link） -->
+  <div class="seen-in">
     <span class="seen-label">Supported by &amp; partnered with</span>
     <!-- 循环滚动：同一组 logo 放两遍，整条向左移一半后无缝衔接；悬停暂停 -->
-    <span class="seen-logos"><span class="seen-track"><span class="seen-set">{% for o in practice.seen_in %}<span class="seen-item" title="{{ o.name }}"><img src="{{ o.logo | relative_url }}" alt="{% unless o.label %}{{ o.name }}{% endunless %}"{% if o.height %} style="--h: {{ o.height }}px"{% endif %}>{% if o.label %}<span>{{ o.label }}</span>{% endif %}</span>{% endfor %}</span><span class="seen-set" aria-hidden="true">{% for o in practice.seen_in %}<span class="seen-item" title="{{ o.name }}"><img src="{{ o.logo | relative_url }}" alt=""{% if o.height %} style="--h: {{ o.height }}px"{% endif %}>{% if o.label %}<span>{{ o.label }}</span>{% endif %}</span>{% endfor %}</span></span></span>
-  </a>
+    <span class="seen-logos"><span class="seen-track"><span class="seen-set">{% for o in practice.seen_in %}<a class="seen-item" href="{{ o.link }}" target="_blank" rel="noopener" title="{{ o.name }}"><img src="{{ o.logo | relative_url }}" alt="{% unless o.label %}{{ o.name }}{% endunless %}"{% if o.height %} style="--h: {{ o.height }}px"{% endif %}>{% if o.label %}<span>{{ o.label }}</span>{% endif %}</a>{% endfor %}</span><span class="seen-set" aria-hidden="true">{% for o in practice.seen_in %}<a class="seen-item" href="{{ o.link }}" target="_blank" rel="noopener" tabindex="-1" title="{{ o.name }}"><img src="{{ o.logo | relative_url }}" alt=""{% if o.height %} style="--h: {{ o.height }}px"{% endif %}>{% if o.label %}<span>{{ o.label }}</span>{% endif %}</a>{% endfor %}</span></span></span>
+  </div>
 </section>
 
 <!-- ===================== PUBLICATIONS ===================== -->

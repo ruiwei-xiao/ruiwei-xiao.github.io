@@ -210,37 +210,48 @@ deck:
       next: Play AI World Park
       next_link: https://four-games-ten.vercel.app/
 
-# 首屏 "As seen in" logo 条（统一单色）；label: 在图标旁加文字；height: 单独调整高度（默认 24px）
+# 首屏 "As seen in" logo 条（统一单色）；link: 点 logo 打开的官网；label: 在图标旁加文字；height: 单独调整高度（默认 24px）
 seen_in:
   - name: Carnegie Mellon University
+    link: https://www.cmu.edu
     logo: /assets/img/logos/cmu.svg
     height: 35
   - name: NSF I-Corps
+    link: https://www.nsf.gov/funding/initiatives/i-corps
     logo: /assets/img/logos/nsf-icorps.png
     height: 30
   - name: Google
+    link: https://www.google.com
     logo: /assets/img/logos/google.svg
   - name: Microsoft
+    link: https://www.microsoft.com
     logo: /assets/img/logos/microsoft.svg
   - name: CSforALL
+    link: https://www.csforall.org
     logo: /assets/img/logos/csforall.png
     height: 21
   - name: Hour of AI
+    link: https://hourofai.org
     logo: /assets/img/logos/hourofai.png
     height: 21
   - name: Junyi Academy
+    link: https://www.junyiacademy.org
     logo: /assets/img/logos/junyi-mark.png
     label: Junyi Academy
   - name: DBS Bank
+    link: https://www.dbs.com
     logo: /assets/img/logos/dbs.svg
     height: 22
   - name: Micron
+    link: https://www.micron.com
     logo: /assets/img/logos/micron.svg
     height: 18
   - name: Taiwan Cement (TCC)
+    link: https://www.tccgroupholdings.com
     logo: /assets/img/logos/tcc.svg
     height: 28
   - name: KLC International Institute
+    link: https://klc.edu.sg
     logo: /assets/img/logos/klc.png
     height: 22
 
