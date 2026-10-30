@@ -231,6 +231,18 @@ seen_in:
   - name: Junyi Academy
     logo: /assets/img/logos/junyi-mark.png
     label: Junyi Academy
+  - name: DBS Bank
+    logo: /assets/img/logos/dbs.svg
+    height: 22
+  - name: Micron
+    logo: /assets/img/logos/micron.svg
+    height: 18
+  - name: Taiwan Cement (TCC)
+    logo: /assets/img/logos/tcc.svg
+    height: 28
+  - name: KLC International Institute
+    logo: /assets/img/logos/klc.png
+    height: 22
 
 # 新闻报道，新到旧。section: research | practice（决定颜色点）；partners 显示在每条右侧。
 # 中文报道：页面只显示 title_en；title 保留原文标题备查，不显示。
