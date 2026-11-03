@@ -133,7 +133,7 @@ deck:
       format: "Free PDF, CC BY 4.0"
       gains_title: Highlights
       gains:
-        - "Translated by Ruiwei with Junyi Academy × ActiveAI, building on our Traditional Chinese edition"
+        - "Translated by Ruiwei with Junyi Academy × ActiveAI"
         - "Covers all 19 competences across the four domains"
         - "Free to share and adapt under CC BY 4.0"
       # editions：卡片里并排的三本书（原版、繁中、简中），每本都可点开；mine 标出我翻译的那本（绿色描边 + 角标）。
