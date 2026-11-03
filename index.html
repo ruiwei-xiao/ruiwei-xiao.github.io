@@ -147,13 +147,14 @@ title: Ruiwei Xiao
       <article class="deck-card" data-pos="{{ forloop.index0 }}" data-card="{{ forloop.index0 }}">
         <button class="deck-head" type="button" aria-label="Show {{ c.label }}"><span class="deck-dot"></span>{{ c.label }}<span class="deck-tag">{{ c.tag }}</span></button>
         {% if c.editions %}
-        <div class="ed-fig" role="img" aria-label="{% for e in c.editions %}{{ e.lang }}: {{ e.title | strip_html }}{% unless forloop.last %}, {% endunless %}{% endfor %}">
-          {% for e in c.editions %}{% unless forloop.first %}<span class="ed-arrow" aria-hidden="true">→</span>{% endunless %}<div class="ed{% if e.soon %} soon{% endif %}" aria-hidden="true">
+        <div class="ed-fig" role="group" aria-label="{% for e in c.editions %}{{ e.lang }}: {{ e.title | strip_html }}{% unless forloop.last %}, {% endunless %}{% endfor %}">
+          {% for e in c.editions %}<a class="ed{% if e.mine %} mine{% endif %}" href="{{ e.link }}" target="_blank">
+            {% if e.badge %}<span class="ed-badge">{{ e.badge }}</span>{% endif %}
+            <span class="ed-book">{% if e.cover %}<img class="ed-art" src="{{ e.cover | relative_url }}" alt="" loading="lazy">{% else %}<span class="ed-art ed-glyph">{{ e.glyph }}</span>{% endif %}</span>
             <span class="ed-lang">{{ e.lang }}</span>
-            {% if e.cover %}<img class="ed-art" src="{{ e.cover | relative_url }}" alt="" loading="lazy">{% else %}<span class="ed-art ed-glyph">{{ e.glyph }}</span>{% endif %}
             <span class="ed-title">{{ e.title }}</span>
-            <span class="ed-by">{{ e.by }}{% if e.soon %}<b>Coming soon</b>{% endif %}</span>
-          </div>{% endfor %}
+            <span class="ed-by">{{ e.by }}</span>
+          </a>{% endfor %}
         </div>
         {% endif %}
         <ol class="deck-steps">
