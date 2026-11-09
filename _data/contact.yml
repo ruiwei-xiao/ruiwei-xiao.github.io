@@ -1,7 +1,7 @@
 # 首页 Contact 版块。
 # endpoint：表单服务（如 Formspree）的提交地址；邮箱不会出现在网页上。留空时，按钮改为"复制消息并打开 LinkedIn"。
 # roles：可选的联系类型。field1 / field2 是这个类型专属的两个输入框；label 同时是发到收件箱里的字段名。
-endpoint: ""
+endpoint: "https://formspree.io/f/xkjjdwqk"
 linkedin: https://linkedin.com/in/rx98
 roles:
   - key: research
