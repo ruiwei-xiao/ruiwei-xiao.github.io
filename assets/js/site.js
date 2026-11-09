@@ -247,7 +247,7 @@ document.querySelectorAll('.pub-tabs').forEach(group => {
       if (!res.ok) throw new Error(res.status);
       form.reset();
       form.querySelector('.role input:checked').dispatchEvent(new Event('change'));
-      say('Thanks. Your message has been sent.', 'ok');
+      say('Thanks for your interest! Ruiwei will reach out to you soon.', 'ok');
     } catch (err) {
       say('Something went wrong. Please try again.', 'err');
     }
