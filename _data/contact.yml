@@ -6,25 +6,25 @@ linkedin: https://linkedin.com/in/rx98
 roles:
   - key: research
     label: Research collaboration
-    text: Studies, co-authored work, or shared classrooms and data
+    text: Let's figure out together how people learn with AI
     field1: { label: "Institution", placeholder: "University or lab" }
     field2: { label: "Research area", placeholder: "Topic or project" }
     message: "What would you like to work on together?"
   - key: media
     label: Media coverage
-    text: Interviews, articles, and press inquiries
+    text: Tell our story and help more people become AI literate
     field1: { label: "Outlet", placeholder: "Publication or program" }
     field2: { label: "Deadline", placeholder: "When you need a response" }
     message: "What is the story, and what would you like to ask?"
   - key: talk
     label: Invited talks
-    text: Keynotes, panels, seminars, and workshops
+    text: Bring AI literacy to your conference, school, or team
     field1: { label: "Event or host", placeholder: "Conference, school, or organization" }
     field2: { label: "Date and format", placeholder: "In person or online" }
     message: "Who is the audience, and what topic do you have in mind?"
   - key: consulting
     label: AI literacy course consulting
-    text: Designing or reviewing AI literacy curricula
+    text: Let's build AI literacy into what your learners do
     field1: { label: "Organization", placeholder: "School, district, or company" }
     field2: { label: "Learners", placeholder: "Who they are and how many" }
     message: "What are you hoping to build or improve?"
