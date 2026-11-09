@@ -28,3 +28,9 @@ roles:
     field1: { label: "Organization", placeholder: "School, district, or company" }
     field2: { label: "Learners", placeholder: "Who they are and how many" }
     message: "What are you hoping to build or improve?"
+  - key: others
+    label: Others
+    text: "Surprise me! Let's talk about something I haven't thought of"
+    field1: { label: "Affiliation", placeholder: "Where you're coming from" }
+    field2: { label: "Topic", placeholder: "In a few words" }
+    message: "What's on your mind?"
