@@ -16,12 +16,6 @@ roles:
     field1: { label: "Outlet", placeholder: "Publication or program" }
     field2: { label: "Deadline", placeholder: "When you need a response" }
     message: "What is the story, and what would you like to ask?"
-  - key: talk
-    label: Invited talks
-    text: Bring AI literacy to your conference, school, or team
-    field1: { label: "Event or host", placeholder: "Conference, school, or organization" }
-    field2: { label: "Date and format", placeholder: "In person or online" }
-    message: "Who is the audience, and what topic do you have in mind?"
   - key: consulting
     label: AI literacy course consulting
     text: Let's build AI literacy into what your learners do
