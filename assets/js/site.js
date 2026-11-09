@@ -203,3 +203,54 @@ document.querySelectorAll('.pub-tabs').forEach(group => {
     if (visible) { reset(); restart(8000); } else restart();
   }, { threshold: 0.3 }).observe(wrap);
 })();
+
+// 首页 Contact：选联系类型时换掉两个专属字段和留言提示；有 endpoint 就直接提交，否则复制消息并打开 LinkedIn
+(function () {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+  const $ = id => document.getElementById(id);
+  const btn = form.querySelector('button[type=submit]');
+  const status = form.querySelector('.contact-status');
+  const say = (text, cls) => { status.textContent = text; status.className = 'contact-status' + (cls ? ' ' + cls : ''); };
+
+  form.querySelectorAll('.role input').forEach(r => r.addEventListener('change', () => {
+    const d = r.dataset;
+    [['cf1', d.f1, d.f1p], ['cf2', d.f2, d.f2p]].forEach(([id, label, hint]) => {
+      $(id + '-l').textContent = label; $(id).name = label; $(id).placeholder = hint;
+    });
+    $('cmsg').placeholder = d.msg;
+    say('');
+  }));
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const { endpoint, linkedin } = form.dataset;
+
+    if (!endpoint) {
+      const text = [...data].filter(([k, v]) => k !== '_gotcha' && v).map(([k, v]) => k + ': ' + v).join('\n');
+      const tab = window.open(linkedin, '_blank');
+      const where = tab ? 'into a LinkedIn message.' : 'into a LinkedIn message. Pop-ups were blocked, so please open LinkedIn yourself.';
+      try {
+        await navigator.clipboard.writeText(text);
+        say('Message copied. Paste it ' + where, 'ok');
+      } catch (err) {
+        say('Copying was blocked. Please paste your message ' + where, 'err');
+      }
+      return;
+    }
+
+    btn.disabled = true;
+    say('Sending…');
+    try {
+      const res = await fetch(endpoint, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+      if (!res.ok) throw new Error(res.status);
+      form.reset();
+      form.querySelector('.role input:checked').dispatchEvent(new Event('change'));
+      say('Thanks. Your message has been sent.', 'ok');
+    } catch (err) {
+      say('Something went wrong. Please try again.', 'err');
+    }
+    btn.disabled = false;
+  });
+})();

@@ -243,3 +243,34 @@ title: Ruiwei Xiao
     {% endfor %}
   </div>
 </section>
+
+<!-- ===================== CONTACT：先选联系类型，右边表单的专属字段跟着换（内容在 _data/contact.yml） ===================== -->
+{% assign contact = site.data.contact %}
+<section class="sec" id="contact">
+  <div class="sec-h"><span class="dot ink"></span><h3>Contact</h3><small>Get in touch</small></div>
+  <form class="contact" id="contact-form" data-endpoint="{{ contact.endpoint }}" data-linkedin="{{ contact.linkedin }}">
+    <fieldset class="roles">
+      <legend>I'm reaching out about</legend>
+      {% for r in contact.roles %}
+      <label class="role">
+        <input type="radio" name="Reaching out about" value="{{ r.label }}" required{% if forloop.first %} checked{% endif %}
+          data-f1="{{ r.field1.label }}" data-f1p="{{ r.field1.placeholder }}" data-f2="{{ r.field2.label }}" data-f2p="{{ r.field2.placeholder }}" data-msg="{{ r.message }}">
+        <span class="role-card"><b>{{ r.label }}</b><small>{{ r.text }}</small></span>
+      </label>
+      {% endfor %}
+    </fieldset>
+    <div class="contact-fields">
+      {% assign first = contact.roles | first %}
+      <label class="f"><span>Name</span><input name="Name" autocomplete="name" required></label>
+      <label class="f"><span>Email</span><input name="Email" type="email" autocomplete="email" required></label>
+      <label class="f"><span id="cf1-l">{{ first.field1.label }}</span><input id="cf1" name="{{ first.field1.label }}" placeholder="{{ first.field1.placeholder }}"></label>
+      <label class="f"><span id="cf2-l">{{ first.field2.label }}</span><input id="cf2" name="{{ first.field2.label }}" placeholder="{{ first.field2.placeholder }}"></label>
+      <label class="f wide"><span>Message</span><textarea id="cmsg" name="Message" rows="5" placeholder="{{ first.message }}" required></textarea></label>
+      <input class="gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="contact-send wide">
+        <button type="submit">{% if contact.endpoint != "" %}Send message{% else %}Copy message &amp; open LinkedIn{% endif %}</button>
+        <p class="contact-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </form>
+</section>
