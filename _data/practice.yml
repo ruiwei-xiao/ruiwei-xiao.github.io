@@ -300,6 +300,17 @@ seen_in:
 # image_position: top 让裁切时保留图片顶部。
 # role: 你在这条新闻里的角色；impact: 一句影响/规模；headline: true 的 3 条做成大卡片，其余为紧凑列表
 press:
+  - date: 2026-11-13
+    title_en: "Free AI Tools for Teacher Training Still Fall Short of Professional Needs"
+    title: "免費AI做教師培訓 離專業有距離"
+    outlet: Sing Tao Daily
+    section: practice
+    link: /assets/img/press/singtao-2026-page.jpg
+    role: "Quoted on the AI literacy workshop at AIED 2026"
+    impact: "AI literacy workshop · AIED 2026, Korea"
+    headline: true
+    image: /assets/img/press/singtao-2026.jpg
+    image_position: left top
   - date: 2026-10-23
     title_en: "Junyi Academy, Minsheng Elementary School, and Google Team Up to Advance AI Literacy in Changhua"
     title: "均一平台、民生國小攜手 Google 推動彰化 AI 素養"
