@@ -149,21 +149,6 @@
   links:
     paper: https://arxiv.org/pdf/2509.10782
 
-- title: "Improving Student–AI Interaction Through Pedagogical Prompting: An Example in Computer Science Education"
-  authors: "Ruiwei Xiao, Xinying Hou*, Runlong Ye*, Majeed Kazemitabaar*, Nicholas Diana, Michael Liut, John Stamper"
-  venue: Preprint
-  venue_full: "Under review"
-  year: 2026
-  date: 2026-05-01
-  featured: true
-  group: literacy
-  topics: [CS education, AI in education]
-  image: /assets/img/pedagogicalprompting.png
-  project: prompting
-  role: 1st
-  links:
-    paper: https://arxiv.org/abs/2506.19107
-
 - title: "Exploring Student Choice and the Use of Multimodal Generative AI in Programming Learning"
   authors: "Ruiwei Xiao*, Xinying Hou*, Runlong Ye, Michael Liut, John Stamper"
   venue: SIGCSE 2026
@@ -195,9 +180,10 @@
 
 - title: "Misalignment Between Educators' Testing and End Users' Behavior: What 17,000+ Chatbot Messages Reveal About AI Literacy Training for Teachers"
   authors: "Ruiwei Xiao, Jiayi Wang, Miina Koyama, Yue Wang, Qing Xiao, Xinying Hou, Norman Bier, John Stamper"
-  venue: Preprint
-  year: 2026
-  date: 2026-04-30
+  venue: AAAI 2027
+  venue_full: "Proceedings of the AAAI Conference on Artificial Intelligence (AAAI’27)"
+  year: 2027
+  date: 2027-01-25
   featured: true
   group: literacy
   mentees: [Jiayi Wang, Miina Koyama]
@@ -207,7 +193,8 @@
 
 - title: "Brief instruction durably improves students’ generative AI prompting skills but not academic performance"
   authors: "Ruiwei Xiao, Runlong Ye, Xinying Hou, Jessica Wen, Harsh Kumar, Michael Liut, John Stamper"
-  venue: Preprint
+  venue: Scientific Reports
+  venue_full: "Nature Scientific Reports"
   year: 2026
   date: 2026-12-01
   featured: true
