@@ -254,3 +254,26 @@ document.querySelectorAll('.pub-tabs').forEach(group => {
     btn.disabled = false;
   });
 })();
+
+/* BibTeX：点按钮展开/收起引用，Copy 复制到剪贴板 */
+document.addEventListener('click', async e => {
+  const btn = e.target.closest('.bib-btn');
+  if (btn) {
+    const box = btn.closest('.pr-main').querySelector('.bib');
+    box.hidden = !box.hidden;
+    btn.setAttribute('aria-expanded', String(!box.hidden));
+    return;
+  }
+  const copy = e.target.closest('.bib-copy');
+  if (!copy) return;
+  const pre = copy.parentElement.querySelector('pre');
+  try {
+    await navigator.clipboard.writeText(pre.textContent);
+    copy.textContent = 'Copied';
+  } catch (err) {
+    const r = document.createRange(); r.selectNodeContents(pre);
+    const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r);
+    copy.textContent = 'Press Ctrl/Cmd+C';
+  }
+  setTimeout(() => { copy.textContent = 'Copy'; }, 1800);
+});

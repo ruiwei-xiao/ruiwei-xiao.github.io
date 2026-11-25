@@ -11,9 +11,29 @@
     {% if p.authors != '' %}<p class="pub-authors">{{ authors }}</p>{% endif %}
     {% if include.full and p.venue_full and p.venue_full != p.venue %}<p class="pub-venue-full">{{ p.venue_full }}</p>{% endif %}
     {% capture extra %}{% for l in p.links %}{% unless l[0] == 'paper' or l[0] == 'video' %}<a href="{{ l[1] }}" target="_blank">{{ l[0] }}</a>{% endunless %}{% endfor %}{% endcapture %}
-    {% if p.award or extra != '' %}<div class="pr-links">
+    {% comment %} BibTeX：有 p.bibtex 就用它，否则按 authors / venue_full / year 自动生成 {% endcomment %}
+    {% if p.bibtex %}{% assign bib = p.bibtex | strip %}{% else %}
+    {% assign bauthors = p.authors | remove: '*' | split: ', ' %}
+    {% assign bkey1 = bauthors | first | split: ' ' | last | downcase %}
+    {% assign bwords = p.title | downcase | split: ' ' %}
+    {% assign bkey2 = bwords[0] | append: bwords[1] | remove: ':' | remove: ',' | remove: '“' | remove: '”' | remove: '"' | remove: "'" | remove: '’' | remove: '-' | remove: '(' | remove: ')' | remove: '?' | remove: '&' %}
+    {% assign btitle = p.title | replace: '&', '\\&' %}
+    {% assign bvenue = p.venue_full | default: p.venue | replace: '&', '\\&' %}
+    {% if p.venue == 'Preprint' %}{% assign btype = 'misc' %}{% assign bfield = 'note' %}{% assign bvenue = 'Preprint' %}
+    {% elsif p.venue contains 'Portfolio' or p.venue contains 'Reports' %}{% assign btype = 'article' %}{% assign bfield = 'journal' %}
+    {% else %}{% assign btype = 'inproceedings' %}{% assign bfield = 'booktitle' %}{% endif %}
+    {% capture bib %}@{{ btype }}{% raw %}{{% endraw %}{{ bkey1 }}{{ p.year }}{{ bkey2 }},
+  title = {% raw %}{{% endraw %}{{ btitle }}},
+  author = {% raw %}{{% endraw %}{{ bauthors | join: ' and ' }}},
+  {{ bfield }} = {% raw %}{{% endraw %}{{ bvenue }}},
+  year = {% raw %}{{% endraw %}{{ p.year }}}{% if p.links.paper %},
+  url = {% raw %}{{% endraw %}{{ p.links.paper }}}{% endif %}
+}{% endcapture %}{% endif %}
+    <div class="pr-links">
       {% if p.award %}<span class="pr-award">{{ p.award }}</span>{% endif %}
       {{ extra }}
-    </div>{% endif %}
+      <button type="button" class="bib-btn" aria-expanded="false">BibTeX</button>
+    </div>
+    <div class="bib" hidden><pre>{{ bib | escape }}</pre><button type="button" class="bib-copy">Copy</button></div>
   </div>
 </article>

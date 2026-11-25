@@ -12,6 +12,7 @@
 # mentees:    你指导的学生（作者全名列表），作者列表里显示为绿色，链接见 mentees.yml
 # award:      optional badge, e.g. "Best Paper Honorable Mention" or "Oral Presentation"
 # image:      optional teaser; cards without one get a soft placeholder
+# bibtex:     optional; 完整的 BibTeX 条目（用 | 多行写），不填则按 authors / venue_full / year 自动生成
 # links:      any of paper, code, dataset, project, poster, slides, website（paper 只用作标题链接，不显示按钮）
 
 # ---------- 2026 ----------

@@ -415,6 +415,11 @@ a.row:hover .row-title { text-decoration: underline; text-underline-offset: 3px;
 .pr-links a { color: var(--muted); text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: 3px; }
 .pr-links a:hover { color: var(--ink); }
 .pr-award { color: var(--orange-tx); font-weight: 600; }
+.bib-btn, .bib-copy { font: inherit; font-size: 13px; color: var(--muted); background: none; border: 1px solid var(--line-strong); border-radius: 6px; padding: 1px 8px; cursor: pointer; }
+.bib-btn:hover, .bib-copy:hover, .bib-btn[aria-expanded="true"] { color: var(--ink); border-color: var(--ink); }
+.bib { position: relative; margin-top: 10px; }
+.bib pre { margin: 0; padding: 12px 64px 12px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; line-height: 1.5; color: var(--ink); white-space: pre-wrap; overflow-wrap: anywhere; }
+.bib-copy { position: absolute; top: 8px; right: 8px; background: var(--surface); }
 .pub-authors .mentee { color: var(--green-tx); font-weight: 600; }
 .pub-authors a.mentee { text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--green) 40%, transparent); text-underline-offset: 3px; }
 .pub-authors a.mentee:hover { text-decoration-color: currentColor; }
